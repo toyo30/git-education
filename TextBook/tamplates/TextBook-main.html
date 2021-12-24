@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../static/TextBook-main.css?ver=11243131233">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>교제몰 메인</title>
+
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="mobile-all-menu">
+            <section class="mobile-header">
+                <section class="mobile-header-items">
+                    <img src="../static/tosel-logo.png" class="m-logo">
+                    <img src="../static/m-close.png" class="m-close">
+                </section>
+            </section>
+            <div class="mobile-ne">
+                <div class="mobile-con">
+                    <img src="../static/all-cate.png" class="all-cate">
+
+                    <div class="mobile-slide-menu">
+                        <section>
+                            <img src="../static/all-text.png" class="mobile-menu-allText">
+                            <span>전체 교재</span>
+                        </section>
+                        <section>
+                            <img src="../static/event.png" class="mobile-menu-event">
+                            <span>이벤트</span>
+                        </section>
+                        <section>
+                            <img src="../static/best-seller.png" class="mobile-menu-bestSeller">
+                            <span>베스트 셀러</span>
+                        </section>
+                        <section>
+                            <img src="../static/new-product.png" class="mobile-menu-newProduct">
+                            <span>신상품</span>
+                        </section>
+                        <section>
+                            <img src="../static/goods.png" class="mobile-menu-goods">
+                            <span>굿즈</span>
+                        </section>
+                        <section>
+                            <img src="../static/data-room.png" class="mobile-menu-dataRoom">
+                            <span>학습 자료실</span>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="mobile-nav">
+                    <ul>
+                        <li>
+                            <img src="../static/mobile-user.png" class="mobile-user">
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li>
+                            <img src="../static/bell.png" class="mobile-bell">
+                            <a href="#">공지사항</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-faq.png" class="mobile-faq">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-cart.png" class="mobile-cart">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-join.png" class="mobile-join">
+                            <a href="#">회원가입</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <section class="mobile-login"><span>로그인</span></section>
+            </div>
+
+        </div>
+
+
+        <script>
+            $(document).ready(function(){
+                $('.mobile-all-menu div').hide();
+                $('.mobile-all-menu section').hide();
+                $('.m-ham').click(function(){
+                    $('.mobile-all-menu').css('background','#fff');
+                    $('.mobile-all-menu').css('width','100%');
+                    $('.mobile-all-menu div').fadeIn();
+                    $('.mobile-all-menu section').fadeIn();
+                    $('body').css('overflow-y','hidden');
+                });
+                $('.m-close').click(function(){
+                    $('.mobile-all-menu').css('background','transparent');
+                    $('.mobile-all-menu').css('width','0%');
+                    $('.mobile-all-menu div').fadeOut();
+                    $('.mobile-all-menu section').fadeOut();
+                });
+            });
+        </script>
+
+        <div class="fixed-category swiper mySwiper">
+            <div class="fixed-menu swiper-wrapper">
+                <section class="swiper-slide">
+                    <img src="../static/all-text.png" class="all-text all-text-fix">
+                    <span>전체 교재</span>
+                </section>
+                <section class="swiper-slide">
+                    <img src="../static/event.png" class="event event-fix">
+                    <span>이벤트</span>
+                </section>
+                <section class="swiper-slide">
+                    <img src="../static/best-seller.png" class="best-seller best-seller-fix">
+                    <span>베스트 셀러</span>
+                </section>
+                <section class="swiper-slide">
+                     <img src="../static/new-product.png" class="new-product new-product-fix">
+                    <span>신상품</span>
+                </section>
+                <section class="swiper-slide">
+                    <img src="../static/goods.png" class="goods goods-fix">
+                    <span>굿즈</span>
+                </section>
+                <section class="swiper-slide">
+                    <img src="../static/data-room.png" class="data-room data-room-fix">
+                    <span>학습 자료실</span>
+                </section>
+                <div class="search-box">
+                    <img src="../static/search.png" class="search-img">
+                    <input type="search">
+                    <button>검색</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.swiper1 = new Swiper(".mySwiper", {
+               slidesPerView: "auto",
+               spaceBetween: 0,
+              
+           });
+       </script>
+
+        <div id="header">
+
+            <div id="top-menu">
+
+                <div class="logo-box">
+                    <img src="../static/tosel-logo.png" class="t-logo">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a class="login-btn">로그인</a></li>
+                        <li><img src="../static/join.png" class="join"><a href="#">회원가입</a></li>
+                        <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                        <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
+                        <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                        <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-box search-m">
+                    <img src="../static/search.png" class="search-img">
+                    <input type="search">
+                </div>
+                <img src="../static/bell.png" class="bell">
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="content">
+
+            <!-- <div class="slide-wrap">
+
+                <div class="slides">
+
+                    <div class="slide-items">
+                        <img src="../static/slide-img1.png" class="slide-img">
+                        <img src="../static/slide-img-m.png" class="slide-img-m">
+                    </div>
+
+                    <div class="slide-items">
+                        <img src="../static/slide-img1.png" class="slide-img">
+                        <img src="../static/slide-img-m.png" class="slide-img-m">
+                    </div>
+
+                </div>
+
+            </div> -->
+
+            <div class="slide-wrap">
+                <div class="swiper-wrapper">
+                    <div class="slide-items slide-one swiper-slide">
+                        <img src="../static/slide-img1.png" class="slide-img">
+                    </div>
+                    <div class="slide-items slide-two swiper-slide">
+                        <img src="../static/slide-img2.png" class="slide-img">
+                    </div>
+                    <div class="slide-items slide-one swiper-slide">
+                        <img src="../static/slide-img1.png" class="slide-img">
+                    </div>
+                    <div class="slide-items slide-two swiper-slide">
+                        <img src="../static/slide-img2.png" class="slide-img">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="slide-wrap2">
+                <div class="swiper-wrapper">
+                    <div class="slide-items-m slide-one swiper-slide">
+                        <img src="../static/slide-img-m1.png" class="slide-img-m">
+                    </div>
+                    <div class="slide-items-m slide-two swiper-slide">
+                        <img src="../static/slide-img-m2.png" class="slide-img-m">
+                    </div>
+                    <div class="slide-items-m slide-one swiper-slide">
+                        <img src="../static/slide-img-m1.png" class="slide-img-m">
+                    </div>
+                    <div class="slide-items-m slide-two swiper-slide">
+                        <img src="../static/slide-img-m2.png" class="slide-img-m">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+
+            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+            <script>
+                
+                $(document).ready(function(){                     
+                    
+                    new Swiper('.slide-wrap', {
+                        loop: true,
+                        speed: 500,
+                        autoplay: { delay: 2000, },
+                        pagination : { 
+                            el : '.swiper-pagination',
+                            type : 'bullets',
+                            clickable : true
+                        },
+                    });
+
+
+                    new Swiper('.slide-wrap2', {
+                        loop: true,
+                        speed: 500,
+                        autoplay: { delay: 2000, },
+                        pagination : { 
+                            el : '.swiper-pagination',
+                            type : 'bullets',
+                            clickable : true
+                        },
+                    });
+
+                });
+                
+            </script>
+
+             <div class="search-menu">
+                 <div class="search-bar">
+                    <div class="category-title category-title-m">
+                        <div class="c-img">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>모든 <strong>카테고리</strong></span>
+                    </div>
+                     <img src="../static/compass.png" class="compass">
+                     <img src="../static/compass-m.png" class="compass-m">
+
+                     <div class="search-box search-box-pc">
+                         <img src="../static/search.png" class="search-img">
+                         <input type="search">
+                         <button>검색</button>
+                     </div>
+                 </div>
+             </div>
+
+             <div id="book-shop">
+
+
+
+                 <div class="all-category">
+                    <div class="top-category">
+                        <div class="category-title">
+                            <div class="c-img">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>모든<br>카테고리</span>
+                        </div>
+
+                        <section>
+                            <img src="../static/all-text.png" class="all-text">
+                            <span>전체 교재</span>
+                        </section>
+                        <section>
+                            <img src="../static/event.png" class="event">
+                            <span>이벤트</span>
+                        </section>
+                        <section>
+                            <img src="../static/best-seller.png" class="best-seller">
+                            <span>베스트 셀러</span>
+                        </section>
+                        <section>
+                            <img src="../static/new-product.png" class="new-product">
+                            <span>신상품</span>
+                        </section>
+                        <section>
+                            <img src="../static/goods.png" class="goods">
+                            <span>굿즈</span>
+                        </section>
+                        <section>
+                            <img src="../static/data-room.png" class="data-room">
+                            <span>학습 자료실</span>
+                        </section>
+                    </div>
+                </div>
+
+                <span class="gray-line gray-line-m"></span>
+
+                <div id="book-list">
+                    <section class="best-book">
+                        <h3>베스트 셀러</h3>
+                        <img src="../static/best-seller.png">
+                        <span>더보기<img src="../static/deo-view.png"></span>
+                        <div class="books">
+
+                            <section class="first-book">
+                                <img src="../static/pink-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank first-num">1</h1>
+                                    <span>Pre-starter<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                <p class="book-explan">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </section>
+
+                            <section class="second-book">
+                                <img src="../static/blue-green-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank second-num">2</h1>
+                                    <span>Junior<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                <p class="book-explan">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </section>
+                            <section class="third-book">
+                                <img src="../static/blue-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank third-num">3</h1>
+                                    <span>High-Junior<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                <p class="book-explan">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </section>
+
+                            <section class="fourth-book">
+                                <img src="../static/yellow-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank">4</h1>
+                                    <span>Basic<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                <p class="book-explan">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </section>
+
+                            <section class="fifth-book">
+                                <img src="../static/yellow-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank">5</h1>
+                                    <span>Basic<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                <p class="book-explan">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </section>
+
+                        </div>
+                    </section>
+
+                    <span class="gray-line first-gray"></span>
+
+                    <div class="slide-books-wrap swiper mySwiper2">
+                        <div class="slide-books swiper-wrapper">
+
+                            <section class="third-book third-book-m swiper-slide">
+                                <img src="../static/blue-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank third-num">3</h1>
+                                    <span>High-Junior<br><strong>LISTENING 1</strong></span>
+                                </div>
+                            </section>
+
+                            <section class="fourth-book fourth-book-m swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank">4</h1>
+                                    <span>Basic<br><strong>LISTENING 1</strong></span>
+                                </div>
+                                
+                            </section>
+
+                            <section class="fifth-book fifth-book-m swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <div class="book-title">
+                                    <h1 class="rank">5</h1>
+                                    <span>Basic<br><strong>LISTENING 1</strong></span>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                    <script>
+                        window.swiper2 = new Swiper(".mySwiper2", {
+                           slidesPerView: "auto",
+                           spaceBetween: 0,
+                           pagination: {
+                           el: ".swiper-pagination",
+                           clickable: true,
+                           },
+                       });
+                   </script>
+
+                    <span class="gray-line second-gray"></span>
+                    <section class="new-book swiper mySwiper3">
+                        <h3> 
+                            신상품
+                            <img src="../static/new-product.png">
+                        </h3>
+                        <span>더보기<img src="../static/deo-view.png"></span>
+
+                        <div class="book-list new-book-list swiper-wrapper">
+                            <section class="swiper-slide">
+                                <img src="../static/pink-book.png">
+                                <span>Basic</span>
+                                <h4>ALL READING SPEAKING</h4>
+                                <p>(학생용 3권 + 교사용 4권)</p>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/blue-green-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/blue-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/pink-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                        </div>
+                    </section>
+                    <script>
+                        window.swiper3 = new Swiper(".mySwiper3", {
+                           slidesPerView: "auto",
+                           spaceBetween: 0,
+                           pagination: {
+                           el: ".swiper-pagination",
+                           clickable: true,
+                           },
+                       });
+                   </script>
+                    <span class="gray-line"></span>
+                    <section class="event-book swiper mySwiper4">
+                        <h3>이벤트</h3>
+                        <img src="../static/event.png">
+                        <span>더보기<img src="../static/deo-view.png"></span>
+                        <div class="book-list event-book-list swiper-wrapper">
+                            <section class="swiper-slide">
+                                <img src="../static/pink-book.png">
+                                <span>Basic</span>
+                                <h4>ALL READING SPEAKING</h4>
+                                <p>(학생용 3권 + 교사용 4권)</p>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/blue-green-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/blue-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/yellow-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                            <section class="swiper-slide">
+                                <img src="../static/pink-book.png">
+                                <span>Basic</span>
+                                <h4>LISTENING 1</h4>
+                            </section>
+                        </div>
+                    </section>
+                    <script>
+                        window.swiper4 = new Swiper(".mySwiper4", {
+                            calculateHeight:true,                            
+                           slidesPerView: "auto",
+                           spaceBetween: 0,
+                           pagination: {
+                           el: ".swiper-pagination",
+                           clickable: true,
+                           },
+                       });
+                   </script>
+                   <span class="gray-line"></span>
+                   <section class="goods-book swiper mySwiper5">
+                    <h3>굿즈</h3>
+                    <img src="../static/goods.png">
+                    <span>더보기<img src="../static/deo-view.png"></span>
+                    <div class="book-list goods-list swiper-wrapper">
+                        <section class="swiper-slide">
+                            <img src="../static/pink-book.png">
+                            <span>Basic</span>
+                            <h4>ALL READING SPEAKING</h4>
+                            <p>(학생용 3권 + 교사용 4권)</p>
+                        </section>
+                        <section class="swiper-slide">
+                            <img src="../static/blue-green-book.png">
+                            <span>Basic</span>
+                            <h4>LISTENING 1</h4>
+                        </section>
+                        <section class="swiper-slide">
+                            <img src="../static/blue-book.png">
+                            <span>Basic</span>
+                            <h4>LISTENING 1</h4>
+                        </section>
+                        <section class="swiper-slide">
+                            <img src="../static/yellow-book.png">
+                            <span>Basic</span>
+                            <h4>LISTENING 1</h4>
+                        </section>
+                        <section class="swiper-slide">
+                            <img src="../static/yellow-book.png">
+                            <span>Basic</span>
+                            <h4>LISTENING 1</h4>
+                        </section>
+                        <section class="swiper-slide">
+                            <img src="../static/pink-book.png">
+                            <span>Basic</span>
+                            <h4>LISTENING 1</h4>
+                        </section>
+                    </div>
+                </section>
+                <script>
+                    window.swiper4 = new Swiper(".mySwiper5", {
+                        calculateHeight:true,                            
+                       slidesPerView: "auto",
+                       spaceBetween: 0,
+                       pagination: {
+                       el: ".swiper-pagination",
+                       clickable: true,
+                       },
+                   });
+               </script>
+                </div>
+
+             </div>
+        </div>
+
+
+        <div id="footer">
+            <img src="../static/mobile-banner.png" class="mobile-banner">
+            <div class="footer-banner-bar">
+                <div class="footer-banner">
+                    <img src="../static/footer-banner.png" class="banner">
+                    <div class="banner-title">
+                        <h2>올해의</h2>
+                        <h1>베스트 셀러</h1>
+                    </div>
+                    <span>토셀의 심화 문제를 만나고 싶다면?</span>
+                    <div class="purchase">
+                        <span>구매하러가기</span>
+                        <img src="../static/purchase-arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div class="company-intro">
+                <div class="company-intro-bar">
+                    <div class="logo-intro">
+                        <img src="../static/tosel.png" class="bottom-tosel">
+                        <span class="vertical-line"></span> 
+                        <img src="../static/tosel-lab.png" class="tosel-lab">
+                    </div>
+                    <span>회사 소개</span>
+                </div>
+            </div>
+
+            <div class="tosel-footer">
+                <div class="tosel-footer-bar">
+                    <img src="../static/tosel-logo.png" class="footer-logo">
+                    <div class="company-detail">
+
+                        <p class="l-intro">
+                            서울시 성북구 안암로 145 고려대학교 라이시움 4층<br>
+                            Lyceum. Korea University, 145 Anam Ro, Seongbuk-Gu, Seoul, Korea 02841<br>
+                            Copyright ⓒ TOSEL. All Rights Reserved.
+                        </p>
+
+                        <p class="r-intro">
+                            상호명 : (주)에듀토셀<br>
+                            사업자 등록번호 : 209-81-55585<br>
+                            대표자명 : 오승연<br>
+                            Tel: +82-02-923-0505 / Fax : +82-02-923-7070
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-footer-menu">
+            <img src="../static/mobile-ham.png" class="m-ham">
+            <img src="../static/mobile-user.png" class="m-user">
+            <img src="../static/mobile-home.png" class="m-home">
+            <img src="../static/mobile-faq.png" class="m-faq">
+            <img src="../static/mobile-cart.png" class="m-cart">
+        </div>
+        <div class="recent-box">
+            <div class="b">
+                <div class="recent-img">
+                    <!-- <div class="hover-texta">
+                        최근 본<br>
+                        교재
+                    </div> -->
+                    <img src="../static/blue-book.png">
+                </div>
+                <div class="page-top">
+                    <img src="../static/top-arrow.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        $(window).scroll(function(){
+            var fixMenu = $('.gray-line-m').offset().top;
+            var recent = $('.slide-wrap').offset().top;
+            // var fixMenuhide = $('.gray-line').offset().top;
+            
+            if( $(window).scrollTop() > fixMenu ){
+                $('.fixed-category').fadeIn(150);
+            }
+
+            if( $(window).scrollTop() < fixMenu ){
+                $('.fixed-category').fadeOut(150);
+            }
+            
+            // if( $(window).scrollTop() > recent ){
+            //     $('.recently-text').css({
+            //         'position':'fixed',
+            //         'top': '31vw',
+            //         'right' : '11vw'
+            //     });
+            // }
+
+            // if( $(window).scrollTop() < recent ){
+            //     $('.recently-text').css({
+            //         'position':'absolute',
+            //         'top': '0vw',
+            //         'right' : '11vw'
+            //     });
+            // }
+
+        });
+
+
+        $('.page-top').click( function() {
+            $('html, body').animate( { scrollTop : 0 }, 400 );
+            return false;
+        } );
+
+
+        
+
+    </script>
+</html>

@@ -1,0 +1,61 @@
+@media (min-width:768px) and (max-width:1275px) {
+    #book-list { margin-top: 4.0784vw;}
+    #book-list > section { width: 93.7%;}
+    #book-list > section > span { margin-top: 0.6980vw;}
+    #book-list > section > span > img {
+        width: 0.5490vw; height: 0.9412vw; margin-left: 1.1765vw;
+    }
+    .best-book { padding-bottom: 4.3137vw; }
+    .best-book > img { width: 1.8824vw; height: 1.8824vw; }
+    .books { margin: 3.2941vw 0 0 0; }
+    .books > section { width: 10.8235vw; height: 25.9608vw; }
+    .books > section > img { height: 14.1176vw;}
+    .book-title { height: 2.9804vw; margin-top: 0.7059vw;}
+    .rank { width: 2.3529vw; }
+    .books > section span {border: 0.0784vw solid transparent; line-height: 1.6471vw;}
+    .book-explan {height: 5.8039vw; margin-top: 1.4118px; line-height: 1.4902px;}
+
+
+    .new-book { padding: 4.0784vw 0 2.9020vw 0; }
+    .new-book > h3 > img {
+        width: 2.2745vw; height: 2.3435vw;
+    }
+    .book-list { margin-top: 3.1373vw;}
+    .book-list > section { width: 9.8039vw; height: 18.2745vw;}
+    .book-list > section > img { height: 12.7843vw;}
+    .book-list > section > span { margin-top: 0.7843vw;}
+    .book-list > section > h4 { width: 9.8039vw; line-height: 1.8824vw; }
+
+    .event-book { height: 35.6078vw; padding: 4.5490vw 0 7.4510vw 0; }
+    .event-book > img { width: 2.0392vw; height: 2.0392vw; }
+
+
+    .footer-banner-bar { height: 11.9216vw;}
+    .footer-banner { width: 93.7%;}
+    .banner { width: 16.6275vw; height: 11.4510vw; margin-top: 0.3922vw;}
+    .banner-title { margin: 2.6667vw 0 0 1.8039vw; }
+    .banner-title > h2 { margin-bottom: 0.3922vw; }
+    .footer-banner > span { margin: 6.4314vw 0 0 4.4706vw; }
+    .purchase { 
+        width: 16.2353vw; height: 3.7647vw; border-radius: 2.9804vw; 
+        margin: 4vw 1.8039vw 0 0;
+    }
+    .purchase > span { margin-left: 2.3529vw; line-height: 3.9216vw; }
+    .purchase > img { width: 1.4118vw; height: 1.4118vw; margin: 1.1765vw 2.5882vw 0 0;}
+    .company-intro-bar { width: 93.7%; height: 6.2745vw;}
+    .company-intro-bar > span { margin-left: 2.9804vw; width: 15.8431vw; }
+    .bottom-tosel { width: 4.2353vw; height: 1.0980vw;}
+    .vertical-line { height: 4.3137vw; width: 0.0784vw; }
+    .tosel-lab { width: 6.9020vw; height: 1.0980vw;}
+    .tosel-footer-bar { width: 93.7%; padding-bottom: 6.6667vw;}
+    .footer-logo { 
+        width: 19.0588vw; height: 2.9020vw; display: block; 
+        margin-top: 6.5098vw; 
+    }
+    .company-detail { margin-top: 3.1373vw; }
+    .company-detail > p { line-height: 2.5882vw;}
+
+    .fixed-menu { width: 93.7%;}
+    .fixed-category { height: 6.6667vw;}
+    .fixed-menu > section > img { margin-right: 0.3922vw;}
+}
