@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/InfoUser.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>마이페이지 개인 회원정보</title>
+</head>
+<body>
+    <div id="wrap">
+
+        <div id="header">
+
+            <div id="top-menu">
+
+                <div class="logo-box">
+                    <img src="../static/tosel-logo.png" class="t-logo">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                        <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
+                        <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                        <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="ham-menu">
+                    <img src="../static/ham-menu.png" class="ham-menu-bar">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="content">
+
+            
+
+             <div class="search-menu">
+                 <div class="search-bar">
+                    <section>
+                        <img src="../static/all-text.png" class="all-text">
+                        <span>전체 교재</span>
+                    </section>
+                    <section>
+                        <img src="../static/event.png" class="event">
+                        <span>이벤트</span>
+                    </section>
+                    <section>
+                        <img src="../static/best-seller.png" class="best-seller">
+                        <span>베스트 셀러</span>
+                    </section>
+                    <section>
+                        <img src="../static/new-product.png" class="new-product">
+                        <span>신상품</span>
+                    </section>
+                    <section>
+                        <img src="../static/goods.png" class="goods">
+                        <span>굿즈</span>
+                    </section>
+                    <section>
+                        <img src="../static/data-room.png" class="data-room">
+                        <span>학습 자료실</span>
+                    </section>
+
+                     <div class="search-box">
+                         <img src="../static/search.png" class="search-img">
+                         <input type="search">
+                         <button>검색</button>
+                     </div>
+                 </div>
+             </div>
+
+
+
+             <div id="page-section">
+                <div id="page-list">
+
+
+                    <section class="mypage-menu">
+                        <h2 class="mypage-title">마이페이지</h3>
+
+                        <ul class="mypage-list">
+                            <li class="mypage-item">주문내역 관리</li>
+                            <li class="mypage-item">장바구니</li>
+                            <li class="mypage-item">취소/반품/교환 조회</li>
+                            <li class="mypage-item">회원 정보</li>
+                        </ul>
+                    </section>
+
+
+                    <section class="manage-info">
+                        <h3 class="manage-title">회원정보 관리</h4>
+                        <h4 class="manage-sub">필수정보</h4>
+                        <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-box">
+                                <h5 class="blind">회원정보 수정</h5>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label class="lab-item" for="id">아이디</label></p>
+                                    </div>
+                                    <div class="input-text">
+                                        <p class="same-height mobile-text" id="userid">asdfasf</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label class="lab-item" for="userName">이름</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <div>
+                                            <span class="input-wrap mobile-name">
+                                                <input type="text" id="userName" class="inp" name="userName" maxlength="20" autocomplete="off" value="백민기">
+                                            <!-- input 태그 안  value에 이름 전송하기-->
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                    
+                                
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="userGender">성별</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <div>
+                                        <p id="userGender" class="genderText">여성</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                        </div>
+                                    </div>
+
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="userBirth">생년월일</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <p id="userBirth" class="genderText">9999년 12월 31일</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item mobile-selfcheck">
+                                    <div class="form-lab">
+                                        <p><label for="userCheck">본인인증</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <p id="userCheck" class="email-check">이메일 인증 완료</p>
+                                    </div>
+                                </div>
+                    
+                    
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>주소</p>
+                                    </div>
+                                    <div class="input-text direction">
+                                        
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">612-121</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">북한 평양시 맥도날드 305호</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                    
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                    
+                                       
+                                        
+                                    </div>
+                                </div>
+                    
+                        
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="phoneNumber">전화번호</label></p>
+                                    </div>
+                                    <div class="input-text direction">
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">010-1234-5678</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>이메일</p>
+                                    </div>
+
+                                    <div class="input-text direction">
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">asdfghjkl@korea.ac.kr</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                                    </div>
+                           
+                                   
+                    
+                    
+                                </div>
+                    
+                            
+                    
+                        
+                            </div>
+                    
+
+                            <div class="member-btnarea">
+
+                        
+
+
+                                <div class="btn-wrap">
+                                    <a id="btnConfirm" href="" class="btn-model">
+                                        회원정보수정
+                                    </a>
+                                </div>
+    
+                                <div class="btn-wrap">
+                                    <a id="btnWithdraw" href="" class="btn-model withdraw-color">
+                                        회원탈퇴하기
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </section>
+
+                    
+
+        <div class="dimmed-section"><span class="blind">딤드영역</span></div>
+        <section class="pop-up">
+            <p class="popup-title">정말 아이디를 <strong>삭제</strong>하시겠습니까?</p>
+            <p class="popup-text">*아이디를 삭제하면 토셀 통합 계정이 모두 삭제됩니다.</p>
+            
+            <div class="btn-box">
+                <button class="member-check">확인</button>
+                <button class="member-cancel">취소</button>
+            </div>
+            
+        </section>
+
+        <section class="check-up">
+            <p class="popup-title">비밀번호를 입력해주세요.</p>
+            <p class="popup-text">*아이디를 삭제하면 토셀 통합 계정이 모두 삭제됩니다.</p>
+            
+            <div class="mcheck-input">
+                <label for="member-password">비밀번호</label>
+                <p class="mcheck-inputarea">
+                    <input type="text" id="member-password" placeholder="아이디 삭제를 위해 비밀번호를 입력해주세요.">
+                </p>
+            </div>
+
+            <div class="mcheck-input">
+                <label for="check-password">비밀번호 확인</label>
+                <p class="mcheck-inputarea">
+                    <input type="text" id="check-password" placeholder="아이디 삭제를 위해 비밀번호를 입력해주세요.">
+                </p>
+            </div>
+
+            <div class="btn-box">
+                <button class="member-check">확인</button>
+                <button class="member-cancel">취소</button>
+            </div>
+            
+        </section>
+
+                    
+                </div>
+
+             </div>
+        </div>
+
+        
+
+        <div id="footer">
+
+        </div> 
+    </div>
+</body>
+<script src="../static/dimmed.js"></script>
+</html>

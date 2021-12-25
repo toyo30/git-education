@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/InfoUserChange.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>마이페이지 개인 회원정보 수정</title>
+</head>
+<body>
+    <!-- <body class="before-load"> -->
+    <!-- <div class="loading">
+        <svg class="loading-circle">
+            <circle cx="50%" r="25"></circle>
+        </svg>
+    </div>  -->
+
+    <div id="wrap">
+
+        <div id="header">
+
+            <div id="top-menu">
+
+                <div class="logo-box">
+                    <img src="../static/tosel-logo.png" class="t-logo">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                        <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
+                        <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                        <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="ham-menu">
+                    <img src="../static/ham-menu.png" class="ham-menu-bar">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="content">
+
+            
+
+             <div class="search-menu">
+                 <div class="search-bar">
+                    <section>
+                        <img src="../static/all-text.png" class="all-text">
+                        <span>전체 교재</span>
+                    </section>
+                    <section>
+                        <img src="../static/event.png" class="event">
+                        <span>이벤트</span>
+                    </section>
+                    <section>
+                        <img src="../static/best-seller.png" class="best-seller">
+                        <span>베스트 셀러</span>
+                    </section>
+                    <section>
+                        <img src="../static/new-product.png" class="new-product">
+                        <span>신상품</span>
+                    </section>
+                    <section>
+                        <img src="../static/goods.png" class="goods">
+                        <span>굿즈</span>
+                    </section>
+                    <section>
+                        <img src="../static/data-room.png" class="data-room">
+                        <span>학습 자료실</span>
+                    </section>
+
+                     <div class="search-box">
+                         <img src="../static/search.png" class="search-img">
+                         <input type="search">
+                         <button>검색</button>
+                     </div>
+                 </div>
+             </div>
+
+
+
+             <div id="page-section">
+                <div id="page-list">
+
+
+                    <section class="mypage-menu">
+                        <h2 class="mypage-title">마이페이지</h3>
+
+                        <ul class="mypage-list">
+                            <li class="mypage-item">주문내역 관리</li>
+                            <li class="mypage-item">장바구니</li>
+                            <li class="mypage-item">취소/반품/교환 조회</li>
+                            <li class="mypage-item">회원 정보</li>
+                        </ul>
+                    </section>
+
+
+                    <section class="manage-info">
+                        <h3 class="manage-title">회원정보 관리</h4>
+                        <h4 class="manage-sub">필수정보</h4>
+                        <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-box">
+                                <h5 class="blind">회원정보 수정</h5>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label class="lab-item" for="id">아이디</label></p>
+                                    </div>
+                                    <div class="input-text">
+                                        <p class="same-height mobile-text" id="userid">asdfasf</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label class="lab-item" for="userName">이름</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <div>
+                                            <span class="input-wrap mobile-name">
+                                                <input type="text" id="userName" class="inp" name="userName" maxlength="20" autocomplete="off" value="백민기">
+                                            <!-- input 태그 안  value에 이름 전송하기-->
+                                            </span>
+                                            <p class="add-info">*개명하신 경우 본인인증 후 수정 가능합니다.</p>
+                                        </div>
+                                        
+                                    </div>
+                    
+                                
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="userGender">성별</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <div>
+                                        <p id="userGender" class="genderText">여성</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="userBirth">생년월일</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <p id="userBirth" class="genderText">9999년 12월 31일</p>
+                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item mobile-selfcheck">
+                                    <div class="form-lab">
+                                        <p><label for="userCheck">본인인증</label></p>
+                                    </div>
+                                    <div class="input-text same-height">
+                                        <p id="userCheck" class="email-check">이메일 인증 완료</p>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="form-item">
+                                    <div class="form-lab change">
+                                        <p>비밀번호<br>변경</p>
+                                    </div>
+                    
+                    
+                                    <div class="input-text direction">
+                                        <div class="input-detail">
+                                            <label class="detail-lab" for="passwordCur">현재 비밀번호</label>
+                                            <div class="input-box">
+                                                <input type="text" id="passwordCur" placeholder="현재 비밀번호" class="inp-area" name="passwordCur" maxlength="20" autocomplete="off">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="input-detail">
+                                            <label class="detail-lab" for="passwordNew">새 비밀번호</label>
+                                            <div class="input-box">
+                                                <input type="text" id="passwordNew" placeholder="새 비밀번호" class="inp-area" name="passwordNew" maxlength="20" autocomplete="off">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="input-detail">
+                                            <label class="detail-lab" for="passNewCheck">비밀번호 다시 입력</label>
+                                            <div class="input-box">
+                                                <input type="text" id="passNewCheck" placeholder="비밀번호 확인" class="inp-area" name="passNewCheck" maxlength="20" autocomplete="off">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="passbtn-wrap">
+                                            <a id="passChange" href="">비밀번호 변경
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>주소</p>
+                                    </div>
+                                    <div class="input-text direction">
+                                        <div class="input-detail">
+                                            <div class="input-box address-box">
+                                                <input type="text" id="passwordCur" class="inp-area" name="passwordCur" maxlength="6" autocomplete="off">
+                                            </div>
+                                            <div class="btn-addressbox">
+                                                <a id="addfind" class="btn-address" href="">주소 찾기</a>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="input-detail">
+                                            <div class="input-box address-inp">
+                                                <input type="text" id="passwordNew" class="inp-area" name="passwordNew" maxlength="60" autocomplete="off">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="input-detail">
+                                            <div class="input-box address-inp">
+                                                <input type="text" id="passNewCheck" class="inp-area" name="passNewCheck" maxlength="60" autocomplete="off">
+                                            </div>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                    
+                                        <div class="input-detail address-textbox">
+                                            <p class="address-text">*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</p>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                    
+                                       
+                                        
+                                    </div>
+                                </div>
+                    
+                        
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="phoneNumber">전화번호</label></p>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="input-detail phone-detail">
+                                            <div class="input-box phone-inp">
+                                                <input type="text" id="phoneNumber" class="inp" name="phoneNumber" maxlength="20" autocomplete="off" placeholder="숫자만 입력해주세요">
+                                            </div>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                                        
+                                        <!-- input 태그 안  value에 이름 전송하기-->
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>이메일</p>
+                                    </div>
+                           
+                    
+                                        <div class="input-text direction mobile-layout">
+                                            <div class="input-detail">
+                                                <div class="input-box email-box">
+                                                    <input type="email" id="passwordCur" class="inp-area" name="passwordCur"  autocomplete="on" placeholder="tosel@tosel.com">
+                                                </div>
+                                                <div class="btn-addressbox">
+                                                    <a id="addSend" class="btn-email" href="">인증메일 전송</a>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="input-detail">
+                                                <div class="input-box email-box mobile-emailbox">
+                                                    <input type="text" id="passwordCur" class="inp-area" name="passwordCur" maxlength="6" autocomplete="off">
+                                                </div>
+                                                <div class="btn-addressbox">
+                                                    <a id="EmailCheck" class="btn-emailcheck" href="">인증하기</a>
+                                                </div>
+                                            </div>
+                        
+                                    
+                        
+                                           
+                                            
+                                        </div>
+                    
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>이메일<br>수신 동의</p>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="emailsms-box">
+                                            <div class="selectAgreebox">
+                                                <label class="mobile-select" for="selectEmail">선택 동의</label>
+                                                <input type="checkbox" id="selectEmail" name="selectAgree">
+                                                
+                                            </div>
+                                            <p class="mobile-selectText">*회원가입, 주문배송, 약관안내, 회사 주요정책 변경 관련 E-mail은 수신동의 관계없이 발송됩니다. </p>
+                                        </div>
+
+                                        
+                                        <!-- <div>*자세한 안내를 위해 E-mail대신 SMS등의 문자서비스로 발송될 수 있습니다.</div> -->
+                                    </div>
+                    
+                                
+                                </div>
+                    
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p>SMS<br>수신동의</p>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="sms-box">
+                                            <div class="selectAgreebox">
+                                            <label class="selectAgreement mobile-select" for="selectAgree">선택 동의</label>
+                                            <input type="checkbox" id="selectAgree" name="selectAgree">
+                                            </div>
+                                            <p class="sms-text">*자세한 안내를 위해 E-mail대신 SMS등의 문자서비스로 발송될 수 있습니다.</p>
+                                        </div>
+                                        
+                                        
+                                
+                                    </div>
+                                </div>
+                    
+                                <div class="form-item mobile-perInfo">
+                                    <div class="form-lab mobile-perlab">
+                                        <p class="person-info-title">개인정보 유효기간</p>
+                                    </div>
+                                    <div class="input-text mobile-perText">
+                                        <div class="sms-box mobile-perBox">
+                                            <div class="vaild">
+                                                <a href="">1년</a>
+                                                <a href="">3년</a>
+                                                <a href="">5년</a>
+                                                <a href="">10년</a>
+                                                <a href="">탈퇴시</a>
+                                            </div>
+                                            <p class="sms-text">*개인정보 유효기간 내 이용이 없을 경우, 휴면 계정으로 전환되어 각종 메일, 문자를 수신할 수 없습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    
+                            </div>
+                    
+                            <div class="btn-wrap">
+                                <a id="btnConfirm" href="" class="btn-model">
+                                    회원정보수정
+                                </a>
+                                <!-- <a id="btnConfirm" href="" class="btn-model">
+                                    <b id="btnLeave">회원 탈퇴하기</b>
+                                </a> -->
+                            </div>
+                        </form>
+                    </section>
+
+
+
+                    
+                </div>
+
+             </div>
+        </div>
+
+
+        <div id="footer">
+
+        </div> 
+    </div>
+</body>
+<script>
+    
+</script>
+</html>

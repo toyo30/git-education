@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/notice.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>TOSEL 교재몰 공지사항</title>
+</head>
+<body>
+    <div id="wrap">
+
+        <div id="header">
+
+            <div id="top-menu">
+
+                <div class="logo-box">
+                    <img src="../static/tosel-logo.png" class="t-logo">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                        <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
+                        <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                        <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="ham-menu">
+                    <img src="../static/ham-menu.png" class="ham-menu-bar">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="content">
+
+            
+
+             <div class="search-menu">
+                 <div class="search-bar">
+                    <section>
+                        <img src="../static/all-text.png" class="all-text">
+                        <span>전체 교재</span>
+                    </section>
+                    <section>
+                        <img src="../static/event.png" class="event">
+                        <span>이벤트</span>
+                    </section>
+                    <section>
+                        <img src="../static/best-seller.png" class="best-seller">
+                        <span>베스트 셀러</span>
+                    </section>
+                    <section>
+                        <img src="../static/new-product.png" class="new-product">
+                        <span>신상품</span>
+                    </section>
+                    <section>
+                        <img src="../static/goods.png" class="goods">
+                        <span>굿즈</span>
+                    </section>
+                    <section>
+                        <img src="../static/data-room.png" class="data-room">
+                        <span>학습 자료실</span>
+                    </section>
+
+                     <div class="search-box">
+                         <img src="../static/search.png" class="search-img">
+                         <input type="search">
+                         <button>검색</button>
+                     </div>
+                 </div>
+             </div>
+
+
+
+             <div id="page-section">
+                <div id="page-list">
+
+
+                    <section class="faq-area">
+                        <h2 class="faq-title">공지사항</h3>
+
+                        <div class="faq-searchBox">
+
+                            <div class="selectBox">
+                                <button class="label">제목</button>
+                                <ul class="optionList">
+                                  <li class="optionItem">제목</li>
+                                  <li class="optionItem">내용</li>
+                                  <li class="optionItem">작성자</li>
+                                  <li class="optionItem">제목 + 내용</li>
+                                </ul>
+                            </div>
+
+
+                            <div class="faq-search">
+                                <img src="../static/search.png" class="faqsearch-img">
+                                <input type="search">
+                                <button>검색</button>
+                            </div>
+
+                        </div>
+
+
+                        <div class="faq-arrange">
+                            <div class="arrange-box arrange-active">
+                                <p class="arrange-text arrange-active">
+                                    전체 공지
+                                </p>
+                            </div>
+
+                            <div class="arrange-box">
+                                <p class="arrange-text">
+                                    교재
+                                </p>
+                            </div>
+
+                            <div class="arrange-box">
+                                <p class="arrange-text">
+                                    이벤트
+                                </p>
+                            </div>
+
+                            <div class="arrange-box">
+                                <p class="arrange-text">
+                                    주문 / 배송
+                                </p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="faq-view-point">
+                            <div class="view-box view-active">
+                                <p class="view-text">전체</p>
+                            </div>                            
+
+                            <div class="view-box">
+                                <p class="view-text">날짜순</p>
+                            </div>              
+
+                            <div class="view-box">
+                                <p class="view-text">조회순</p>
+                            </div>              
+                        </div>
+
+                        
+
+
+                    </section>
+
+
+                    <section class="faq-section">
+                        <h2 class="faq-title blind"><span class="title-text blind">FAQ</span></h2>
+                        
+                        <ul class="faq-area">
+                            <li class="faq-box">
+                                <input type="checkbox" id="open-btn1" class="btn-input blind">
+                                <label for="open-btn1" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <div class="faq-question"><p class="question-text">[교재 공지]  윈터 패키지 출시 공지</p>
+                                    <div class="question-logo"><span class="blind">질문아이콘</span></div>
+                                    <button class="btn-open"><span class="blind">펼침</span></button>
+                                    <button class="btn-close"><span class="blind">닫힘</span></button>
+                                </div>  
+                                <div class="faq-answer">
+                                    <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
+                                    <p class="answer-text">푸드위드에 가입해주세요. 가입 후 푸드파트너 메뉴에 신청해주시면 자격 조건을 확인 후 파트너가 될 수 있어요.</p>
+                                </div> 
+                            </li>
+                    
+            
+                            <li class="faq-box">
+                                <input type="checkbox" id="open-btn2" class="btn-input blind">
+                                <label for="open-btn2" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <div class="faq-question"><p class="question-text">[교재 공지]  윈터 패키지 출시 공지</p>
+                                    <div class="question-logo"><span class="blind">질문아이콘</span></div>
+                                    <button class="btn-open"></button>
+                                    <button class="btn-close"></button>
+                                </div>
+                                <div class="faq-answer">
+                                    <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
+                                    <p class="answer-text">로그인 화면 내 [아이디 찾기], [비밀번호 찾기]를 클릭해 주세요.                                                                                                               
+            회원정보에 있는 이메일로 임시 비밀번호를 전송해드립니다.
+            보안을 위해 임시 비밀번호 로그인 후 비밀번호를 재설정해주세요.</p>
+                                </div>   
+                            </li>
+                    
+            
+                            <li class="faq-box">
+                                <input type="checkbox" id="open-btn3" class="btn-input blind">
+                                <label for="open-btn3" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <div class="faq-question"><p class="question-text">[교재 공지]  윈터 패키지 출시 공지</p>
+                                    <div class="question-logo"><span class="blind">질문아이콘</span></div>
+                                    <button class="btn-open"><span class="blind">펼침</span></button>
+                                    <button class="btn-close"><span class="blind">닫힘</span></button>
+                                </div>
+                                <div class="faq-answer">
+                                    <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
+                                    <p class="answer-text">레시피 하단에 사용한 제품 정보를 확인할 수 있어요. 또한 푸드 스토어에서도 확인 가능할 뿐만 아니라 구매도 가능해요.</p>
+                                </div>  
+                            </li>
+            
+                            <li class="faq-box">
+                                <input type="checkbox" id="open-btn4" class="btn-input blind">
+                                <label for="open-btn4" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <div class="faq-question"><p class="question-text">[교재 공지]  윈터 패키지 출시 공지</p>
+                                    <div class="question-logo"><span class="blind">질문아이콘</span></div>
+                                    <button class="btn-open"><span class="blind">펼침</span></button>
+                                    <button class="btn-close"><span class="blind">닫힘</span></button>
+                                </div>
+                                <div class="faq-answer">
+                                    <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
+                                    <p class="answer-text">레시피를 북마크 하시려면 로그인 후 마이페이지 북마크 메뉴에서 확인하실 수 있어요.</p>
+                                </div> 
+                            </li>
+            
+                            <li class="faq-box">
+                                <input type="checkbox" id="open-btn5" class="btn-input blind">
+                                <label for="open-btn5" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <div class="faq-question"><p class="question-text">[교재 공지]  윈터 패키지 출시 공지</p>
+                                    <div class="question-logo"><span class="blind">질문아이콘</span></div>
+                                    <button class="btn-open"><span class="blind">펼침</span></button>
+                                    <button class="btn-close"><span class="blind">닫힘</span></button>
+                                </div>
+                                <div class="faq-answer">
+                                    <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
+                                    <p class="answer-text">회원가입 후 월 4건 이상 푸드 콘텐츠를 제작해 주세요. 조건에 한하여 상시로 푸드 크리에이터 자격이 수여되고 있어요.</p>
+                                </div> 
+                            </li>
+                        </ul>
+                        
+                    
+                    </section>
+
+    
+
+
+                    
+                </div>
+
+             </div>
+        </div>
+
+
+        <div id="footer">
+
+        </div> 
+    </div>
+</body>
+<script>
+/* 일반함수 */
+const label = document.querySelector('.label');
+const options = document.querySelectorAll('.optionItem');
+// 클릭한 옵션의 텍스트를 라벨 안에 넣음
+const handleSelect = function(item) {
+  label.innerHTML = item.textContent;
+  label.parentNode.classList.remove('active');
+}
+// 옵션 클릭시 클릭한 옵션을 넘김
+options.forEach(function(option){
+  option.addEventListener('click', function(){handleSelect(option)})
+})
+// 라벨을 클릭시 옵션 목록이 열림/닫힘
+label.addEventListener('click', function(){
+  if(label.parentNode.classList.contains('active')) {
+    label.parentNode.classList.remove('active');
+  } else {
+    label.parentNode.classList.add('active');
+  }
+});
+
+
+$(document).on('click', '.arrange-box', function(){
+    $('.arrange-box').hasClass('arrange-active');
+    $('.arrange-text').hasClass('arrange-active');
+    
+});
+
+</script>
+</html>
