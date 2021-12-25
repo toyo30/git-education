@@ -1,1 +1,6 @@
 
+<<<<<<< Updated upstream:rm-test
+=======
+
+git switch -c  <new-branch-name>
+>>>>>>> Stashed changes:newfile
