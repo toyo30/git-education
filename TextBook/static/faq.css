@@ -832,7 +832,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    #arrange-border {
       top: 7.0667vw;
       height: 0.3137vw;
-      z-index: 3000;
    }
 
    .arrange-box {
