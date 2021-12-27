@@ -465,6 +465,8 @@ label.addEventListener('click', function(e){
   }
 });
 
+//특정 영역제외 클릭하기 
+
 
 
 
@@ -490,44 +492,45 @@ $(document).on('click', '.view-box', arrangeView);
 
 
 /* faq-answer-open-close */
-function faqOpenClose (){
-    $(this).parent().siblings().children('.faq-answer').animate({'opacity': '0'}, 100)
-    $(this).parent().siblings().children('.faq-answer').removeClass('faq-open');
-    $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
-    $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
-
-
-
-    $(this).siblings('.faq-answer').toggleClass('faq-open');
-    $(this).siblings('.faq-answer').animate({'opacity': '1'}, 100);
-    $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
-    $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-
-
-}
-
-$(document).on('click', '.btn-point', faqOpenClose);
-
-
-
 // function faqOpenClose (){
-//     // $(this).parent().siblings().children('.faq-answer').fadeIn(1500);
-//     // $(this).parent().siblings().children('.faq-question').children('.btn-open').fadeOut(1500);
-//     // $(this).parent().siblings().children('.faq-question').children('.btn-close').fadeIn(1500);
+//     $(this).parent().siblings().children('.faq-answer').animate({'opacity': '0'}, 500)
+//     $(this).siblings('.faq-answer').animate({'opacity': '0'}, 100);
+//     $(this).parent().siblings().children('.faq-answer').removeClass('faq-open');
+//     $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
+//     $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
 
 
 
-    
+//     $(this).siblings('.faq-answer').toggleClass('faq-open');
+//     $(this).siblings('.faq-answer').animate({'opacity': '1'}, 100);
 //     $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
 //     $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-//     $(this).siblings('.faq-answer').animate({'opacity': '1'}, 500)
-//     $(this).siblings('.faq-answer').fadeToggle(500);
-
 
 
 // }
 
 // $(document).on('click', '.btn-point', faqOpenClose);
+
+
+
+function faqOpenClose (){
+    $(this).parent().siblings().children('.faq-answer').fadeOut(200);
+    $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
+    $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
+
+
+
+    
+    $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
+    $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
+    // $(this).siblings('.faq-answer').animate({'opacity': '1'}, 500)
+    $(this).siblings('.faq-answer').fadeToggle(500);
+
+
+
+}
+
+$(document).on('click', '.btn-point', faqOpenClose);
 
 
 
