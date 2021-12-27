@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../static/faq.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>마이페이지 개인 회원정보 수정</title>
+    <title>FAQ</title>
 </head>
 <body>
     <div id="wrap">
@@ -295,8 +295,7 @@
                         
                         <ul class="faq-area">
                             <li class="faq-box">
-                                <input type="checkbox" id="open-btn1" class="btn-input blind">
-                                <label for="open-btn1" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <button for="open-btn1" class="btn-point"><span class="blind">클릭영역</span></button>
                                 <div class="faq-question"><p class="question-text">[주문] 토셀 교재몰에서 책을 샀는데, 다른 상품이 배송된다면 어떻게 해야하니요?</p>
                                     <div class="question-logo"><span class="blind">질문아이콘</span></div>
                                     <button class="btn-open"><span class="blind">펼침</span></button>
@@ -310,9 +309,9 @@
                     
             
                             <li class="faq-box">
-                                <input type="checkbox" id="open-btn2" class="btn-input blind">
-                                <label for="open-btn2" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <button for="open-btn2" class="btn-point"><span class="blind">클릭영역</span></button> 
                                 <div class="faq-question"><p class="question-text">[주문] 토셀 교재몰에서 책을 샀는데, 다른 상품이 배송된다면 어떻게 해야하니요?</p>
+                                   
                                     <div class="question-logo"><span class="blind">질문아이콘</span></div>
                                     <button class="btn-open"></button>
                                     <button class="btn-close"></button>
@@ -327,8 +326,7 @@
                     
             
                             <li class="faq-box">
-                                <input type="checkbox" id="open-btn3" class="btn-input blind">
-                                <label for="open-btn3" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <button for="open-btn3" class="btn-point"><span class="blind">클릭영역</span></button>
                                 <div class="faq-question"><p class="question-text">[주문] 토셀 교재몰에서 책을 샀는데, 다른 상품이 배송된다면 어떻게 해야하니요?</p>
                                     <div class="question-logo"><span class="blind">질문아이콘</span></div>
                                     <button class="btn-open"><span class="blind">펼침</span></button>
@@ -341,12 +339,12 @@
                             </li>
             
                             <li class="faq-box">
-                                <input type="checkbox" id="open-btn4" class="btn-input blind">
-                                <label for="open-btn4" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <button for="open-btn4" class="btn-point"><span class="blind">클릭영역</span></button>
                                 <div class="faq-question"><p class="question-text">[주문] 토셀 교재몰에서 책을 샀는데, 다른 상품이 배송된다면 어떻게 해야하니요?</p>
                                     <div class="question-logo"><span class="blind">질문아이콘</span></div>
                                     <button class="btn-open"><span class="blind">펼침</span></button>
                                     <button class="btn-close"><span class="blind">닫힘</span></button>
+                                    
                                 </div>
                                 <div class="faq-answer">
                                     <div class="answer-logo"><span class="answer-logo blind">답변아이콘</span></div>
@@ -355,8 +353,7 @@
                             </li>
             
                             <li class="faq-box">
-                                <input type="checkbox" id="open-btn5" class="btn-input blind">
-                                <label for="open-btn5" class="btn-point"><span class="blind">클릭영역</span></label>
+                                <button for="open-btn5" class="btn-point"><span class="blind">클릭영역</span></button>
                                 <div class="faq-question"><p class="question-text">[주문] 토셀 교재몰에서 책을 샀는데, 다른 상품이 배송된다면 어떻게 해야하니요?</p>
                                     <div class="question-logo"><span class="blind">질문아이콘</span></div>
                                     <button class="btn-open"><span class="blind">펼침</span></button>
@@ -440,11 +437,12 @@
             <img src="../static/mobile-cart.png" class="m-cart">
         </div>
     </div>
-    </div>
+
 </body>
 <script>
 /* 일반함수 */
 const label = document.querySelector('.label');
+const faqBtn = document.querySelector('.btn-point');
 const options = document.querySelectorAll('.optionItem');
 // 클릭한 옵션의 텍스트를 라벨 안에 넣음
 const handleSelect = function(item) {
@@ -474,6 +472,11 @@ body.addEventListener('click', function(event) {
     if(target !== label) {
         label.parentNode.classList.remove('active');
     }
+    
+    if(target !== faqBtn) {
+
+        $('.faq-answer').stop().slideUp();
+    }
 });
 
 
@@ -500,30 +503,11 @@ $(document).on('click', '.view-box', arrangeView);
 
 
 
-/* faq-answer-open-close */
-// function faqOpenClose (){
-//     $(this).parent().siblings().children('.faq-answer').animate({'opacity': '0'}, 500)
-//     $(this).siblings('.faq-answer').animate({'opacity': '0'}, 100);
-//     $(this).parent().siblings().children('.faq-answer').removeClass('faq-open');
-//     $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
-//     $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
-
-
-
-//     $(this).siblings('.faq-answer').toggleClass('faq-open');
-//     $(this).siblings('.faq-answer').animate({'opacity': '1'}, 100);
-//     $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
-//     $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-
-
-// }
-
-// $(document).on('click', '.btn-point', faqOpenClose);
-
 
 
 function faqOpenClose (){
-    $(this).parent().siblings().children('.faq-answer').fadeOut(200);
+   
+    $(this).parent().siblings().children('.faq-answer').stop().slideUp();
     $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
     $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
 
@@ -532,12 +516,28 @@ function faqOpenClose (){
     
     $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
     $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-    // $(this).siblings('.faq-answer').animate({'opacity': '1'}, 500)
-    $(this).siblings('.faq-answer').fadeToggle(500);
-
-
-
+    $(this).siblings('.faq-answer').stop().slideToggle();
+    
 }
+
+
+// $(document).on('click', '.btn-point', faqOpenClose);
+
+// function faqOpenClose (){
+   
+// //    $(this).not().parent().siblings()('.faq-answer').stop().slideUp();
+// //    $(this).not().siblings('.btn-open').removeClass('faq-close');
+// //    $(this).not().siblings('.btn-close').removeClass('faq-open');
+
+
+
+   
+// //    $(this).siblings('.btn-open').toggleClass('faq-close');
+// //    $(this).siblings('.btn-close').toggleClass('faq-open');
+//    $(this).parent.siblings('.faq-answer').stop().slideToggle();
+   
+// }
+
 
 $(document).on('click', '.btn-point', faqOpenClose);
 
