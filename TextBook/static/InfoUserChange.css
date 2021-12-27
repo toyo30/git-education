@@ -2,64 +2,15 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 
+html {
+   font-family: 'NanumSquare', sans-serif;
+}
+
 * { margin: 0px; padding: 0px; 
    box-sizing: border-box; 
    font-family: NanumSquare;
    list-style-type: none; text-decoration: none;
 }
-
-
-body.before-load {
-	overflow: hidden;
-} 
-
-.loading {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 100;
-	background: white;
-	opacity: 0;
-	transition: 0.5s;
-}
-.before-load .container {
-    display: none;
-} 
-.before-load .loading {
-	opacity: 1;
-	transition: 900ms ease-in-out;
-} 
-@keyframes loading-spin {
-	100% { transform: rotate(360deg); }
-}
-@keyframes loading-circle-ani {
-	0% { stroke-dashoffset: 157; }
-	75% { stroke-dashoffset: -147; }
-	100% { stroke-dashoffset: -157; }
-}
-.loading-circle {
-	width: 54px;
-	height: 54px;
-	animation: loading-spin 3s infinite;
-}
-.loading-circle circle {
-	stroke: black;
-	stroke-width: 4;
-	/* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
-	stroke-dasharray: 157, 157;
-	stroke-dashoffset: 0;
-	fill: transparent;
-	animation: loading-circle-ani 1s infinite;
-	/* transition: 1s; */
-}
-
-
-
 
 
 
@@ -146,25 +97,14 @@ input[type="checkbox"] {
    vertical-align: middle; cursor: pointer;
 }
 
-
-nav { display: flex; align-items: center;}
-nav > ul li { display: inline-block; cursor: pointer; margin-right: 2.1vw;}
-nav > ul li a { 
-   color: #333; vertical-align: middle; display: inline-block;
-   font-size: 0.45rem;
+.tm-logo {
+   display: none;
 }
 
-nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9px;}
-.mypage { width: 19.06px; height: 21.44px; }
-.notice { width: 18px; height: 20px; }
-.FAQ { width: 18px; height: 18px; }
-.cart { width: 21px; height: 20px; }
-
-.ham-menu { 
-   display: flex; cursor: pointer;
-   align-items: center;
+.mobile-faq-logo, .mobile-bell-log {
+   display: none;
 }
-.ham-menu-bar { width: 29.17px; height: 23.44px;}
+
 
 
 
@@ -172,43 +112,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 #content { width: 100%;}
 
 /* book*/
-
-.search-bar { 
-   width: 1195px; margin: 0 auto; height: 100%;
-   display: flex; align-items: center; justify-content: space-between;
-}
-
-.compass { width: 350px; height: 43px;}
-
-.search-box { 
-   width: 366px; height: 39px; background: #fff; 
-   position: relative; border-radius: 47px; outline: none;
-}
-.search-box > input { 
-   width: 325px; outline: none; float: left; height: 100%;
-   border: 2.5px solid #DFDFDF; border-radius: 47px;
-   padding: 0 55px 0 40px;
-}
-.search-box > button { 
-   width: 87px; height: 100%; border: 1px solid transparent; background: #EC5937;
-   outline: none; color: #fff; border-radius: 47px; position: absolute;
-   top: 0; right: 0; color: #FFF7EC; font-size: 0.5rem; line-height: 20px;
-   cursor: pointer;
-}
-
-
-.search-img { 
-   position: absolute; top: 25%; left: 4%; width: 19.5px; height: 19px;
-   cursor: pointer;
-}
-
-
-.all-text { width: 40px; height: 36px;}
-.event { width: 37px; height: 37px; }
-.best-seller { width: 35.43px; height: 36px; }
-.new-product { width: 44.65px; height: 46px; }
-.goods { width: 32.4px; height: 36px; }
-.data-room { width: 36px; height: 36px; }
 
 
 /* seach-menu */
@@ -226,6 +129,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    margin-top: 60px;
    display: flex;
    color: #333333;
+   margin-bottom: 500px;
 }
 
 /* mypage-menu */
@@ -939,15 +843,17 @@ color: #FDFDFD;
 }
 
 
-@media screen and (max-width: 768px){
-   #wrap {
-      min-width: 290px;
-   }
+@media screen and (max-width: 690px){
+
 
    #top-menu, #page-list, .search-bar { width: 89.7%; }
 
    #header, .search-menu {
       display: none;
+   }
+
+   #page-list {
+      margin-bottom: 30px;
    }
 
    .mypage-menu, .manage-title {
@@ -972,7 +878,7 @@ color: #FDFDFD;
 
    
    .form-lab {
-      width: 18.9231vw;
+      width: 16.4872vw;
       font-size: 1.27rem;
       line-height: 6.9231vw;
       font-weight: bold;
@@ -988,7 +894,7 @@ color: #FDFDFD;
       font-size: 0.56rem;
       line-height: 0.63rem;
       padding-left: 6.1538vw;
-      width: 100%;
+      width: 70.2564vw;
    }
 
    .form-lab > p, .form-lab label {
@@ -1013,6 +919,7 @@ color: #FDFDFD;
    }
    
    .mobile-name {
+      width: 64.6667vw;
       margin-bottom: 1.2821vw;
    }
    
@@ -1031,7 +938,7 @@ color: #FDFDFD;
    }
 
    .genderText {
-      width: 66.6667vw;
+      width: 64.6667vw;
       height: 8.4615vw;
       background: #F3F3F3;
       border-radius: 1.2821vw;
@@ -1118,7 +1025,7 @@ color: #FDFDFD;
    }
    
    .address-inp, .phone-inp {
-      width: 66.6667vw;
+      width: 63.6667vw;
       height: 8.4615vw;
    }
    
@@ -1169,16 +1076,25 @@ color: #FDFDFD;
    }
    
    .mobile-emailbox {
-      width: 37.0256vw;
+      width: 34.4615vw;
    }
 
 /* select */
 
    .mobile-selectText, .sms-text {
       display: block;
-      word-wrap:break-word;
+      word-break: keep-all;
       font-size: 0.91rem;
-      line-height: 1rem;
+      line-height: 1.3rem;
+      width: 58.5897vw;
+   }
+
+   .sms-text {
+      width: 42.6154vw;
+   }
+
+   .mobile-sms-text {
+      width: 100%;
    }
 
    .mobile-select {
@@ -1221,6 +1137,7 @@ color: #FDFDFD;
 
    .mobile-perText {
       padding: 0;
+      width: 89.7436vw;
    }
 
    .mobile-perBox {
@@ -1268,11 +1185,24 @@ color: #FDFDFD;
    }
    
    
+}
 
-
+@media screen and (max-width: 360px){
+   .mobile-selectText, .sms-text {
+      line-height: 1.3rem;
+   }
 }
 
 
+@media screen and (max-width: 320px){
+   .mobile-selectText, .sms-text {
+      line-height: 1.3rem;
+   }
 
+   #passChange {
+      font-size: 8px;
+      -webkit-transform: scale(0.83);
+   }
+}
 
 

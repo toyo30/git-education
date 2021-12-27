@@ -516,7 +516,7 @@ function faqOpenClose (){
     
     $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
     $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-    $(this).siblings('.faq-answer').stop().slideToggle();
+    $(this).siblings('.faq-answer').stop().slideToggle(500);
     
 }
 
