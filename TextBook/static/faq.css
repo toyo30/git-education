@@ -1210,7 +1210,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	body { position: relative;}
 	.mobile-all-menu { 
 		position: fixed; top: 0; left: 0; width: 0%; height: 100%; 
-		z-index: 999; transition: all 0.5s; overflow-y: scroll;
+		z-index: 5000; transition: all 0.5s; overflow-y: scroll;
 		display: block!important;
 	}
 	/* .mobile-all-menu div{ display: none;} */
