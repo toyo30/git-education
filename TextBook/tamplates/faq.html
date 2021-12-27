@@ -271,6 +271,7 @@
                         
 
                         <div class="faq-view-point">
+                            <div id="vertical-underline"></div>
                             <div class="view-box view-active">
                                 <p class="view-text">전체</p>
                             </div>                            
@@ -505,21 +506,20 @@ $(document).on('click', '.view-box', arrangeView);
 
 
 
-function faqOpenClose (){
+function faqClose (){
    
-    $(this).parent().siblings().children('.faq-answer').stop().slideUp();
+    $(this).parent().siblings().children('.faq-answer').stop().slideUp(400);
     $(this).parent().siblings().children('.faq-question').children('.btn-open').removeClass('faq-close');
-    $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');
-
-
-
-    
-    $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
-    $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
-    $(this).siblings('.faq-answer').stop().slideToggle(500);
-    
+    $(this).parent().siblings().children('.faq-question').children('.btn-close').removeClass('faq-open');    
 }
 
+
+function faqOpenClose (){
+   $(this).siblings('.faq-question').children('.btn-open').toggleClass('faq-close');
+   $(this).siblings('.faq-question').children('.btn-close').toggleClass('faq-open');
+   $(this).siblings('.faq-answer').stop().slideToggle(400);
+   
+}
 
 // $(document).on('click', '.btn-point', faqOpenClose);
 
@@ -538,10 +538,43 @@ function faqOpenClose (){
    
 // }
 
-
+$(document).on('click', '.btn-point', faqClose);
 $(document).on('click', '.btn-point', faqOpenClose);
 
 
+
+
+
+
+/* vertical var */
+
+let verticalBar = document.querySelector('#vertical-underline');
+let verticalMenus = document.querySelectorAll('.faq-view-point > .view-box');
+let verticalFirst = document.querySelectorAll('.view-box');
+
+console.log(verticalFirst[0]);
+
+
+
+console.log(verticalFirst);
+console.log($('.view-box:first-child').text());
+console.log($('.view-box').eq(0));
+
+function verticalIndicator(e) {
+  verticalBar.style.left = e.offsetLeft + "px";
+  verticalBar.style.width = e.offsetWidth + "px";
+  verticalBar.style.top = e.offsetTop + e.offsetHeight - 3 + "px";
+}
+
+
+verticalMenus.forEach((menu) =>
+  menu.addEventListener("click", (e) => verticalIndicator(e.currentTarget))
+);
+
+
+verticalBar.style.left = verticalFirst[0].offsetLeft + "px";
+verticalBar.style.width = verticalFirst[0].offsetWidth + "px";
+verticalBar.style.top = verticalFirst[0].offsetTop + verticalFirst[0].offsetHeight + "px";
 
 </script>
 </html>

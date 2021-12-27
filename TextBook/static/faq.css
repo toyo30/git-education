@@ -235,6 +235,8 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 .selectBox.active .optionList {
   max-height: 500px;
   z-index: 3000;
+  /* border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px; */
 }
 
 .selectBox .optionItem {
@@ -254,16 +256,33 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     font-size: 18px;
     line-height: 21px;
     z-index: 3000;
-   
+    
 }
+
+/* .selectBox .optionItem:nth-child(1) {
+   border-radius: 20px;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;   
+}
+
+.optionItem:nth-child(1):hover ~ .selectBox.active .optionList {
+   background: rgba(14, 14, 14, 0.036);
+}
+
+
+
+.selectBox .optionItem:last-child {
+   border-radius: 20px;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   
+} */
+
 
 .selectBox .optionItem:hover {
   background: rgba(14, 14, 14, 0.036);
 }
 
-.selectBox .optionItem:last-child {
-  border-bottom: 0 none;
-}
 
 
 .selectBox .optionList::-webkit-scrollbar {width: 6px;}
@@ -349,6 +368,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 /* faq-view-point */
 
 .faq-view-point {
+   position: relative;
    display: flex;
    align-items: center;
    height: 60px;
@@ -372,9 +392,21 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    
 }
 
-.view-active {
-   border-bottom: 4px solid #EC5937;
+#vertical-underline {
+   position: absolute;
+   height: 4px;
+   width: 0;
+   background: #EC5937;
+   top: 0px;
+   transition: 0.5s;
+   border-radius: 3px;
+   left: 0px;
 }
+
+
+/* .view-active {
+   border-bottom: 4px solid #EC5937;
+} */
 
 /* faq-section */
 
@@ -810,9 +842,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       line-height: 0.72rem;
    }
 
-   .view-active {
+   /* .view-active {
       border-bottom: 0.3137vw solid #EC5937;
-   }
+   } */
 
    /* faq-section */
 
@@ -1398,13 +1430,14 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    }
 
    .view-text {
+      /* font-size 수정 */
       font-size: 1.09rem;
       line-height: 1.20rem;
    }
 
-   .view-active {
+   /* .view-active {
       border-bottom: 1.0256vw solid #EC5937;
-   }
+   } */
 
    /* faq-section */
 
