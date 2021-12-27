@@ -468,6 +468,15 @@ label.addEventListener('click', function(e){
 //특정 영역제외 클릭하기 
 
 
+var body = document.querySelector("body");
+body.addEventListener('click', function(event) {
+    var target = event.target;
+    if(target !== label) {
+        label.parentNode.classList.remove('active');
+    }
+});
+
+
 
 
 /* faq-arrange-category */
