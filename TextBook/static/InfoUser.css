@@ -22,57 +22,6 @@ html,body { width: 100%; height: 100%; font-size: 32px;}
 
 
 
-/* loading */
-body.before-load {
-	overflow: hidden;
-} 
-
-.loading {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 100;
-	background: white;
-	opacity: 0;
-	transition: 0.5s;
-}
-.before-load .wrap {
-   display: none;
-} 
-.before-load .loading {
-  opacity: 1;
-  transition: 900ms ease-in-out;
-} 
-@keyframes loading-spin {
-  100% { transform: rotate(360deg); }
-}
-@keyframes loading-circle-ani {
-  0% { stroke-dashoffset: 157; }
-  75% { stroke-dashoffset: -147; }
-  100% { stroke-dashoffset: -157; }
-}
-.loading-circle {
-  width: 54px;
-  height: 54px;
-  animation: loading-spin 3s infinite;
-}
-.loading-circle circle {
-  stroke: black;
-  stroke-width: 4;
-  /* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
-  stroke-dasharray: 157, 157;
-  stroke-dashoffset: 0;
-  fill: transparent;
-  animation: loading-circle-ani 1s infinite;
-  /* transition: 1s; */
-}
-
-
 
 
 
@@ -586,11 +535,16 @@ line-height: 21px;
    position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 1195px;
    height: 273px; margin: auto auto; padding: 10px;
    text-align: center;
-   background-color: #FFFFFF;
+   background-color: #FdFdFd;
    padding-top: 90px;
    padding-bottom: 80px;
    border-radius: 20px;
    z-index: 100010;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.check-up {
+   display: none;
 }
 
 .check-up {
@@ -609,6 +563,14 @@ line-height: 21px;
    font-weight: bold;
    font-size: 14px;
    line-height: 16px;
+   color: #EC683D;
+   margin-bottom: 20px;
+}
+
+.popup-leavetext {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 14px;
    color: #EC683D;
    margin-bottom: 20px;
 }
@@ -674,6 +636,20 @@ line-height: 21px;
    cursor: pointer;
 }
 
+
+.mcheck-inputarea {
+   width: 304px;
+   height: 31px;
+   
+}
+
+.mcheck-inputarea input {
+   display: block;
+   font-size: 13px;
+   line-height: 15px;
+
+
+}
 /* #footer { width: 100%; height: 585px; background: cadetblue; } */
 
 
@@ -1003,6 +979,89 @@ line-height: 21px;
    }
    
    
+/* 딤드 영역 */
+
+
+   
+   .pop-up, .check-up {
+      width: 93.7%;
+      height: 21.4118vw; 
+      padding: 0.7843vw;
+      padding-top: 7.0588vw;
+      padding-bottom: 6.2745vw;
+      border-radius: 1.5686vw;
+      filter: drop-shadow(0px 0.3922vw 0.3922vw rgba(0, 0, 0, 0.25));
+   }
+   
+
+
+
+   .check-up {
+      height: 24.1569vw;
+      padding: 2.3529vw 0 0 1.5686vw;
+   }
+   
+   .popup-title {
+      font-size: 0.56rem;
+      line-height: 0.66rem;
+      margin-bottom: 0.9412vw;
+   }
+   
+   .popup-text {
+      font-size: 0.44rem;
+      line-height: 0.50rem;
+      margin-bottom: 1.5686vw;
+   }
+
+   .popup-leavetext {
+      font-size: 0.38rem;
+      line-height: 0.44rem;
+      margin-bottom: 1.5686vw;
+   }
+   
+   
+   
+   .btn-box {
+      width: 18.8235vw;
+      
+   }
+   
+   .btn-box  > button {
+      width: 6.2745vw;
+      height: 3.1373vw;
+      font-size: 0.56rem;
+      line-height: 0.66rem;
+   }
+   
+   
+   
+   .mcheck-input {
+      width: 23.8431vw;
+   }
+   
+   .mcheck-input label {
+      font-size: 0.41rem;
+      line-height: 0.47rem;
+   }
+   
+
+   
+   .mcheck-inputarea input {
+      padding: 0.6275vw 0.7843vw;
+      font-size: 0.41rem;
+      line-height: 0.50rem;
+      
+   }
+   
+   .check-up .btn-box {
+      margin-top: 0.7843vw;
+   }
+   
+   .mcheck-inputarea {
+      width: 23.8431vw;
+      height: 2.4314vw;
+      
+   }
    
 }
 
@@ -1353,6 +1412,99 @@ line-height: 21px;
       line-height: 4.4615vw;
       font-weight: normal;
       word-break: keep-all;
+   }
+
+
+
+   .pop-up, .check-up {
+      width: 89.7%;
+      padding: 6.6667vw 0 5.8974vw 0;
+      border-radius: 5.1282vw;
+      filter: none;
+   }
+
+
+   
+   .pop-up {
+      height: 37.6923vw;
+
+   }
+
+
+   .check-up {
+      height: 69.2308vw;
+      padding: 7.4359vw 0 5.1282vw 0;
+   }
+
+
+   
+   .popup-title {
+      font-size: 1.64rem;
+      line-height: 1.82rem;
+      margin-bottom: 3.3333vw;
+   }
+   
+   .popup-text {
+      font-size: 1.09rem;
+      line-height: 1.27rem;
+      margin-bottom: 5.1282vw;
+   }
+
+   .popup-leavetext {
+      font-size: 1.09rem;
+      line-height: 1.27rem;
+      margin-bottom: 2.8205vw;
+   }
+   
+   
+   
+   .btn-box {
+      width: 56.4103vw;
+      
+   }
+
+   
+   .btn-box  > button {
+      width: 12.8205vw;
+      height: 7.6923vw;
+      font-size: 1.64rem;
+      line-height: 1.82rem;
+   }
+   
+   
+   
+   .mcheck-input {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 3.8462vw;
+      padding: 0 5.1282vw;
+      
+   }
+
+   
+   .mcheck-input label {
+      font-size: 1.18rem;
+      line-height: 1.36rem;
+   }
+   
+
+   
+   .mcheck-inputarea input {
+      padding: 2.0513vw 2.5641vw;
+      font-size: 1.18rem;
+      line-height: 1.36rem;
+      
+   }
+   
+   .check-up .btn-box {
+      margin-top: 0.7843vw;
+   }
+   
+   .mcheck-inputarea {
+      width: 77.9487vw;
+      height: 7.9487vw;
+      margin: 0 auto;
+      
    }
 
 
