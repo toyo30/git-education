@@ -1420,7 +1420,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       font-size: 1.82rem;
       line-height: 1.82rem;
       background: rgba(255, 255, 255, 0.21);
-      box-sizing: none !important;
+      box-shadow: none !important;
    }
 
    
