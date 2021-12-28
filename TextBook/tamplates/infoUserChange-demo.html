@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../static/infoUserChangeDemo.css">
     <title>개인회원정보 수정</title>
@@ -97,12 +99,15 @@
                     $('.mobile-all-menu div').fadeIn();
                     $('.mobile-all-menu section').fadeIn();
                     $('body').css('overflow-y','hidden');
+                    $('.logo-box').css("display", "none");
                 });
+
                 $('.m-close').click(function(){
                     $('.mobile-all-menu').css('background','transparent');
                     $('.mobile-all-menu').css('width','0%');
                     $('.mobile-all-menu div').fadeOut();
                     $('.mobile-all-menu section').fadeOut();
+                    $('.logo-box').fadeIn();
                 });
             });
         </script>
@@ -203,7 +208,7 @@
                             <li class="mypage-item">주문내역 관리</li>
                             <li class="mypage-item">장바구니</li>
                             <li class="mypage-item">취소/반품/교환 조회</li>
-                            <li class="mypage-item">회원 정보</li>
+                            <li class="mypage-item text-active">회원 정보</li>
                         </ul>
                     </section>
 
@@ -331,7 +336,7 @@
                                             </div>
                                         </div>
                     
-                                        <div class="input-detail">
+                                        <div class="input-detail mobile-addressdetail">
                                             <div class="input-box address-inp">
                                                 <input type="text" id="passNewCheck" class="inp-area" name="passNewCheck" maxlength="60" autocomplete="off">
                                             </div>
@@ -383,7 +388,7 @@
                                                 </div>
                                             </div>
                         
-                                            <div class="input-detail">
+                                            <div class="input-detail mobile-addressdetail">
                                                 <div class="input-box email-box mobile-emailbox">
                                                     <input type="text" id="passwordCur" class="inp-area" name="passwordCur" maxlength="6" autocomplete="off">
                                                 </div>
