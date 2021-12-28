@@ -517,8 +517,14 @@ line-height: 21px;
 
 /* dimmed-section */
 
+
+.mobile-check-bar {
+   display: none;
+}
+
+
 .dimmed-section {
-   display: block;
+   display: none;
    position: fixed;
    top: 0;
    right: 0;
@@ -528,6 +534,8 @@ line-height: 21px;
    opacity:.8;
    filter: alpha(opacity=80);
    z-index: 100000;
+   /* height: 1000px; */
+   /* overflow-y: hidden; */
 }
 
 .pop-up, .check-up {
@@ -543,13 +551,13 @@ line-height: 21px;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.check-up {
+.pop-up, .check-up {
    display: none;
 }
 
 .check-up {
    height: 308px;
-   padding: 30px 0 0 20px;
+   padding: 30px 0 20px 0;
 }
 
 .popup-title {
@@ -564,7 +572,7 @@ line-height: 21px;
    font-size: 14px;
    line-height: 16px;
    color: #EC683D;
-   margin-bottom: 20px;
+   margin-bottom: 55px;
 }
 
 .popup-leavetext {
@@ -605,12 +613,15 @@ line-height: 21px;
    width: 304px;
    margin: 0 auto;
    text-align: left;
+   margin-bottom: 20px;
 }
 
 .mcheck-input label {
+   display: block;
    font-weight: normal;
    font-size: 13px;
    line-height: 15px;
+   margin-bottom: 7px;
 }
 
 .mcheck-inputarea {
@@ -998,7 +1009,7 @@ line-height: 21px;
 
    .check-up {
       height: 24.1569vw;
-      padding: 2.3529vw 0 0 1.5686vw;
+      padding: 2.3529vw 0 1.5686vw 0;
    }
    
    .popup-title {
@@ -1006,11 +1017,15 @@ line-height: 21px;
       line-height: 0.66rem;
       margin-bottom: 0.9412vw;
    }
+
+   .check-up .popup-title {
+      margin-bottom: 0.9412vw;
+   }
    
    .popup-text {
       font-size: 0.44rem;
       line-height: 0.50rem;
-      margin-bottom: 1.5686vw;
+      margin-bottom: 4.3137vw;
    }
 
    .popup-leavetext {
@@ -1037,11 +1052,13 @@ line-height: 21px;
    
    .mcheck-input {
       width: 23.8431vw;
+      margin-bottom: 1.5686vw;
    }
    
    .mcheck-input label {
       font-size: 0.41rem;
       line-height: 0.47rem;
+      margin-bottom: 0.5490vw;
    }
    
 
@@ -1416,6 +1433,10 @@ line-height: 21px;
 
 
 
+   /* dimmed */
+
+
+
    .pop-up, .check-up {
       width: 89.7%;
       padding: 6.6667vw 0 5.8974vw 0;
@@ -1423,6 +1444,9 @@ line-height: 21px;
       filter: none;
    }
 
+   .check-up {
+      height: 69.2308vw;
+   }
 
    
    .pop-up {
@@ -1443,6 +1467,10 @@ line-height: 21px;
       line-height: 1.82rem;
       margin-bottom: 3.3333vw;
    }
+
+   .check-up .popup-title {
+      margin-bottom: 2.8205vw;
+   }
    
    .popup-text {
       font-size: 1.09rem;
@@ -1460,6 +1488,8 @@ line-height: 21px;
    
    .btn-box {
       width: 56.4103vw;
+      display: flex;
+      align-items: center;
       
    }
 
@@ -1471,20 +1501,29 @@ line-height: 21px;
       line-height: 1.82rem;
    }
    
-   
+   .mobile-check-bar {
+      display: block;
+      width: 1px;
+      height: 22px;
+      background: #DFDFDF;
+   }
    
    .mcheck-input {
+      display: block;
       width: 100%;
       margin: 0 auto;
       margin-bottom: 3.8462vw;
       padding: 0 5.1282vw;
+     
       
    }
 
    
    .mcheck-input label {
+      display: block;
       font-size: 1.18rem;
       line-height: 1.36rem;
+      margin-bottom: 1.7949vw;
    }
    
 

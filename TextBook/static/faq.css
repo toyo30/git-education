@@ -187,7 +187,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    height: 53px;
    border-radius: 47px;
    cursor: pointer;
-   background-color: #F3F3F3;
+   background-color: #FDFDFD;
 }
 
 
@@ -200,11 +200,10 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    height: inherit;
    border: 0 none;
    outline: 0 none;
-   background: transparent;
+   background: #FDFDFD;
    cursor: pointer;
    padding: 15px;
    padding-left: 25px;
-   margin-top: 4px;
    font-weight: normal;
    font-size: 18px;
    line-height: 21px;
@@ -213,13 +212,14 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    background-size: 20px;
    border-radius: 27px;
    transition: 100ms;
+   border: 2.5px solid #E8E8E8;;
 }
 
 .selectBox.active .label{
    transition: 100ms;
    background: url(../static/faq/faq-close.png) calc(100% - 16px) center no-repeat;
    background-size: 20px;
-   background-color: #F3F3F3;
+   background-color: #FDFDFD;
    box-shadow: 4px 4px 3px rgb(0 0 0 / 7%);
 }
 
@@ -234,9 +234,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    max-height: 0;
    /* transition: .3s ease-in; */
    z-index: 3000;
-   background: #f3f3f3;
-   padding-top: 57px;
+   background: #FDFDFD;
    border-radius: 27px;
+   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
 }
 
 .selectBox.active .optionList {
@@ -248,15 +248,12 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 .selectBox .optionItem {
     /* border-bottom: 1px dashed rgb(170, 72, 72); */
-    padding: 5px 15px 5px;
-    width: 177px;
-    height: 53px;
+    width: 100%;
+    height: 100%;
     /* transition: .1s; */
-    border-radius: 50px;
-    background-color: #f4f4f4;
     background-size: 20px;
     cursor: pointer;
-    background-color: #F3F3F3;
+    background-color: #FDFDFD;
     padding: 15px;
     padding-left: 25px;
     font-weight: normal;
@@ -264,6 +261,14 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     line-height: 21px;
     z-index: 3000;
     
+}
+
+
+.selectBox .optionItem:first-child {
+   padding-top: 73px;
+   width: 100%;
+   padding-bottom: 15px;
+   height: 100%;;
 }
 
 /* .selectBox .optionItem:nth-child(1) {
@@ -287,9 +292,8 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 .selectBox .optionItem:hover {
-  background: rgba(14, 14, 14, 0.036);
+  background: #F3F3F3;
 }
-
 
 
 .selectBox .optionList::-webkit-scrollbar {width: 6px;}
@@ -696,11 +700,11 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
    .selectBox {
+      position: relative;
       width: 13.8824vw;
       height: 4.1569vw;
       border-radius: 3.6863vw;
-      background-color: #F3F3F3;
-      margin-right: 1.1765vw;
+      margin-right: 1.3333vw;
    }
 
    
@@ -708,21 +712,22 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
    .selectBox .label {
-      padding: 2.3641vw;
+      position: relative;
+      width: 100%;
+      height: 100%;
       margin-top: 0;
       padding-left: 2.0513vw;
       font-size: 0.60rem;
       line-height: 0.66rem;
-      z-index: 3001;
       background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
       background-size: 0.63rem;
       border-radius: 3.6863vw;
+
    }
 
 
 
    .selectBox .optionList {
-      position: absolute;
       top: 0px;
       left: 0;
       width: 100%;
@@ -731,56 +736,35 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       overflow: hidden;
       max-height: 0;
       /* transition: .3s ease-in; */
-      z-index: 3000;
-      background: #f3f3f3;
       
       border-radius: 2.1176vw;
    }
 
    .selectBox.active .optionList {
       max-height: 39.2157vw;
-      padding-top: 5.1569vw;
    }
 
-   .selectBox .optionItem {
-      /* border-bottom: 1px dashed rgb(170, 72, 72); */
-      padding: 5px 15px 5px;
-      width: 177px;
-      height: 53px;
-      /* transition: .1s; */
-      border-radius: 50px;
-      background-color: #f4f4f4;
-      background-size: 20px;
-      cursor: pointer;
-      background-color: #F3F3F3;
-      padding: 15px;
-      padding-left: 25px;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      z-index: 3000;
-     
-  }
 
    .selectBox .optionItem {
       padding: 0.3922vw 1.1765vw 0.3922vw;
-      width: 13.8824vw;
-      height: 4.1569vw;
-      border-radius: 3.9216vw;
-      background-size: 1.5686vw;
       padding: 1.1765vw;
       padding-left: 1.9608vw;
       font-size: 0.56rem;
       line-height: 0.66rem;
    }
 
-   
+   .selectBox .optionItem:first-child {
+      padding-top: 5.7255vw;
+      width: 100%;
+      padding-bottom: 1.1765vw;
+      height: 100%;;
+   }
    
    .selectBox.active .label{
       background: url(../static/faq/faq-close.png) calc(100% - 1.2549vw) center no-repeat;
       background-size: 0.63rem;
-      background-color: #F3F3F3;
       box-shadow: 0.3137vw 0.3137vw 0.2353vw rgb(0 0 0 / 7%);
+      background-color: #FDFDFD;
    }
    
    
@@ -1324,7 +1308,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    .selectBox {
       width: 22.5641vw;
       height: 8.7179vw;
-      background-color: #F3F3F3;
    }
 
 
@@ -1345,7 +1328,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
    .selectBox .optionList {
       position: absolute;
-      top: 0;
+      top: 0.6594vw;
       left: 0;
       width: 100%;
       list-style-type: none;
@@ -1354,7 +1337,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       max-height: 0;
       /* transition: .3s ease-in; */
       z-index: 3000;
-      background: #f3f3f3;
       padding-top: 5.1569vw;
       border-radius: 2.1176vw;
    }
@@ -1368,25 +1350,26 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
    .selectBox.active .optionList {
       max-height: 48.2157vw;
-      padding-top: 9.8569vw;
-      border-radius: 6.9231vw;
+      border-radius: 2.9231vw;
    }
 
  
 
    .selectBox .optionItem {
       padding: 0.3922vw 1.1765vw 0.3922vw;
-      width: 22.5641vw;
-      height: 8.7179vw;
-      border-radius: 12.0513vw;
+      width: 100%;
+      height: 100%;
       background-size: 1.5686vw;
-      padding: 1.1765vw;
+      padding: 2.1765vw;
       padding-top: 2.156vw;
       padding-left: 1.9608vw;
       font-size: 1.09rem;
       line-height: 1.20rem;
    }
 
+   .selectBox .optionItem:first-child {
+      padding-top: 10.8569vw;
+   }
 
    
 
@@ -1399,7 +1382,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    .selectBox.active .label{
       background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
       background-size: 2.0513vw;
-      background-color: #F3F3F3;
+      background-color: #FDFDFD;
       box-shadow: 0.3137vw 0.3137vw -1.2308vw rgb(0 0 0 / 7%);
    }
 
@@ -1578,6 +1561,18 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 }
 
+@media screen and (max-width: 380px){
+   .selectBox .label {
+      background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
+      background-size: 1.5513vw;
+  }
+
+  .selectBox.active .label {
+   background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
+   background-size: 1.5513vw;
+
+}
+
 
 @media screen and (max-width: 300px){
       .view-box {
@@ -1607,6 +1602,4 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    }
 
 }
-
-
 

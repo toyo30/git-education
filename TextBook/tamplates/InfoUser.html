@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/InfoUser.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>마이페이지 개인 회원정보</title>
 </head>
 <body>
@@ -101,7 +102,7 @@
                     <section class="manage-info">
                         <h3 class="manage-title">회원정보 관리</h4>
                         <h4 class="manage-sub">필수정보</h4>
-                        <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data">
+                        <form id="frm" name="frm" method="post" enctype="multipart/form-data">
                             <div class="form-box">
                                 <h5 class="blind">회원정보 수정</h5>
                     
@@ -230,25 +231,26 @@
                             </div>
                     
 
-                            <div class="member-btnarea">
+                            
+                            
+                        </form>
+                        <div class="member-btnarea">
 
                         
 
 
-                                <div class="btn-wrap">
-                                    <a id="btnConfirm" href="" class="btn-model">
-                                        회원정보수정
-                                    </a>
-                                </div>
-    
-                                <div class="btn-wrap">
-                                    <a id="btnWithdraw" href="" class="btn-model withdraw-color">
-                                        회원탈퇴하기
-                                    </a>
-                                </div>
+                            <div class="btn-wrap">
+                                <a id="btnConfirm" class="btn-model">
+                                    회원정보수정
+                                </a>
                             </div>
-                            
-                        </form>
+
+                            <div class="btn-wrap">
+                                <button id="btnWithdraw" class="btn-model withdraw-color">
+                                    회원탈퇴하기
+                                </button>
+                            </div>
+                        </div>
                     </section>
 
                     
@@ -259,7 +261,8 @@
             <p class="popup-text">*아이디를 삭제하면 토셀 통합 계정이 모두 삭제됩니다.</p>
             
             <div class="btn-box">
-                <button class="member-check">확인</button>
+                <button id="leave-check" class="member-check">확인</button>
+                <div class="mobile-check-bar"><p class="blind">모바일 간격 바</p></div>
                 <button class="member-cancel">취소</button>
             </div>
             
@@ -284,7 +287,8 @@
             </div>
 
             <div class="btn-box">
-                <button class="member-check">확인</button>
+                <button id="leave-account" class="member-check">확인</button>
+                <div class="mobile-check-bar"><p class="blind">모바일 간격 바</p></div>
                 <button class="member-cancel">취소</button>
             </div>
             
@@ -303,5 +307,48 @@
         </div> 
     </div>
 </body>
-<script src="../static/dimmed.js"></script>
+<script>
+
+
+function openDimmed() {
+    $('.dimmed-section').fadeIn(400);
+    $('.pop-up').fadeIn(400);
+}
+
+$(document).on('click', '.withdraw-color', openDimmed);
+
+
+function closeDimmed() {
+    $('.dimmed-section').fadeOut(400);
+    $('.pop-up').fadeOut(400);
+    $('.check-up').fadeOut(400);
+}
+
+
+$(document).on('click', '.member-cancel', closeDimmed);
+
+
+
+
+function goWithdraw() {
+    $('.pop-up').fadeOut(400);
+    $('.check-up').fadeIn(400);
+}
+
+$(document).on('click', '#leave-check', goWithdraw);
+
+
+
+function goWith() {
+    $('.check-up').fadeOut(400);
+    $('.dimmed-section').fadeOut(400);
+    alert('계정이 삭제되었습니다. 감사합니다.(요청보내기)')
+}
+
+$(document).on('click', '#leave-account', goWith);
+
+
+
+
+</script>
 </html>
