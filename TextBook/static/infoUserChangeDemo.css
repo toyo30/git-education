@@ -543,7 +543,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-bottom: 15px;
  }
  
- .vaild a {
+ .vaild-box {
 	display: inline-block;
 	width: 89.68px;
 	height: 61.43px;
@@ -554,19 +554,18 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	text-align: center;
 	line-height:61.43px;
 	color: #333333;
+	transition: 400ms;
  }
  
- .focus {
-	color: #FDFDFD;
-	background: #EC5937;
- }
- 
+
  .selectAgreement {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 20px;
  }
  
+
+
  .active-box {
 	background: #EC5937;
 	color: #FDFDFD;
@@ -972,7 +971,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		margin-bottom: 1.1765vw;
 	 }
 	 
-	 .vaild a {
+	 .vaild-box {
 		width: 7.0337vw;
 		height: 4.8180vw;
 		font-size: 0.56rem;
@@ -1051,6 +1050,24 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 @media screen and (max-width:649px) {
+
+	input[type="checkbox"]:after {
+		content: '';
+		position: relative;
+		left: 33%;
+		top: 3%;
+		width: 23%;
+		height: 60%;
+		border: solid #fff;
+		border-width: 0 2px 2px 0;
+	}
+
+	input[type="checkbox"] {
+		height: 4.1026vw;
+		width: 4.1026vw;
+		border-radius: 0.7692vw;
+	 }
+	
 
 
    /* header */
@@ -1173,7 +1190,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
  .form-box {
-	border-top: 0.1rem solid #EC5937;
+	border-top: 1.0256vw solid #EC5937;
  }
 
 
@@ -1451,13 +1468,14 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-bottom: 1.1765vw;
  }
  
- .vaild a {
+ .vaild-box {
 	width: 16.9231vw;
 	height: 11.7949vw;
 	font-size: 1.64rem;
 	line-height: 11.7949vw;
  }
  
+
  
  .selectAgreebox {
 	margin-bottom: 3.0026vw;
@@ -1480,10 +1498,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-top: 6.2745vw;
  }
 
- input[type="checkbox"] {
-	height: 4.1026vw;
-	width: 4.1026vw;
- }
 
 
 
@@ -1552,7 +1566,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
   
 
-	.m-close { width: 4.6154vw; height: 4.6154vw; cursor: pointer;}
+	.m-close { display: block !important; width: 4.6154vw; height: 4.6154vw; cursor: pointer;}
 
 	.mobile-header-items { 
 		width: 91%; height: 100%;  margin: 0 auto;

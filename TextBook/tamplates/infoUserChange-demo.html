@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../static/infoUserChangeDemo.css">
-    <title>마이페이지, Faq 등의 기본 값</title>
+    <title>개인회원정보 수정</title>
 </head>
 <body>
 
@@ -444,11 +445,11 @@
                                     <div class="input-text mobile-perText">
                                         <div class="sms-box mobile-perBox">
                                             <div class="vaild">
-                                                <a href="">1년</a>
-                                                <a href="">3년</a>
-                                                <a href="">5년</a>
-                                                <a href="">10년</a>
-                                                <a href="">탈퇴시</a>
+                                                <div class="vaild-box active-box">1년</div>
+                                                <div class="vaild-box">3년</div>
+                                                <div class="vaild-box">5년</div>
+                                                <div class="vaild-box">10년</div>
+                                                <div class="vaild-box">탈퇴시</div>
                                             </div>
                                             <p class="sms-text mobile-sms-text">*개인정보 유효기간 내 이용이 없을 경우, 휴면 계정으로 전환되어 각종 메일, 문자를 수신할 수 없습니다.</p>
                                         </div>
@@ -573,6 +574,20 @@
 
 
     </div>
+
+<script>
+
+console.log($('.vaild').children())
+function addColor() {
+    $(this).siblings().removeClass('active-box');
+    $(this).addClass('active-box');
+
+}
+
+
+$(document).on('click', '.vaild-box', addColor)
+
+</script>
     
 </body>
 </html>
