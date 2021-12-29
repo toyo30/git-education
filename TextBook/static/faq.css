@@ -9,6 +9,8 @@
 }
 
 
+
+
 html,body { width: 100%; height: 100%; font-size: 32px; color: #333333; background-color: #FDFDFD;}
 
 
@@ -1561,18 +1563,22 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 }
 
-@media screen and (max-width: 380px){
-   .selectBox .label {
-      background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
-      background-size: 1.5513vw;
-  }
 
-  .selectBox.active .label {
-   background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
-   background-size: 1.5513vw;
+
+
+@media screen and (max-width: 380px){
+         .selectBox .label {
+            background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
+            background-size: 1.5513vw;
+      }
+
+      .selectBox.active .label {
+         background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
+         background-size: 1.5513vw;
+
+      }
 
 }
-
 
 @media screen and (max-width: 300px){
       .view-box {
@@ -1595,11 +1601,12 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 @media screen and (max-width: 203px){
-   .arrange-text {
-      -webkit-transform: scale(0.53);
-      text-indent: -4vw;
-      margin: 0 auto;
+      .arrange-text {
+         -webkit-transform: scale(0.53);
+         text-indent: -4vw;
+         margin: 0 auto;
+      }
+
    }
 
-}
-
+   
