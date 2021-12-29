@@ -12,6 +12,18 @@ html,body { width: 100%; height: 100%; font-size: 32px; overflow-x: hidden; back
 #wrap { width: 100%; height: 100%; position: relative; }
 
 
+/* password 안 보이게 */
+input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
+
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ 
+   font-family: 'nanumsquare', sans-serif; color: #888  /* Firefox */ } 
+input::-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #888; } 
+input::-ms-input-placeholder { /* Microsoft Edge */ color: #888; }
+
+
+/* checkbox 수정 */
+
 input[type="checkbox"] {
 	cursor: pointer;
 	-webkit-appearance: none;

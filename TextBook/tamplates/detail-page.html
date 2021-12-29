@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/notice.css">
+    <link rel="stylesheet" href="../static/detail-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>마이페이지 개인 회원정보 수정</title>
 </head>
 <body class="before-load">
@@ -17,29 +18,140 @@
 
     <div id="wrap">
 
+        <div class="mobile-all-menu">
+            
+            
+            
+            
+            <section class="mobile-header">
+                <section class="mobile-header-items">
+                    <img src="../static/faq/tosel-mobile-logo.png" class="m-logo">
+                    <img src="../static/m-close.png" class="m-close">
+                </section>
+            </section>
+            <div class="mobile-ne">
+                <div class="mobile-con">
+                    <img src="../static/all-cate.png" class="all-cate">
+
+                    <div class="mobile-slide-menu">
+                        <section>
+                            <img src="../static/all-text.png" class="mobile-menu-allText">
+                            <span>전체 교재</span>
+                        </section>
+                        <section>
+                            <img src="../static/event.png" class="mobile-menu-event">
+                            <span>이벤트</span>
+                        </section>
+                        <section>
+                            <img src="../static/best-seller.png" class="mobile-menu-bestSeller">
+                            <span>베스트 셀러</span>
+                        </section>
+                        <section>
+                            <img src="../static/new-product.png" class="mobile-menu-newProduct">
+                            <span>신상품</span>
+                        </section>
+                        <section>
+                            <img src="../static/goods.png" class="mobile-menu-goods">
+                            <span>굿즈</span>
+                        </section>
+                        <section>
+                            <img src="../static/data-room.png" class="mobile-menu-dataRoom">
+                            <span>학습 자료실</span>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="mobile-nav">
+                    <ul>
+                        <li>
+                            <img src="../static/mobile-user.png" class="mobile-user">
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li>
+                            <img src="../static/bell.png" class="mobile-bell">
+                            <a href="#">공지사항</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-faq.png" class="mobile-faq">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-cart.png" class="mobile-cart">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-join.png" class="mobile-join">
+                            <a href="#">회원가입</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <section class="mobile-login"><span>로그인</span></section>
+            </div>
+
+        </div>
+
+
+        <script>
+            $(document).ready(function(){
+                $('.mobile-all-menu div').hide();
+                $('.mobile-all-menu section').hide();
+                $('.m-ham').click(function(){
+                    $('.mobile-all-menu').css('background','#fff');
+                    $('.mobile-all-menu').css('width','100%');
+                    $('.mobile-all-menu div').fadeIn();
+                    $('.mobile-all-menu section').fadeIn();
+                    $('body').css('overflow-y','hidden');
+                });
+                $('.m-close').click(function(){
+                    $('.mobile-all-menu').css('background','transparent');
+                    $('.mobile-all-menu').css('width','0%');
+                    $('.mobile-all-menu div').fadeOut();
+                    $('.mobile-all-menu section').fadeOut();
+                });
+            });
+        </script>
+
+
+        
+
         <div id="header">
 
             <div id="top-menu">
 
                 <div class="logo-box">
                     <img src="../static/tosel-logo.png" class="t-logo">
+                    <img src="../static/faq/tosel-mobile-logo.png" class="tm-logo">
+
+                    
                 </div>
+
 
                 <nav>
                     <ul>
+                        <li><a class="login-btn">로그인</a></li>
+                        <li><img src="../static/join.png" class="join"><a href="#">회원가입</a></li>
                         <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
                         <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
                         <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
                         <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
                     </ul>
                 </nav>
-                
-                <div class="ham-menu">
-                    <img src="../static/ham-menu.png" class="ham-menu-bar">
+
+                <div class="logo-box mobile-faq-logo">
+                    <h1 class="mobile-title">회원 정보</h1>
                 </div>
+                <div class="logo-box mobile-bell-log">
+                    <img src="../static/bell.png" class="bell">
+                </div>
+
+                
 
 
             </div>
+
+            
 
         </div>
 
@@ -51,40 +163,39 @@
 
             
 
-             <div class="search-menu">
-                 <div class="search-bar">
-                    <section>
-                        <img src="../static/all-text.png" class="all-text">
+            <div class="fixed-category swiper mySwiper">
+                <div class="fixed-menu swiper-wrapper">
+                    <section class="swiper-slide">
+                        <img src="../static/all-text.png" class="all-text all-text-fix">
                         <span>전체 교재</span>
                     </section>
-                    <section>
-                        <img src="../static/event.png" class="event">
+                    <section class="swiper-slide">
+                        <img src="../static/event.png" class="event event-fix">
                         <span>이벤트</span>
                     </section>
-                    <section>
-                        <img src="../static/best-seller.png" class="best-seller">
+                    <section class="swiper-slide">
+                        <img src="../static/best-seller.png" class="best-seller best-seller-fix">
                         <span>베스트 셀러</span>
                     </section>
-                    <section>
-                        <img src="../static/new-product.png" class="new-product">
+                    <section class="swiper-slide">
+                         <img src="../static/new-product.png" class="new-product new-product-fix">
                         <span>신상품</span>
                     </section>
-                    <section>
-                        <img src="../static/goods.png" class="goods">
+                    <section class="swiper-slide">
+                        <img src="../static/goods.png" class="goods goods-fix">
                         <span>굿즈</span>
                     </section>
-                    <section>
-                        <img src="../static/data-room.png" class="data-room">
+                    <section class="swiper-slide">
+                        <img src="../static/data-room.png" class="data-room data-room-fix">
                         <span>학습 자료실</span>
                     </section>
-
-                     <div class="search-box">
-                         <img src="../static/search.png" class="search-img">
-                         <input type="search">
-                         <button>검색</button>
-                     </div>
-                 </div>
-             </div>
+                    <div class="search-box">
+                        <img src="../static/search.png" class="search-img">
+                        <input type="search">
+                        <button>검색</button>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -147,29 +258,38 @@
                                     </li>
                                 </ul>
 
-                                <p>
-                                    <input type="number" value="1">
-                                </p>
+    
     
                                 <div class="select-option">
-                                    <button>분권 구매</button>
-                                    <ul>
-                                        <li>LISTENING 1</li>
-                                        <li>LISTENING 2</li>
-                                    </ul>
-                                </div>
+                                    <div class="selectBox">
+                                        <button class="label">분권 구매</button>
+                                        <ul class="optionList">
+                                          <li class="optionItem">LISTENING 1</li>
+                                          <li class="optionItem">LISTENING 2</li>
+                                        </ul>
+                                    </div>
+        
     
+                                </div>
+
+                                
     
                                 <div class="button-set">
-                                    <div class="btn-amount">
-                                        <p>
-                                            <input type="number" value="1">
-                                        </p>
-                                        <!-- <div class="updown-amount">
-                                            <button class="amount-up">위</button>
-                                            <button class="amount-down">아래</button>
-                                        </div> -->
-                                        
+                                    <div class="amount-box">
+                                        <div class="amount-check">
+                                            
+                                            <div class="amount-num">
+                                                <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                 class="amount-count" maxlength="2" min="1" value="1">
+                                            </div>
+                                            <div class="plus-minus-box">
+                                                <div class="sign sign-plus">
+                                                </div>
+                                                <div class="sign sign-mius">
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                     
@@ -228,45 +348,44 @@
                 </section>
 
                 <section class="book-tcontent">
-                    <div>
-                        <div>목차</div>
+                    <div class="book-tbox">
+                        <div class="bcontent-title">목차</div>
 
-                        <p>
-                            TOSEL 소개
+                        <p class="bcontent-item">
+TOSEL 소개
     
-                            TOSEL Level Chart
-                            About TOSEL - 토셀에 관하여
-                            Why TOSEL - 왜 토셀인가
-                            Evaluation - 평가
-                            성적표 및 인증서
-                            
-                            Grammar Series 소개
-                            
-                            Grammar Series 특장점
-                            Grammar Series level
-                            1시간 학습 guideline
+TOSEL Level Chart
+About TOSEL - 토셀에 관하여
+Why TOSEL - 왜 토셀인가
+Evaluation - 평가
+성적표 및 인증서
 
-                            TOSEL Level Chart
-                            About TOSEL - 토셀에 관하여
-                            Why TOSEL - 왜 토셀인가
-                            Evaluation - 평가
-                            성적표 및 인증서
-                            
-                            Grammar Series 소개
-                            
-                            Grammar Series 특장점
-                            Grammar Series level
-                            1시간 학습 guideline
+Grammar Series 소개
+
+Grammar Series 특장점
+Grammar Series level
+1시간 학습 guideline
+
+TOSEL Level Chart
+About TOSEL - 토셀에 관하여
+Why TOSEL - 왜 토셀인가
+Evaluation - 평가
+성적표 및 인증서
+
+Grammar Series 소개
+
+Grammar Series 특장점
+Grammar Series level
+1시간 학습 guideline
                         </p>
+                        <div class="bcontent-op">
+                            <p class="bcontent-open bcontent-btndesign">
+                                펼쳐보기
+                            </p>
 
-                        <div>
-                            <span>펼쳐보기</span>
-                            <img src="../static/" alt="펼쳐보기버튼">
-                        </div>
-
-                        <div>
-                            <span>접기</span>
-                            <img src="../static/" alt="접기버튼">
+                            <p class="bcontent-close bcontent-btndesign">
+                                접기
+                            </p>
                         </div>
                     </div>
  
@@ -291,24 +410,20 @@
 
 
                 <section class="about-tosel">
-                    <div>
+                    <div class="about-box">
                         <p class="about-title">TOSEL에 대하여</p>
                     
                     <p class="about-test">
-                        TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 단계별 난이도와 문항으로
+TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 단계별 난이도와 문항으로
 영어 숙달 정도를 측정하는 영어 사용자 중심의 맞춤식 영어능력인증 시험제도입니다.
 평가유형에 따른 개인별 장점과 단점을 파악하고, 개인별 영어학습 방향을 제시하는 성적분석자료를 제공하여
 영어능력 종합검진 서비스를 제공함으로써 영어 사용자인 소비자와
-영어능력 평가를 토대로 영어교육을 담당하는 교사 및 기관 인사관리자인 공급자를
-모두 만족시키는 영어능력인증 평가입니다.
-                    </p>
+영어능력 평가를 토대로 영어교육을 담당하는 교사 및 기관 인사관리자인 공급자를 모두 만족시키는 영어능력인증 평가입니다.</p>
 
 
-                    <p class="about-ability">
-                        TOSEL은 인지적-학문적 언어 사용의 유창성 (Cognitive-Academic Language Proficiency, CALP)과
-                        기본적-개인적 의사소통능력 (Basic Interpersonal Communication Skill, BICS)을
-                        엄밀히 구분하여 수험자의 언어능력을 가장 친밀하게 평가하는 시험입니다.
-                    </p>
+                    <p class="about-ability">TOSEL은 인지적-학문적 언어 사용의 유창성 (Cognitive-Academic Language Proficiency, CALP)과
+기본적-개인적 의사소통능력 (Basic Interpersonal Communication Skill, BICS)을
+엄밀히 구분하여 수험자의 언어능력을 가장 친밀하게 평가하는 시험입니다.</p>
                     </div>
                 </section>
 
@@ -331,41 +446,46 @@
 
 
                 <section class="ask-product">
-                    <p>상품 문의</p>
-                    
-                    <div>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="300자 이내로 작성해주세요."></textarea>
+                    <div class="ask-box">
+                        <div class="ask-area">
+                            <p>상품 문의</p>
+                            
+                            <div class="text-area">
+                                <textarea class="text-box" name="" id="" cols="30" rows="10" placeholder="300자 이내로 작성해주세요."></textarea>
+                            </div>
+
+                            <p>*상품 문의를 작성해주시면, 검토 후 계정에 등록된 이메일로 답변을 제공해 드리겠습니다.</p>
+                            <p>*상품 문의가 많을 경우 답변이 조금 늦어질 수 있는 점 양해 부탁드립니다.</p>
+
+                            <button>보내기</button>
+                        </div>
                     </div>
-
-                    <p>*상품 문의를 작성해주시면, 검토 후 계정에 등록된 이메일로 답변을 제공해 드리겠습니다.</p>
-                    <p>*상품 문의가 많을 경우 답변이 조금 늦어질 수 있는 점 양해 부탁드립니다.</p>
-
-                    <button>보내기</button>
                 </section>
 
                 
                 <section class="table-section">
                     <div class="table-box">
-                        <div>배송 안내</div>
-                        <table>
-                            <caption></caption>
-                            <thead>
-                                <th>
-                                    <td></td>
+                        <h4 class="table-title">배송 안내</h4>
+                        <table class="table-area">
+                            <caption class="blind">배송 안내</caption>
+                            <thead class="blind">
+                                <th class="blind">
+                                    <td class="blind"></td>
+                                    <td class="blind"></td>
                                 </th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="table-litem">배송 구분</td>
+                                    <td class="table-ritem">CJ대한통운 배송</td>
                                 </tr>
 
                                 <tr>
-                                    <td></td>
-                                    <td>
+                                    <td class="table-litem">배송비 안내</td>
+                                    <td class="table-ritem">
                                         <div>
                                             <div>배송비: 3500원</div>
-                                            <div>
+                                            <div class="tablem-design">
                                                 <div>*제주 추가 5000원</div>
                                                 <span>/</span>
                                                 <div>제주 외 도서지역 추가 10000원</div>
@@ -374,7 +494,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
+                            <tfoot class="blind">
                                 <tr>
                                     <td></td>
                                     <td></td>
@@ -382,38 +502,35 @@
                             </tfoot>
                         </table>
                     </div>
-                </section>
 
-
-                <section class="table-section">
                     <div class="table-box">
-                        <div>배송 안내</div>
-                        <table>
-                            <caption></caption>
-                            <thead>
+                        <div class="table-title">반품/교환 안내</div>
+                        <table class="table-area">
+                            <caption class="blind">반품/교환 안내</caption>
+                            <thead class="blind">
                                 <th>
                                     <td></td>
                                 </th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>반품/교환 방법</td>
-                                    <td>
+                                    <td class="table-litem">반품/교환 방법</td>
+                                    <td class="table-ritem">
                                         <div>-마이페이지 > 반품/교환 신청 및 조회, 고객센터(02-923-0505)</div>
                                         <div>-판매자 배송 상품은 판매자와 반품/교환이 협의된 상품에 한해 가능합니다.</div>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td>반품/교환 가능기간</td>
-                                    <td>
+                                    <td class="table-litem">반품/교환 가능기간</td>
+                                    <td class="table-ritem">
                                         <div>- 출고 완료 후 10일 이내의 주문 상품</div>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td>반품/교환 비용</td>
-                                    <td>
+                                    <td class="table-litem">반품/교환 비용</td>
+                                    <td class="table-ritem">
                                         <div>- 고객의 단순변심 및 착오구매일 경우 상품 반송비용은 고객 부담임</div>
                                         <div>- 박스 포장은 택배 배송이 가능한 규격과 무게를 준수하며, 고객의 단순변심 및 착오구매일 경우 상품의 반송비용은 
                                             박스 당 부과됩니다.</div>
@@ -421,8 +538,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td>반품/교환 불가사유</td>
-                                    <td>
+                                    <td class="table-litem">반품/교환 불가사유</td>
+                                    <td class="table-ritem">
                                         <div>- 소비자의 책임 있는 사유로 상품 등이 손실 또는 훼손된 경우</div>
                                         <div>- 소비자의 사용, 포장 개봉에 의해 상품 등의 가치가 현저히 감소한 경우</div>
                                         <div>- 복제가 가능한 상품 등의 포장을 훼손한 경우 : 예) CD, 패키지 도서</div>
@@ -432,13 +549,13 @@
                                 </tr>
 
                                 <tr>
-                                    <td>소비자 피해보상</td>
-                                    <td>
+                                    <td class="table-litem">소비자 피해보상</td>
+                                    <td class="table-ritem">
                                         <div>- 상품의 불량에 의한 반품, 교환, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자분쟁해결기준(공정거래위원회 고시)에 준하여 처리됨</div>
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
+                            <tfoot class="blind">
                                 <tr>
                                     <td></td>
                                     <td></td>
@@ -448,6 +565,8 @@
                     </div>
                 </section>
 
+
+               
                    
 
 
@@ -460,18 +579,184 @@
 
 
         <div id="footer">
+            
+            
+            
+            
+            
+            <img src="../static/mobile-banner.png" class="mobile-banner">
+            <div class="footer-banner-bar">
+                <div class="footer-banner">
+                    <img src="../static/footer-banner.png" class="banner">
+                    <div class="banner-title">
+                        <h2>올해의</h2>
+                        <h1>베스트 셀러</h1>
+                    </div>
+                    <span>토셀의 심화 문제를 만나고 싶다면?</span>
+                    <div class="purchase">
+                        <span>구매하러가기</span>
+                        <img src="../static/purchase-arrow.png">
+                    </div>
+                </div>
+            </div>
+           
+           
+           
+           
+           
+            <div class="company-intro">
+                <div class="company-intro-bar">
+                    <div class="logo-intro">
+                        <img src="../static/tosel.png" class="bottom-tosel">
+                        <span class="vertical-line"></span> 
+                        <img src="../static/tosel-lab.png" class="tosel-lab">
+                    </div>
+                    <span>회사 소개</span>
+                </div>
+            </div>
 
-        </div> 
+            
+            
+            
+            
+            <div class="tosel-footer">
+                <div class="tosel-footer-bar">
+                    <img src="../static/tosel-logo.png" class="footer-logo">
+                    
+                    <div class="company-detail">
+
+                        <p class="l-intro">
+                            서울시 성북구 안암로 145 고려대학교 라이시움 4층<br>
+                            Lyceum. Korea University, 145 Anam Ro, Seongbuk-Gu, Seoul, Korea 02841<br>
+                            Copyright ⓒ TOSEL. All Rights Reserved.
+                        </p>
+
+                        <p class="r-intro">
+                            상호명 : (주)에듀토셀<br>
+                            사업자 등록번호 : 209-81-55585<br>
+                            대표자명 : 오승연<br>
+                            Tel: +82-02-923-0505 / Fax : +82-02-923-7070
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="mobile-footer-menu">
+            <img src="../static/mobile-ham.png" class="m-ham">
+            <img src="../static/mobile-user.png" class="m-user">
+            <img src="../static/mobile-home.png" class="m-home">
+            <img src="../static/mobile-faq.png" class="m-faq">
+            <img src="../static/mobile-cart.png" class="m-cart">
+        </div>
     </div>
-</body>
 <script>
-var btn = document.querySelector('.more-bookinfo');
-var area = document.querySelector('.book-desbox');
-function fBtn(e) {
-    area.classList.toggle('height-full');
-}
 
-btn.addEventListener('click', fBtn);
 
-</script>
+
+/* 책 정보 더 보기 */
+    var btn = document.querySelector('.more-bookinfo');
+    var area = document.querySelector('.book-desbox');
+    function fBtn(e) {
+        area.classList.toggle('height-full');
+
+        // 클릭했을 때 책 정보 더보기 -> 접기 / 글씨와 이미지 변경하기 
+        // $('.more-bookinfo::after').css({"background":"url(../static/detail-page/close-bookinfo.png) no-repeat"})
+        // if(area.classList.hasClass('height-full')){
+        //     $('.more-bookinfo::after').css({"background":"url(../static/detail-page/close-bookinfo.png) no-repeat"})
+        // } else {
+        //     $('.more-bookinfo::after').css({"background":"url(../static/detail-page/open-bookinfo.png) no-repeat"})
+        // }
+    }
+    
+    btn.addEventListener('click', fBtn);
+    
+    
+    const label = document.querySelector('.label');
+    const faqBtn = document.querySelector('.btn-point');
+    const options = document.querySelectorAll('.optionItem');
+    // 클릭한 옵션의 텍스트를 라벨 안에 넣음
+    const handleSelect = function(item) {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove('active');
+    }
+    // 옵션 클릭시 클릭한 옵션을 넘김
+    options.forEach(function(option){
+        option.addEventListener('click', function(){handleSelect(option)})
+    })
+    
+    // 라벨을 클릭시 옵션 목록이 열림/닫힘
+    label.addEventListener('click', function(e){
+        if(label.parentNode.classList.contains('active')) {
+        label.parentNode.classList.remove('active');
+        } else {
+        label.parentNode.classList.add('active');
+        }
+    });
+    
+    //특정 영역제외 클릭하기 
+    
+    // body.addEventListener('click', function(event) {
+    //     var target = event.target;
+    //     if(target !== label) {
+    //         label.parentNode.classList.remove('active');
+    //     }
+    // });
+
+
+
+
+
+    // 책 수량 
+
+    $('.amount-box .sign-mius').click(function(e){
+                    e.preventDefault();
+                    var stat = $(this).parent().parent().children().find('.amount-count').val();
+                    var num = parseInt(stat,10);
+                    num--;
+                    if(num<=1){
+                        num = 1;
+                    }
+                    $(this).parent().parent().children().find('.amount-count').val(num);
+                });
+
+                $('.amount-box .sign-plus').click(function(e){
+                    e.preventDefault();
+                    var stat = $(this).parent().parent().children().find('.amount-count').val();
+                    var num = parseInt(stat,10);
+                    num++;
+                    if(num>=999){
+                        num = 999;
+                    }
+                    $(this).parent().parent().children().find('.amount-count').val(num);
+                });
+    
+    
+
+/* 책 목차 더 보기 */
+    
+    $(document).on('click', '.bcontent-open', function() {
+        $('.bcontent-item').css({"height":"100%"});
+        $('.bcontent-open').fadeOut(0);
+        $('.bcontent-close').fadeIn(50);
+    })
+
+    $(document).on('click', '.bcontent-close', function() {
+        $('.bcontent-item').css({"height":"260px"});
+        $('.bcontent-close').fadeOut(0);
+        $('.bcontent-open').fadeIn(50);
+    })
+    </script>
+</body>
 </html>
