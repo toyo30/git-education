@@ -586,14 +586,22 @@ function verticalIndicator(e) {
 }
 
 
+
 verticalMenus.forEach((menu) =>
   menu.addEventListener("click", (e) => verticalIndicator(e.currentTarget))
 );
 
 
+
+function resizeEvent(){
 verticalBar.style.left = verticalFirst[0].offsetLeft + "px";
 verticalBar.style.width = verticalFirst[0].offsetWidth + "px";
 verticalBar.style.top = verticalFirst[0].offsetTop + verticalFirst[0].offsetHeight - 3 + "px";
+}
+
+resizeEvent();
+
+window.addEventListener('resize', resizeEvent);
 
 </script>
 </html>
