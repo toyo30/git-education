@@ -221,15 +221,15 @@
 
 
                 <section class="order-menu">
-                    <div>
+                    <div class="order-menu-box">
                         <div class="main-bookbox">
                             <img src="../static/detail-page/book-main-img.png" alt="책메인이미지">
                         </div>
     
                         <div class="order-info">
                             <div class="order-title">
-                                <h3>TOSEL LISTENING</h3>
-                                <p>JUNIOR</p>
+                                <h3 id="booktitle">TOSEL LISTENING</h3>
+                                <p id="booklevel">JUNIOR</p>
                             </div>
     
                             <div class="order-list">
@@ -241,7 +241,7 @@
     
                                     <li>
                                         <div class="Litem">판매가</div>
-                                        <div class="Ritem"><span class="sale-rate">10%</span><span class="sale-price">17,910</span><span class="won">원</span></div>
+                                        <div class="Ritem"><span class="sale-rate">10%</span><span class="sale-price" id="bookprice">17,910</span><span class="won">원</span></div>
                                     </li>
     
                                     <li>
@@ -295,13 +295,13 @@
                                     
 
                                     <div class="add-cart">
-                                        <button>
+                                        <button id="inp-basket">
                                             장바구니 담기
                                         </button>
                                     </div>
     
                                     <div class="go-buy">
-                                        <button>
+                                        <button id="order-now">
                                             바로 구매
                                         </button>
                                     </div>
@@ -316,32 +316,34 @@
                 </section>
 
                 <section class="event-banner">
-                    <div>
-                        <img src="../static/" alt="이벤트베너">
+                    <div class="event-banner-box">
+                        <img src="../static/detail-page/event-banner.png" alt="이벤트베너">
                     </div>
                     
                 </section>
 
                 <section class="page-direction-position">
-                    <div>
-                        <div>상세</div>
-                        <div>FAQ</div>
-                        <div>상품 문의</div>
-                        <div>배송/반품/교환</div>
+                    <div class="page-direction-box">
+                        <div class="page-box detail-page-box active-box">상세</div>
+                        <div class="page-box faq-page-box">FAQ</div>
+                        <div class="page-box question-page-box">상품 문의</div>
+                        <div class="page-box shipment-page-box">배송/반품/교환</div>
                     
-                        <div>
-                            <div>
-                                <div>TOSEL LISTENING</div>
-                                <div>JUNIOR</div>
+                        
+                        <div class="order-page-box">
+                            <div class="order-page-title">
+                                <div id="booktitle" class="page-book-title">TOSEL LISTENING</div>
+                                <div id="booklevel" class="page-book-level">JUNIOR</div>
                             </div>
-                            <span></span>
-                            <div>17,910원</div>
+                            <span class="bar"></span>
+                            <div id="bookprice" class="page-book-price">17,910원</div>
 
-                            <div>
-                                <div>장바구니 담기</div>
-                                <div>바로 구매</div>
-                            </div>
+                        
+                            <button id="input-basket" class="page-add">장바구니 담기</button>
+                            <button id="order-now" class="page-buy">바로 구매</button>
+                            
                         </div>
+               
                     </div>
                     
 
@@ -399,7 +401,7 @@ Grammar Series level
 
 
                 <section class="book-description">
-                    <div>
+                    <div class="book-infobox">
                         <div class="book-desbox">
                             <img class="book-inforamtionimg" src="../static/detail-page/book-infomation-img.png" alt="">
                         </div>
@@ -413,8 +415,7 @@ Grammar Series level
                     <div class="about-box">
                         <p class="about-title">TOSEL에 대하여</p>
                     
-                    <p class="about-test">
-TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 단계별 난이도와 문항으로
+                    <p class="about-test">TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 단계별 난이도와 문항으로
 영어 숙달 정도를 측정하는 영어 사용자 중심의 맞춤식 영어능력인증 시험제도입니다.
 평가유형에 따른 개인별 장점과 단점을 파악하고, 개인별 영어학습 방향을 제시하는 성적분석자료를 제공하여
 영어능력 종합검진 서비스를 제공함으로써 영어 사용자인 소비자와
@@ -429,18 +430,227 @@ TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 �
 
 
                 <section class="more-series">
-                    <p>이 책의 시리즈</p>
+                    <div class="more-series-box">
+                        <p class="series-title">이 책의 시리즈</p>
                     
-                    <div>
+                        <div class="book-slide-box">
+                            <button class="btn-left"></button>
 
+                            <div class="slide-show-box">
+
+                                <div class="slide-show-area">
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                            <p class="series-level">Basic</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+        
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                            <p class="series-level">Basic</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+        
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                            <p class="series-level">Basic</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+        
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                            <p class="series-level">Basic</p>
+                                            <p class="series-btitle">All READING</p>
+                                            <p class="series-text">학생용 3권</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                            <p class="series-level">Basic</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="slide-show-area">
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="slide-show-area">
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+    
+                                    <div class="book-component">
+                                        <a class="move-book">
+                                            <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
+                                            <p class="series-level">Starter</p>
+                                            <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                            <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+
+                            <button class="btn-right"></button>
+
+                        </div>
                     </div>
                 </section>
 
-                <section class="reco-book">
-                    <p>추천 교재</p>
+                <section class="more-series">
+                    <div class="more-series-box">
+                        <p class="series-title">이 책의 시리즈</p>
                     
-                    <div>
+                        <div class="book-slide-box">
+                            <button class="btn-left"></button>
 
+                            <div class="slide-show-box">
+
+                                <div class="book-component">
+                                    <a class="move-book">
+                                        <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                        <p class="series-level">Basic</p>
+                                        <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                        <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                    </a>
+                                </div>
+    
+                                <div class="book-component">
+                                    <a class="move-book">
+                                        <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                        <p class="series-level">Basic</p>
+                                        <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                        <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                    </a>
+                                </div>
+    
+                                <div class="book-component">
+                                    <a class="move-book">
+                                        <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                        <p class="series-level">Basic</p>
+                                        <p class="series-btitle">All READING</p>
+                                        <p class="series-text"></p>
+                                    </a>
+                                </div>
+    
+                                <div class="book-component">
+                                    <a class="move-book">
+                                        <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                        <p class="series-level">Basic</p>
+                                        <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                        <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                    </a>
+                                </div>
+
+                                <div class="book-component">
+                                    <a class="move-book">
+                                        <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
+                                        <p class="series-level">Basic</p>
+                                        <p class="series-btitle">All READING SIERIES PACKAGE</p>
+                                        <p class="series-text">(학생용 3권 + 교사용 5권)</p>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <button class="btn-right"></button>
+
+                        </div>
                     </div>
                 </section>
 
@@ -448,16 +658,16 @@ TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 �
                 <section class="ask-product">
                     <div class="ask-box">
                         <div class="ask-area">
-                            <p>상품 문의</p>
+                            <p class="ask-title">상품 문의</p>
                             
                             <div class="text-area">
                                 <textarea class="text-box" name="" id="" cols="30" rows="10" placeholder="300자 이내로 작성해주세요."></textarea>
                             </div>
 
-                            <p>*상품 문의를 작성해주시면, 검토 후 계정에 등록된 이메일로 답변을 제공해 드리겠습니다.</p>
-                            <p>*상품 문의가 많을 경우 답변이 조금 늦어질 수 있는 점 양해 부탁드립니다.</p>
+                            <p class="ask-text top">*상품 문의를 작성해주시면, 검토 후 계정에 등록된 이메일로 답변을 제공해 드리겠습니다.</p>
+                            <p class="ask-text bottom">*상품 문의가 많을 경우 답변이 조금 늦어질 수 있는 점 양해 부탁드립니다.</p>
 
-                            <button>보내기</button>
+                            <button id="send-message" class="ask-btn">보내기</button>
                         </div>
                     </div>
                 </section>
@@ -758,5 +968,7 @@ TOSEL은 각급 학교 교과과정과 연령별 인지단계를 고려하여 �
         $('.bcontent-open').fadeIn(50);
     })
     </script>
+
+<script src="../static/detail-page/detail-slide.js"></script>
 </body>
 </html>
