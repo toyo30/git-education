@@ -37,6 +37,11 @@ button, a {
 	white-space: nowrap;
 }
 
+button {
+	border: none;
+	background: transparent;
+}
+
 
 /* checkbox 수정 */
 
@@ -414,6 +419,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 17px;
+	margin-bottom: -0.9px;
 	color: #EC5937;
  }
  
@@ -499,9 +505,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
  }
  
  .address-box {
-	width: 151px;
+	width: 180px;
 	height: 34px;
-	margin-right: 30px;
+	margin-right: 20px;
  }
  
  .address-inp {
@@ -573,7 +579,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 187px;
+	width: 119px;
 	height: 70px;
  }
  
@@ -940,6 +946,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 .add-info {
 		font-size: 0.44rem;
 		line-height: 0.53rem;
+		margin-bottom: -0.05rem;
 	 }
 	 
 	 
@@ -971,27 +978,27 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 }
 	 #passChange {
 		width: 10.6667vw;
-		height: 2.6667vw;
-		line-height: 2.6667vw;
-		border-radius: 0.2604vw;
+		height: 2.4667vw;
+		line-height: 2.5667vw;
+		border-radius: 0.3922vw;
 		font-size: 0.56rem;
 	 }
 	 
 	 
 	 .btn-address {
 		width: 10.6667vw;
-		height: 2.6667vw;
+		height: 2.4667vw;
 		line-height: 2.6667vw;
-		border-radius: 0.2604vw;
+		border-radius: 0.3922vw;
 		font-size: 0.56rem;
 		line-height: 2.6667vw;
 		color: #FDFDFD;
 	 }
 	 
 	 .address-box {
-		width: 11.8431vw;
+		width: 14.2vw;
 		height: 2.6667vw;
-		margin-right: 2.3529vw;
+		margin-right: 1.5686vw;
 	 }
 	 
 	 .address-inp {
@@ -1022,20 +1029,21 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 .inp-area {
 		padding: 0.4167vw 0.4167vw 0.2604vw;
 		font-size: 0.56rem;
-		line-height: 0.66rem;
+		line-height: 3vw;
 	 }
 	 
 	 .btn-email, .btn-emailcheck {
 		width: 10.6667vw;
 		height: 2.6667vw;
 		line-height: 2.6667vw;
-		border-radius: 0.2604vw;
+		border-radius: 0.3922vw;
 		font-size: 0.56rem;
-		line-height: 1.06rem;
+		line-height: 2.9667vw;
 	 }
 	 
 	 .btn-email {
 		border: 0.0521vw solid #EC5937;
+		line-height: 2.6vw;;
 	 }
 	 
 	 .email-box {
@@ -1045,7 +1053,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 }
 	 
 	 .selectAgreebox {
-		width: 14.6667vw;
+		width: 9.3333vw;
 		height: 6.2745vw;
 	 }
 	 
@@ -1356,6 +1364,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	text-indent: -5vw;
 	font-size: 0.69rem;
 	line-height: 0.69rem;
+	margin-bottom: -0.5385vw;
  }
 
  .genderText {
@@ -1440,7 +1449,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	height: 8.4615vw;
 	line-height: 8.4615vw;
 	border-radius: 1.2821vw;
-	font-size: 1.27rem;
+	font-size: 1rem;
 	line-height: 8.4615vw;
 	color: #FDFDFD;
  }
@@ -1449,6 +1458,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	width: 44.3590vw;
 	height: 8.4615vw;
 	margin-right: 2.3529vw;
+	margin-bottom: 0px;
  }
  
  .address-inp, .phone-inp {
@@ -1493,7 +1503,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	background: #EC5937;
 	color: #FDFDFD;
 	line-height: 8.4615vw;
-	font-size: 1.27rem;
+	font-size: 1rem;
  }
 
  .btn-emailcheck {
