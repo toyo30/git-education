@@ -704,13 +704,14 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    .faq-searchBox {
       display: flex;
       margin-bottom: 3.7657vw;
+      align-items: center;
    }
 
 
    .selectBox {
       position: relative;
       width: 13.8824vw;
-      height: 4.1569vw;
+      height: 5.1569vw;
       border-radius: 3.6863vw;
       margin-right: 1.3333vw;
    }
@@ -1334,7 +1335,6 @@ button {-webkit-appearance:none;}
       border-radius: 12.0513vw;
       background-size: 2.0513vw;
       border-radius: 3.6863vw;
-      margin-top: 0.5vw;
    }
 
 
@@ -1626,7 +1626,12 @@ button {-webkit-appearance:none;}
       .view-box {
          width: 100%;
       }
-   
+      
+      .l-intro, .r-intro {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+      }
 }
 
 

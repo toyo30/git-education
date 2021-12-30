@@ -1764,3 +1764,18 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     	overflow: hidden;
 	}
 }
+
+
+
+
+@media screen and (max-width: 300px){
+	.view-box {
+	   width: 100%;
+	}
+	
+	.l-intro, .r-intro {
+	   overflow: hidden;
+	   text-overflow: ellipsis;
+	   white-space: nowrap;
+	}
+}
