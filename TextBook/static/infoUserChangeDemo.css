@@ -568,7 +568,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
  }
  
  .sms-box {
-	padding: 20px 0;
+	/* padding: 20px 0; */
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 17px;
@@ -655,6 +655,10 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	color: #EC683D;
 }
 
+
+.pc-detail {
+	margin: 0;
+}
 
 
 
@@ -1035,7 +1039,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 }
 	 
 	 .sms-box {
-		padding: 1.56867vw 0;
+		/* padding: 1.56867vw 0; */
 		font-size: 0.44rem;
 		line-height: 0.53rem;
 	 }
