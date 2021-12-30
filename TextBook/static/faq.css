@@ -1590,21 +1590,12 @@ button {-webkit-appearance:none;}
 
 @media screen and (max-width: 380px){
 
-      .selectBox {
-         overflow:hidden !important;
-            white-space: nowrap !important;
-            text-overflow: ellipsis !important;
-      }
 
       .selectBox .label {
             margin-top: 0px;
             background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
             background-size: 2.5513vw;
 
-            overflow:hidden !important;
-            white-space: nowrap !important;
-            text-overflow: ellipsis !important;
-            border: 0.7813vw solid #DFDFDF;
       }
 
       .selectBox.active .label {
@@ -1614,11 +1605,7 @@ button {-webkit-appearance:none;}
 
       }
       
-      .selectBox .optionItem {
-         overflow:hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-      }
+
 
 }
 
@@ -1646,9 +1633,7 @@ button {-webkit-appearance:none;}
 
 
 
-   .selectBox .optionItem {
-      height: 100%;
-   }
+
 
 }
 
@@ -1662,11 +1647,8 @@ button {-webkit-appearance:none;}
       line-height: 1.5rem;
    }
 
-   .selectBox .optionItem {
-      height: 100%;
-   }
 
-   }
+}
 
    
 .l-intro, .r-intro {
