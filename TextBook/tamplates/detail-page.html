@@ -406,7 +406,8 @@ Grammar Series level
                             <img class="book-inforamtionimg" src="../static/detail-page/book-infomation-img.png" alt="">
                         </div>
     
-                        <button class="more-bookinfo">책 정보 더보기</button>
+                        <div class="more-bookinfo on">책 정보 더보기</div>
+                        <div class="more-bookinfo back">책 정보 접기</div>
                     </div>
                 </section>
 
@@ -982,21 +983,15 @@ Grammar Series level
 
 
 /* 책 정보 더 보기 */
-    var btn = document.querySelector('.more-bookinfo');
-    var area = document.querySelector('.book-desbox');
-    function fBtn(e) {
-        area.classList.toggle('height-full');
 
-        // 클릭했을 때 책 정보 더보기 -> 접기 / 글씨와 이미지 변경하기 
-        // $('.more-bookinfo::after').css({"background":"url(../static/detail-page/close-bookinfo.png) no-repeat"})
-        // if(area.classList.hasClass('height-full')){
-        //     $('.more-bookinfo::after').css({"background":"url(../static/detail-page/close-bookinfo.png) no-repeat"})
-        // } else {
-        //     $('.more-bookinfo::after').css({"background":"url(../static/detail-page/open-bookinfo.png) no-repeat"})
-        // }
+
+    function addClass() {
+        $('.book-desbox').toggleClass('height-full')
+        $('.more-bookinfo.on').fadeToggle(400);
+        $('.more-bookinfo.back').fadeToggle(400);
     }
-    
-    btn.addEventListener('click', fBtn);
+
+    $(document).on('click', '.more-bookinfo', addClass)
     
     
     const label = document.querySelector('.label');
@@ -1065,19 +1060,19 @@ Grammar Series level
     $(document).on('click', '.bcontent-open', function() {
         $('.bcontent-item').css({"height":"100%"});
         $('.bcontent-open').fadeOut(0);
-        $('.bcontent-close').fadeIn(50);
+        $('.bcontent-close').toggleClass('toggleClass', 400);
     })
 
     $(document).on('click', '.bcontent-close', function() {
         $('.bcontent-item').css({"height":"260px"});
-        $('.bcontent-close').fadeOut(0);
+        $('.bcontent-close').toggleClass('toggleClass', 400);
         $('.bcontent-open').fadeIn(50);
     })
 
 
 
 
-    
+
 
 </script>
 

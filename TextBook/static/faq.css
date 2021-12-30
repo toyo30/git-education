@@ -1669,3 +1669,6 @@ button {-webkit-appearance:none;}
    }
 
    
+.l-intro, .r-intro {
+   white-space: pre-wrap;
+}

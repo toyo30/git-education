@@ -500,6 +500,12 @@ background: transparent;}
    text-align: right;
 }
 
+.toggleClass {
+   display: flex !important;
+}
+
+
+
 .bcontent-open::after {
    display: inline-block;
    content: '';
@@ -573,10 +579,36 @@ background: transparent;}
    color: #EC5937;
    margin: 0 auto;
    margin-bottom: 60px;
+   background: url(../static/detail-page/open-bookinfo.png) no-repeat;
+   background-size: 24px 24px;
+   background-position: top 47% right 12%;
+   text-align: center;
+   padding-top: 18px;
+   text-indent: -10px;
+
    
 }
 
-.more-bookinfo::after {
+.more-bookinfo.back {
+   display: none;
+   font-weight: 800;
+   border: none;
+   background: #fff;
+   font-size: 22px;
+   line-height: 25px;
+   border-radius: 15px;
+   border: 2px solid #EC5937;
+   width: 233px;
+   height: 69px;
+   color: #EC5937;
+   margin: 0 auto;
+   margin-bottom: 60px;
+   background: url(../static/detail-page/close-bookinfo.png) no-repeat;
+   background-size: 24px 24px;
+   background-position: top 47% right 12%;
+}
+
+/* .more-bookinfo::after {
    content: '';
    display: inline-block;
    width: 24px;
@@ -585,7 +617,7 @@ background: transparent;}
    background-size: 24px 24px;
    margin-left: 5px;
    margin-top: 5px;
-}
+} */
 
 
 
@@ -2591,4 +2623,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 .selectBox .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 3.5294vw;}
    
   
+}
+
+
+.l-intro, .r-intro {
+   white-space: pre-wrap;
 }
