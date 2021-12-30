@@ -12,6 +12,16 @@ html,body { width: 100%; height: 100%; font-size: 32px; overflow-x: hidden; back
 #wrap { width: 100%; height: 100%; position: relative; }
 
 
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+ }
+ 
+ input, textarea, button { appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
+ 
+ 
+
+
 /* password 안 보이게 */
 input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 
@@ -1489,6 +1499,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
  
  .mobile-emailbox {
 	width: 34.4615vw;
+	margin-bottom: 0;
  }
 
 /* select */
