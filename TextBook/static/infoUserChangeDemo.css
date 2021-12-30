@@ -31,6 +31,12 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 input::-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #888; } 
 input::-ms-input-placeholder { /* Microsoft Edge */ color: #888; }
 
+button, a {
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 
 /* checkbox 수정 */
 
@@ -1164,6 +1170,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 	#page-list, .search-bar { width: 91%; }
 	
+	#page-list {
+		margin-top: 8.9744vw;
+	}
 
 	.t-logo { display: none; width: 27.7179vw; height: 4.2513vw;}
 	nav { display: none;}
@@ -1477,7 +1486,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	position: absolute;
 	width: 24.6154vw;
 	height: 8.4615vw;
-	top: 10.5128vw;
+	top: 10.9128vw;
 	right: 3.1538vw;
 	border: 0.0521vw solid #EC5937;
 	border-radius: 1.2821vw;
@@ -1745,4 +1754,13 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	}
 	.recent-box { bottom: 23vw; right:5.6863vw; }
 	
+}
+
+
+@media  screen and (max-width: 276px) {
+	.vaild-box {
+		width: 15.9231vw;
+		text-overflow: ellipsis;
+    	overflow: hidden;
+	}
 }
