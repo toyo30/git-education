@@ -1597,17 +1597,20 @@ button {-webkit-appearance:none;}
       }
 
       .selectBox .label {
+            margin-top: 0px;
             background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
             background-size: 2.5513vw;
 
             overflow:hidden !important;
             white-space: nowrap !important;
             text-overflow: ellipsis !important;
+            border: 0.7813vw solid #DFDFDF;
       }
 
       .selectBox.active .label {
          background: url(../static/faq/faq-close.png) calc(100% - 1.2549vw) center no-repeat;
          background-size: 2.5513vw;
+         border: 0.7813vw solid #DFDFDF;
 
       }
       
