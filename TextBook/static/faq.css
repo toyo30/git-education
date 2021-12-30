@@ -949,6 +949,10 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       min-width: 290px;
    } */
 
+input[type=search], input[type=text] {-webkit-appearance:none;}
+
+button {-webkit-appearance:none;}
+
    #top-menu, #page-list, .search-bar, .faq-section, 
    .faq-box, .faq-question { width: 89.7436vw; }
 
@@ -1563,19 +1567,48 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 }
 
+@media screen and (max-width: 420px){
+   .selectBox .label {
+      background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
+      background-size: 1.5513vw;
+}
 
+.selectBox.active .label {
+   background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
+   background-size: 1.5513vw;
+
+}
+
+}
 
 
 @media screen and (max-width: 380px){
-         .selectBox .label {
-            background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
-            background-size: 1.5513vw;
+
+      .selectBox {
+         overflow:hidden !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+      }
+
+      .selectBox .label {
+            background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
+            background-size: 2.5513vw;
+
+            overflow:hidden !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
       }
 
       .selectBox.active .label {
-         background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
-         background-size: 1.5513vw;
+         background: url(../static/faq/faq-close.png) calc(100% - 1.2549vw) center no-repeat;
+         background-size: 2.5513vw;
 
+      }
+      
+      .selectBox .optionItem {
+         overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
       }
 
 }
@@ -1590,22 +1623,34 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 @media screen and (max-width: 210px){
    .arrange-text {
-      -webkit-transform: scale(0.83);
+      /* -webkit-transform: scale(0.83); */
       text-indent: -1vw;
       text-align: center;
-      word-break: keep-all;
+      word-break: break-all;
       line-height: 1.5rem;
+   }
+
+
+
+   .selectBox .optionItem {
+      height: 100%;
    }
 
 }
 
 
 @media screen and (max-width: 203px){
-      .arrange-text {
-         -webkit-transform: scale(0.53);
-         text-indent: -4vw;
-         margin: 0 auto;
-      }
+   .arrange-text {
+      /* -webkit-transform: scale(0.83); */
+      text-indent: -1vw;
+      text-align: center;
+      word-break: break-all;
+      line-height: 1.5rem;
+   }
+
+   .selectBox .optionItem {
+      height: 100%;
+   }
 
    }
 
