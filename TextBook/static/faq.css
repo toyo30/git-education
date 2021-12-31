@@ -1623,8 +1623,6 @@ button {-webkit-appearance:none;}
       .selectBox.active .label {
          background: url(../static/faq/faq-close.png) calc(100% - 3.2549vw) center no-repeat;
          background-size: 2.5513vw;
-         border: 0.7813vw solid #DFDFDF;
-
       }
       
 
