@@ -1436,7 +1436,6 @@ button {-webkit-appearance:none;}
       width: 65.641vw;
       height: 8.7179vw;
       border: 0.7436vw solid #DFDFDF;
-      border-radius: 9.6863vw;
       padding: 0 21.2821vw 0 4.8718vw;
       font-size: 1.82rem;
       line-height: 1.82rem;
@@ -1444,6 +1443,7 @@ button {-webkit-appearance:none;}
       box-shadow: none !important;
       border-top-right-radius: 40px;
       border-bottom-right-radius: 40px;
+      border-radius: 15.6863vw;
    }
 
    
