@@ -196,7 +196,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    height: 53px;
    border-radius: 47px;
    cursor: pointer;
-   background-color: #FDFDFD;
 }
 
 
@@ -228,7 +227,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    transition: 100ms;
    background: url(../static/faq/faq-close.png) calc(100% - 16px) 49% no-repeat;
    background-size: 23px;
-   background-color: #FDFDFD;
 }
 
 .selectBox .optionList {
