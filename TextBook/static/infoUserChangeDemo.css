@@ -784,12 +784,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 @media (min-width:650px) and (max-width:1275px) {
 
 
-	input[type="checkbox"] {
-		height: 1.9608vw;
-		width: 1.9608vw;
-		border: 0.0784vw solid #C4C4C4;
-		border-radius: 0.3922vw;
-	  }
 
 	#header { height: 6.6667vw;}
 	#top-menu, #page-list, .search-bar { width: 93.7%; }
@@ -1050,9 +1044,21 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 }
 	 
 	 .selectAgreebox {
+		position: relative;
 		width: 9.3333vw;
 		height: 6.2745vw;
 	 }
+
+
+	input[type="checkbox"] {
+		position: absolute;
+		top: 2.1176vw;
+		right: 0px;
+		height: 1.9608vw;
+		width: 1.9608vw;
+		border: 0.0784vw solid #C4C4C4;
+		border-radius: 0.3922vw;
+	  }
 	 
 	 .sms-text {
 		font-size: 0.44rem;
