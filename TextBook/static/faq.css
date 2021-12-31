@@ -211,32 +211,31 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    outline: 0 none;
    background: #FDFDFD;
    cursor: pointer;
-   padding: 15px;
-   padding-left: 25px;
+   text-indent: 25px;
    font-weight: normal;
    font-size: 18px;
    line-height: 21px;
    z-index: 3001;
-   background: url(../static/faq/faq-open.png) calc(100% - 16px) center no-repeat;
-   background-size: 20px;
+   background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
+   background-size: 23px;
    border-radius: 27px;
    transition: 100ms;
    border: 2.5px solid #E8E8E8;;
+   padding-top: 4px;
 }
 
 .selectBox.active .label{
    transition: 100ms;
-   background: url(../static/faq/faq-close.png) calc(100% - 16px) center no-repeat;
-   background-size: 20px;
+   background: url(../static/faq/faq-close.png) calc(100% - 16px) 49% no-repeat;
+   background-size: 23px;
    background-color: #FDFDFD;
-   box-shadow: 4px 4px 3px rgb(0 0 0 / 7%);
 }
 
 .selectBox .optionList {
-   position: absolute;
-   top: 0px;
-   left: 0;
    width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
    list-style-type: none;
    padding: 0;
    overflow: hidden;
@@ -260,23 +259,28 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     width: 100%;
     height: 100%;
     /* transition: .1s; */
-    background-size: 20px;
     cursor: pointer;
     background-color: #FDFDFD;
-    padding: 15px;
+    padding: 17px;
     padding-left: 25px;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     z-index: 3000;
-    
 }
 
 
 .selectBox .optionItem:first-child {
-   padding-top: 73px;
+   padding-top: 69px;
    width: 100%;
-   padding-bottom: 15px;
+   padding-bottom: 17px;
+   height: 100%;;
+}
+
+
+.selectBox .optionItem:last-child {
+   width: 100%;
+   padding-bottom: 24px;
    height: 100%;;
 }
 
@@ -406,7 +410,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    display: flex;
    align-items: center;
    margin-top: 4px;
-   height: 60px;
+   height: 75px;
    border-bottom: 4px solid #F3F3F3;
 }
 
@@ -483,7 +487,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    font-weight: normal;
    font-weight: normal;
    font-size: 24px;
-   line-height: 28px;
+   line-height: 34px;
 }
 
 .btn-point {
@@ -555,6 +559,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    width: 100%;
    height: 100%;
    font-size: 16px;
+   line-height: 34px;
    /* transform: 400ms ease-in-out, opacity 400ms ease-out;
    transition: all 0.5s ease-in-out .1s; */
 }
@@ -566,7 +571,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    align-items: center;
    font-weight: normal;
    font-size: 24px;
-   line-height: 28px;
+   line-height: 34px;
    min-height: 100px;
    /* white-space:pre-wrap; */
 }
@@ -727,12 +732,12 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
       width: 13.8824vw;
       height: 4.1569vw;
       margin-top: 0;
-      padding-left: 2.0513vw;
+      text-indent: 2.0513vw;
       font-size: 0.60rem;
       line-height: 0.66rem;
-      background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
-      background-size: 0.63rem;
+      background-size: 1.8039vw;
       border-radius: 3.6863vw;
+      padding-top: 0.3137vw;
 
    }
 
@@ -757,27 +762,32 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
    .selectBox .optionItem {
-      padding: 0.3922vw 1.1765vw 0.3922vw;
-      padding: 1.1765vw;
-      padding-left: 1.9608vw;
+      padding: 1.3333vw;
+      padding-left: 2.0513vw;
       font-size: 0.56rem;
       line-height: 0.66rem;
    }
 
-   .selectBox .optionItem:first-child {
-      padding-top: 5.7255vw;
-      width: 100%;
-      padding-bottom: 1.1765vw;
-      height: 100%;;
-   }
    
    .selectBox.active .label{
-      background: url(../static/faq/faq-close.png) calc(100% - 1.2549vw) center no-repeat;
-      background-size: 0.63rem;
-      box-shadow: 0.3137vw 0.3137vw 0.2353vw rgb(0 0 0 / 7%);
+      background-size: 1.8039vw;
       background-color: #FDFDFD;
    }
    
+   
+   .selectBox .optionItem:first-child {
+      padding-top: 5.4118vw;
+      width: 100%;
+      padding-bottom: 1.3333vw;
+      height: 100%;;
+   }
+   
+   
+   .selectBox .optionItem:last-child {
+      width: 100%;
+      padding-bottom: 1.8824vw;
+      height: 100%;;
+   }
    
 
    
@@ -854,7 +864,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
    .faq-view-point {
       margin-top: 0.3137vw;
-      height: 4.7059vw;
+      height: 6.2059vw;
       border-bottom: 0.3137vw solid #F3F3F3;
    }
 
@@ -1323,30 +1333,34 @@ button {-webkit-appearance:none;}
 
 
    .selectBox {
-      width: 100%;
-      height: 100%;
+      height: 8.7179vw;
+      width: 22.5641vw;
    }
 
 
 
    .selectBox .label {
       padding: 1.1765vw;
-      padding-left: 1.9608vw;
+      text-indent: 0px;
+      padding-left: 2.5641vw;
       font-size: 1.09rem;
-      line-height: 1.20rem;
+      line-height: 4.7179vw;
       z-index: 3001;
-      background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
       border-radius: 12.0513vw;
-      background-size: 2.0513vw;
-      border-radius: 3.6863vw;
-      height: 8.7179vw;
-      width: 22.5641vw;
+      background-size: 3.3333vw;
+      border-radius: 5.6863vw;
+      width: 100%;
+      height: 100%;
+      background: #fdfdfd;
+      background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
+      background-size: 3.4483vw;
+      padding-top: 1.6vw;
    }
 
 
    .selectBox .optionList {
       position: absolute;
-      top: 0.6594vw;
+      top: 1.2821vw;
       left: 0;
       width: 100%;
       list-style-type: none;
@@ -1361,33 +1375,37 @@ button {-webkit-appearance:none;}
 
 
    .selectBox .optionList {
+      width: 22.5641vw;
       max-height: 0vw;
       padding-top: 0vw;
 
    }
 
    .selectBox.active .optionList {
-      max-height: 48.2157vw;
+      max-height: 51.2821vw;
       border-radius: 2.9231vw;
    }
 
  
 
    .selectBox .optionItem {
-      padding: 0.3922vw 1.1765vw 0.3922vw;
       width: 100%;
       height: 100%;
       background-size: 1.5686vw;
-      padding: 2.1765vw;
-      padding-top: 2.156vw;
-      padding-left: 1.9608vw;
+      padding: 2.5641vw;
       font-size: 1.09rem;
       line-height: 1.20rem;
    }
 
    .selectBox .optionItem:first-child {
-      padding-top: 10.8569vw;
+      padding-top: 10.0000vw;
+      padding-bottom: 2.5641vw;
    }
+
+   .selectBox .optionItem:last-child {
+      padding-bottom: 3.0769vw;
+   }
+
 
    
 
@@ -1398,10 +1416,8 @@ button {-webkit-appearance:none;}
    
    
    .selectBox.active .label{
-      background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
-      background-size: 2.0513vw;
+      background-size: 3.3333vw;
       background-color: #FDFDFD;
-      box-shadow: 0.3137vw 0.3137vw -1.2308vw rgb(0 0 0 / 7%);
    }
 
    .selectBox .optionList::-webkit-scrollbar {width: 0.4706vw;}
@@ -1420,7 +1436,7 @@ button {-webkit-appearance:none;}
       width: 65.641vw;
       height: 8.7179vw;
       border: 0.7436vw solid #DFDFDF;
-      border-radius: 3.6863vw;
+      border-radius: 5.6863vw;
       padding: 0 21.2821vw 0 4.8718vw;
       font-size: 1.82rem;
       line-height: 1.82rem;
@@ -1583,13 +1599,13 @@ button {-webkit-appearance:none;}
 
 @media screen and (max-width: 420px){
    .selectBox .label {
-      background: url(../static/faq/faq-open.png) calc(100% - 2.2549vw) center no-repeat;
-      background-size: 1.5513vw;
+      background: url(../static/faq/faq-open.png) calc(100% - 3.2549vw) center no-repeat;
+      background-size: 3.3333vw;
 }
 
 .selectBox.active .label {
-   background: url(../static/faq/faq-close.png) calc(100% - 2.2549vw) center no-repeat;
-   background-size: 1.5513vw;
+   background: url(../static/faq/faq-close.png) calc(100% - 3.2549vw) center no-repeat;
+   background-size: 3.3333vw;
 
 }
 
@@ -1601,13 +1617,13 @@ button {-webkit-appearance:none;}
 
       .selectBox .label {
             margin-top: 0px;
-            background: url(../static/faq/faq-open.png) calc(100% - 1.2549vw) center no-repeat;
+            background: url(../static/faq/faq-open.png) calc(100% - 3.2549vw) center no-repeat;
             background-size: 2.5513vw;
 
       }
 
       .selectBox.active .label {
-         background: url(../static/faq/faq-close.png) calc(100% - 1.2549vw) center no-repeat;
+         background: url(../static/faq/faq-close.png) calc(100% - 3.2549vw) center no-repeat;
          background-size: 2.5513vw;
          border: 0.7813vw solid #DFDFDF;
 
