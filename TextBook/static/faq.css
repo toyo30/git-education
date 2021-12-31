@@ -1333,6 +1333,7 @@ button {-webkit-appearance:none;}
    .selectBox {
       height: 8.7179vw;
       width: 22.5641vw;
+      box-shadow: none !important;
    }
 
 
@@ -1353,6 +1354,7 @@ button {-webkit-appearance:none;}
       background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
       background-size: 3.4483vw;
       padding-top: 1.6vw;
+      box-shadow: none !important;
    }
 
 
@@ -1415,7 +1417,7 @@ button {-webkit-appearance:none;}
    
    .selectBox.active .label{
       background-size: 3.3333vw;
-      background-color: #FDFDFD;
+      box-shadow: none !important;
    }
 
    .selectBox .optionList::-webkit-scrollbar {width: 0.4706vw;}
@@ -1440,6 +1442,8 @@ button {-webkit-appearance:none;}
       line-height: 1.82rem;
       background: rgba(255, 255, 255, 0.21);
       box-shadow: none !important;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
    }
 
    
