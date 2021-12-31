@@ -227,6 +227,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
    transition: 100ms;
    background: url(../static/faq/faq-close.png) calc(100% - 16px) 49% no-repeat;
    background-size: 23px;
+   background-color: #fdfdfd;
 }
 
 .selectBox .optionList {
@@ -1443,7 +1444,7 @@ button {-webkit-appearance:none;}
       box-shadow: none !important;
       border-top-right-radius: 40px;
       border-bottom-right-radius: 40px;
-      border-radius: 15.6863vw;
+      border-radius: 21.6863vw !important;
    }
 
    
