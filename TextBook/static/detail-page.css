@@ -221,8 +221,6 @@ input, textarea, button { appearance: none; -moz-appearance: none; -webkit-appea
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; 
   border-right: 0px;
-
-
 }
 
 .amount-num {
