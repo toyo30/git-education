@@ -483,7 +483,7 @@ input {
     display: none;
  }
  
-@media (min-width:1160px) and (max-width:1199px) {html{font-size:31px;}}
+/* @media (min-width:1160px) and (max-width:1199px) {html{font-size:31px;}}
 @media (min-width:1120px) and (max-width:1159px) {html{font-size:30px;}}
 @media (min-width:1080px) and (max-width:1119px) {html{font-size:29px;}}
 @media (min-width:1040px) and (max-width:1079px) {html{font-size:28px;}}
@@ -507,9 +507,10 @@ input {
 @media screen and (max-width:359px){html{font-size:10px;}}
 @media screen and (max-width:319px) {html{font-size:9px;}}
 @media screen and (max-width:289px){html{font-size:8px;}}
-@media screen and (max-width:249px){html{font-size:7px;}}
+@media screen and (max-width:249px){html{font-size:7px;}} */
 
-
+@media screen and (max-width: 1275px){ html{font-size: 2.5098vw;}}
+@media (max-width:320px) { html{font-size: 8px;}} 
 
 @media screen and (max-width:1275px) {
     #top-menu, #page-list, .search-bar
@@ -560,6 +561,7 @@ input {
     border-radius: 3.6863vw;
     padding-top: 0.3137vw;
     border: 0.1961vw solid #DFDFDF;
+    background-position: calc(100% - 1.2549vw) 51%;
 
  }
 
@@ -592,6 +594,7 @@ input {
 
  
  .selectBox.active .label{
+    background-position: calc(100% - 1.2549vw) 51%;
     background-size: 1.8039vw;
     background-color: #FDFDFD;
  }
@@ -851,8 +854,8 @@ input {
         width: 100%;
         height: 100%;
         background: #fdfdfd;
-        background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
-        background-size: 3.4483vw;
+        background: url(../static/faq/faq-mopen.png) calc(100% - 2.8205vw) 49% no-repeat;
+        background-size: 2.5641vw;
         padding-top: 1.6vw;
         box-shadow: none !important;
         border: 0.7436vw solid #DFDFDF;
@@ -917,7 +920,11 @@ input {
     
     
     .selectBox.active .label{
-        background-size: 3.3333vw;
+     
+        
+        padding-top: 1.6vw;
+        background: url(../static/faq/faq-mclose.png) calc(100% - 2.8205vw) 49% no-repeat;
+        background-size: 2.5641vw;
         box-shadow: none !important;
     }
 

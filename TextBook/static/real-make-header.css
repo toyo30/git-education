@@ -535,10 +535,12 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 	.bell-box {
+		position: relative;
 		justify-content: right;
 	}
 
 	.bell { 
+		position: absolute; right: 0;
 		width: 1.82rem; height: 2.09rem;  
 		display: block; cursor: pointer;
 	}
@@ -555,7 +557,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		font-size: 0.82rem;
 		line-height: 1.37rem;
 		top: 0.91rem;
-		right: 1.36rem;
+		right: -0.4rem;
 
 	}
 
@@ -649,7 +651,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 .fixed-category { 
         width: 100%; display: block;
         background: #FDFDFD; top: 0; left: 0;
-		box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.07);
 		transition: all 2s;
 		z-index: 99999;
 		
@@ -677,6 +679,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     }
 
     .fixed-menu > section:first-child { margin-left: 2.09rem;}
+	.fixed-menu > section:last-child > span {margin-right: 1.09rem;}
+
+
     .fixed-menu > section > span { font-size: 1.45rem; margin-left: 0.64rem;}
     .fixed-menu > section:nth-child(4)::before {
         content: ""; position: absolute; display: block;
@@ -752,7 +757,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	} */
 
 
-	.mobile-slide-menu > section > span { font-size: 1.27273rem; margin-bottom: 1.09rem; font-weight: 600;}
+	.mobile-slide-menu > section > span { display: block; width: 100%; text-align: center; font-size: 1.27273rem; margin-bottom: 1.09rem; font-weight: 600;}
 	.mobile-slide-menu > section > img { margin-top: 0.64rem; }
 
 
@@ -769,7 +774,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		padding: 1.73rem 0; border-bottom : 0.09rem solid #dfdfdf;
 	}
 	/* .mobile-nav > ul li > img { border: 1px solid blue;} */
-	.mobile-nav > ul li a { font-size: 1.27273rem; color: #EC683D;}
+	.mobile-nav > ul li a { display: block; width: 100%; font-size: 1.27273rem; color: #EC683D;}
 	.mobile-nav > ul {margin: 0 auto;}
 
 	.mobile-user { width: 1.82rem; height: 2rem; margin-right: 2.36rem; margin-left: 1.82rem;}
