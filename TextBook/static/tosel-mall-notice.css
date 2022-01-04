@@ -73,7 +73,7 @@ input {
     font-size: 18px;
     line-height: 21px;
     z-index: 3001;
-    background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
+    background: url(../static/faq/faq-open.png) calc(100% - 16px) 50% no-repeat;
     background-size: 23px;
     border-radius: 27px;
     transition: 100ms;
@@ -83,7 +83,7 @@ input {
  
  .selectBox.active .label{
     transition: 100ms;
-    background: url(../static/faq/faq-close.png) calc(100% - 16px) 49% no-repeat;
+    background: url(../static/faq/faq-close.png) calc(100% - 16px) 50% no-repeat;
     background-size: 23px;
     background-color: #fdfdfd;
  }
@@ -249,6 +249,9 @@ input {
     
     text-align: center;
     color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
  }
  
  
@@ -285,6 +288,9 @@ input {
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     
  }
  
@@ -567,6 +573,7 @@ input {
         border-radius: 3.6863vw;
         padding-top: 0.3137vw;
         border: 0.1961vw solid #DFDFDF;
+        background-position: calc(100% - 1.2549vw) 50%;
 
     }
 
@@ -599,6 +606,7 @@ input {
 
     
     .selectBox.active .label{
+        background-position: calc(100% - 1.2549vw) 50%;
         background-size: 1.8039vw;
         background-color: #FDFDFD;
     }
@@ -867,8 +875,8 @@ input {
         width: 100%;
         height: 100%;
         background: #fdfdfd;
-        background: url(../static/faq/faq-open.png) calc(100% - 16px) 49% no-repeat;
-        background-size: 3.4483vw;
+        background: url(../static/faq/faq-mopen.png) calc(100% - 2.8205vw) 53% no-repeat;
+        background-size: 2.5641vw;
         padding-top: 1.6vw;
         box-shadow: none !important;
         border: 0.7436vw solid #DFDFDF;
@@ -933,7 +941,9 @@ input {
      
      
      .selectBox.active .label{
-        background-size: 3.3333vw;
+        padding-top: 1.6vw;
+        background: url(../static/faq/faq-mclose.png) calc(100% - 2.8205vw) 53% no-repeat;
+        background-size: 2.5641vw;
         box-shadow: none !important;
      }
   
