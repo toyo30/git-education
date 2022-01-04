@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../static/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title>마이페이지, Faq 등의 기본 값</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>header-footer 기본</title>
 </head>
 <body>
 
@@ -152,77 +157,115 @@
 
         </div>
 
+        <div>
+            <div class="">
+                <section class="">
+                    <img src="../static/all-text.png" class="all-text-fix">
+                    <span>주문내역 관리</span>
+                </section>
+                <section class="">
+                    <img src="../static/event.png" class="event-fix">
+                    <span>장바구니</span>
+                </section>
+                <section class="">
+                    <img src="../static/best-seller.png" class="best-seller-fix">
+                    <span>취소/반품/교환/조회</span>
+                </section>
+                <section class="">
+                    <img src="../static/new-product.png" class="new-product-fix">
+                    <span>회원정보</span>
+                </section>
+
+                
+            </div>
+        </div>
+
+     
+ 
+        <!-- <script>
+            window.swiper1 = new Swiper(".mySwiper", {
+               slidesPerView: "auto",
+               spaceBetween: 0,
+              
+           });
+
+           $(window).scroll(function(){
+                var fixc = $('.fixed-category').offset().top;
+                var headerc = $('#header').offset().top + $('#header').outerHeight();
+                // console.log($(window).scrollTop());
+                // if( $(window).scrollTop() == 0 ){
+                //     $('.btn-fold-wrap').animate({'margin-bottom': '0px'});
+                // }
+                if( $(window).scrollTop() > fixc ){
+                    $('.fixed-category').attr('style','position:fixed!important');
+                    $('.btn-fold-wrap').attr('style','position:fixed!important');
+                    $('.btn-fold-wrap').css('top','12.4205vw');
+                }
+                if( $(window).scrollTop() < headerc ){
+                    $('.fixed-category').attr('style','position:relative!important');
+                    $('.btn-fold-wrap').attr('style','position:relative!important');
+                    $('.btn-fold-wrap').css('top','0vw');
+                    $('.m-type-select').css('top','0vw');
+                }
+           });
+        </script> -->
+
+      
+               
+        
+            <img src="../static/all-text.png" class="all-text-fix">
+            <span>전체 교재</span>
+       
+        
+            <img src="../static/event.png" class="event-fix">
+            <span>이벤트</span>
+       
+        
+            <img src="../static/best-seller.png" class="best-seller-fix">
+            <span>베스트 셀러</span>
+       
+        
+            <img src="../static/new-product.png" class="new-product-fix">
+            <span>신상품</span>
+       
+        
+            <img src="../static/goods.png" class="goods-fix">
+            <span>굿즈</span>
+       
+        
+            <img src="../static/data-room.png" class="data-room-fix">
+            <span>학습 자료실</span>
+       
 
 
 
 
 
         <div id="content">
-            <div class="fixed-category swiper mySwiper">
-                <div class="fixed-menu swiper-wrapper">
-                    <section class="swiper-slide">
-                        <img src="../static/all-text.png" class="all-text all-text-fix">
-                        <span>전체 교재</span>
+                <div id="page-list">
+
+
+                    <section class="mypage-menu">
+                        <h2 class="mypage-title">마이페이지</h3>
+
+                        <ul class="mypage-list">
+                            <li class="mypage-item">주문내역 관리</li>
+                            <li class="mypage-item">장바구니</li>
+                            <li class="mypage-item">취소/반품/교환 조회</li>
+                            <li class="mypage-item text-active">회원 정보</li>
+                        </ul>
                     </section>
-                    <section class="swiper-slide">
-                        <img src="../static/event.png" class="event event-fix">
-                        <span>이벤트</span>
+
+
+                    <section class="manage-info">   
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore, accusamus sed soluta quasi officia illo eaque aspernatur voluptate architecto quas debitis deleniti velit quaerat aliquam accusantium voluptatem. Officiis, aliquid.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptatem rem delectus aperiam assumenda vero id ipsum eos magnam dolor sed pariatur ullam recusandae iusto deserunt fugiat vitae, repellendus blanditiis?</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore, accusamus sed soluta quasi officia illo eaque aspernatur voluptate architecto quas debitis deleniti velit quaerat aliquam accusantium voluptatem. Officiis, aliquid.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptatem rem delectus aperiam assumenda vero id ipsum eos magnam dolor sed pariatur ullam recusandae iusto deserunt fugiat vitae, repellendus blanditiis?</p>
                     </section>
-                    <section class="swiper-slide">
-                        <img src="../static/best-seller.png" class="best-seller best-seller-fix">
-                        <span>베스트 셀러</span>
-                    </section>
-                    <section class="swiper-slide">
-                         <img src="../static/new-product.png" class="new-product new-product-fix">
-                        <span>신상품</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/goods.png" class="goods goods-fix">
-                        <span>굿즈</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/data-room.png" class="data-room data-room-fix">
-                        <span>학습 자료실</span>
-                    </section>
-                    <div class="search-box">
-                        <img src="../static/search.png" class="search-img">
-                        <input type="search">
-                        <button>검색</button>
-                    </div>
                 </div>
-
-                
-            </div>
-
-
-
-            <div class="select-option">
-                <div class="selectBox">
-                    <button class="label">분권 구매</button>
-                    <ul class="optionList">
-                      <li class="optionItem">LISTENING 1</li>
-                      <li class="optionItem">LISTENING 2</li>
-                    </ul>
-                </div>
-
-
-            </div>
-
-
-            <div class="">
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis voluptatem voluptates vitae officiis blanditiis inventore, adipisci fugit iusto ea tempore aut atque quos, laborum magni dolore enim tenetur nostrum!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ex et! Magni doloremque ratione quod placeat recusandae ipsum, totam dicta, sed enim iusto corrupti fugiat beatae quasi neque eum? Et!
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis voluptatem voluptates vitae officiis blanditiis inventore, adipisci fugit iusto ea tempore aut atque quos, laborum magni dolore enim tenetur nostrum!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ex et! Magni doloremque ratione quod placeat recusandae ipsum, totam dicta, sed enim iusto corrupti fugiat beatae quasi neque eum? Et!
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis voluptatem voluptates vitae officiis blanditiis inventore, adipisci fugit iusto ea tempore aut atque quos, laborum magni dolore enim tenetur nostrum!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ex et! Magni doloremque ratione quod placeat recusandae ipsum, totam dicta, sed enim iusto corrupti fugiat beatae quasi neque eum? Et!
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis voluptatem voluptates vitae officiis blanditiis inventore, adipisci fugit iusto ea tempore aut atque quos, laborum magni dolore enim tenetur nostrum!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ex et! Magni doloremque ratione quod placeat recusandae ipsum, totam dicta, sed enim iusto corrupti fugiat beatae quasi neque eum? Et!
-                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis voluptatem voluptates vitae officiis blanditiis inventore, adipisci fugit iusto ea tempore aut atque quos, laborum magni dolore enim tenetur nostrum!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ex et! Magni doloremque ratione quod placeat recusandae ipsum, totam dicta, sed enim iusto corrupti fugiat beatae quasi neque eum? Et!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore, accusamus sed soluta quasi officia illo eaque aspernatur voluptate architecto quas debitis deleniti velit quaerat aliquam accusantium voluptatem. Officiis, aliquid.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptatem rem delectus aperiam assumenda vero id ipsum eos magnam dolor sed pariatur ullam recusandae iusto deserunt fugiat vitae, repellendus blanditiis?
-            </div>
-
-
-
+            
         </div>
-
 
 
 
@@ -320,30 +363,6 @@
     </div>
 
 <script>
-const label = document.querySelector('.label');
-const faqBtn = document.querySelector('.btn-point');
-const options = document.querySelectorAll('.optionItem');
-// 클릭한 옵션의 텍스트를 라벨 안에 넣음
-const handleSelect = function(item) {
-  label.innerHTML = item.textContent;
-  label.parentNode.classList.remove('active');
-}
-// 옵션 클릭시 클릭한 옵션을 넘김
-options.forEach(function(option){
-  option.addEventListener('click', function(){handleSelect(option)})
-})
-
-// 라벨을 클릭시 옵션 목록이 열림/닫힘
-label.addEventListener('click', function(e){
-  if(label.parentNode.classList.contains('active')) {
-    label.parentNode.classList.remove('active');
-  } else {
-    label.parentNode.classList.add('active');
-  }
-});
-
-//특정 영역제외 클릭하기 
-
 
 </script>
 </body>

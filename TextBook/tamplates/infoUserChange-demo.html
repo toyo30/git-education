@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../static/infoUserChangeDemo.css">
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <title>개인회원정보 수정</title>
 </head>
 <body>
+<script>
+function goAddr(){
+        new daum.Postcode({
+            oncomplete: function(data) {
+                $("#num-address").val(data.zonecode);
+                $("#my-address").val(data.address);
+            
+              console.log(data.address);
+              console.log(data.zonecode);
+            }
+        }).open();
+      }
+</script>
 
     <div id="wrap">
 
@@ -200,7 +215,7 @@
 
 
                     <section class="mypage-menu">
-                        <h2 class="mypage-title">마페이지</h3>
+                        <h2 class="mypage-title">마이페이지</h3>
 
                         <ul class="mypage-list">
                             <li class="mypage-item">주문내역 관리</li>
@@ -214,7 +229,8 @@
                     <section class="manage-info">
                         <h3 class="manage-title">회원정보 관리</h4>
                         <h4 class="manage-sub">필수정보</h4>
-                        <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data">
+                        <div id="frm" name="frm">
+                        <!-- <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data"> -->
                             <div class="form-box">
                                 <h5 class="blind">회원정보 수정</h5>
                     
@@ -288,31 +304,32 @@
                                         <div class="input-detail">
                                             <label class="detail-lab" for="passwordCur">현재 비밀번호</label>
                                             <div class="input-box">
-                                                <input type="password" id="passwordCur" placeholder="현재 비밀번호" class="inp-area" name="passwordCur" maxlength="20" autocomplete="off">
+                                                <input type="text" id="passwordCur" placeholder="현재 비밀번호" class="inp-area" name="passwordCur" maxlength="20" autocomplete="off">
                                             </div>
                                         </div>
                     
                                         <div class="input-detail">
                                             <label class="detail-lab" for="passwordNew">새 비밀번호</label>
                                             <div class="input-box">
-                                                <input type="password" id="passwordNew" placeholder="새 비밀번호" class="inp-area" name="passwordNew" maxlength="20" autocomplete="off">
+                                                <input type="text" id="passwordNew" placeholder="새 비밀번호" class="inp-area" name="passwordNew" maxlength="20" autocomplete="off">
                                             </div>
                                         </div>
                     
                                         <div class="input-detail">
                                             <label class="detail-lab" for="passNewCheck">비밀번호 다시 입력</label>
                                             <div class="input-box">
-                                                <input type="password" id="passNewCheck" placeholder="비밀번호 확인" class="inp-area" name="passNewCheck" maxlength="20" autocomplete="off">
+                                                <input type="text" id="passNewCheck" placeholder="비밀번호 확인" class="inp-area" name="passNewCheck" maxlength="20" autocomplete="off">
                                             </div>
                                         </div>
                     
                                         <div class="passbtn-wrap">
-                                            <a id="passChange" href="">비밀번호 변경
-                                            </a>
+                                            <button id="passChange" href="">비밀번호 변경
+                                            </button>
                                         </div>
                                         
                                     </div>
                                 </div>
+
                     
                                 <div class="form-item">
                                     <div class="form-lab">
@@ -321,10 +338,10 @@
                                     <div class="input-text direction">
                                         <div class="input-detail">
                                             <div class="input-box address-box">
-                                                <input type="text" id="find-address" class="inp-area" name="find-address" maxlength="6" autocomplete="off">
+                                                <input type="text" id="num-address" class="inp-area" name="num-address" maxlength="6" asutocomplete="off">
                                             </div>
                                             <div class="btn-addressbox">
-                                                <button id="addfind" class="btn-address" href="">주소 찾기</button>
+                                                <button id="addfind" class="btn-address" onclick="goAddr()">주소 찾기</button>
                                             </div>
                                         </div>
                     
@@ -382,7 +399,7 @@
                                                     <input type="email" id="write-email" class="inp-area" name="write-email"  autocomplete="on" placeholder="tosel@tosel.com">
                                                 </div>
                                                 <div class="btn-addressbox">
-                                                    <a id="addSend" class="btn-email" href="">인증메일 전송</a>
+                                                    <a id="addSend" class="btn-email" >인증메일 전송</a>
                                                 </div>
                                             </div>
                         
@@ -472,7 +489,7 @@
                                     <b id="btnLeave">회원 탈퇴하기</b>
                                 </a> -->
                             </div>
-                        </form>
+                        </div>
                     </section>
 
 
@@ -581,6 +598,13 @@
     </div>
 
 <script>
+
+
+
+// $(document).on('click', '#addfind', goAddr)
+
+
+
 
 console.log($('.vaild').children())
 function addColor() {
