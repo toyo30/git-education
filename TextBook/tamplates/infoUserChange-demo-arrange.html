@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script> 
+    <!-- <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>  -->
+    <!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../static/infoUserChangeDemo copy.css">
     <title>개인회원정보 수정</title>
@@ -585,8 +586,7 @@
     </div>
 
 <script>
-function goAddr(){
-    alert('asdf')
+
        new daum.Postcode({
            oncomplete: function(data) {
            $("#num-address").val(data.zonecode);
@@ -597,7 +597,6 @@ function goAddr(){
              console.log(data.zonecode);
            }
        }).open();
-}
 
 // daum.Postcode.load(function() {
 //     new daum.Postcode({
