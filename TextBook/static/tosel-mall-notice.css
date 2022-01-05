@@ -474,7 +474,7 @@ input {
  }
  
  
- .faq-pay, .faq-other {
+ .faq-event, .faq-order, .faq-book {
     display: none;
  }
  
