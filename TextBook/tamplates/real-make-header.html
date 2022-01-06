@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  -->
     <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
@@ -368,16 +369,29 @@ $(window).scroll(function makeF () {
 
 
 
-//뒤로가기 버튼 클릭시 touch 등 현상
+//qjxms zmff
 
 
-$('.page-prev').bind('tap', function() {
+// $('.page-prev').bind('tap', function() {
+//     setTimeout(() => {
+//         $('.page-prev').css({'background-color': '#FFFFFF'});
+        
+//     }, 100);
+//     $('.page-prev').css({'background-color': '#F3F3F3'});
+// })
+
+function clickColor() {
     setTimeout(() => {
-        $('.page-prev').css({'background-color': '#FFFFFF'});
+        $(this).css({'background-color': '#FFFFFF'});
         
     }, 100);
-    $('.page-prev').css({'background-color': '#F3F3F3'});
-})
+    $(this).css({'background-color': '#F3F3F3'});
+}
+
+
+$(document).on('click', '.page-prev', clickColor);
+
+
 
 
 $('.m-btn').bind('tap', function() {
@@ -385,9 +399,9 @@ $('.m-btn').bind('tap', function() {
         // $(this).css({'box-shadow': 'none'});
         $(this).css({'opacity': '1'});
         
-    }, 100);
+    }, 500);
     // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
-    $(this).css({'opacity': '0.3'});
+    $(this).css({'opacity': '0.9'});
 })
 
 
