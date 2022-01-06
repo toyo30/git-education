@@ -518,6 +518,8 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		display: flex;
 	}
 
+
+
 	.logo-title{
 		display: block;
 	}
@@ -540,6 +542,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		position: relative;
 		justify-content: right;
 	}
+
 
 	.bell { 
 		position: absolute; right: 0;

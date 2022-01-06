@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+    <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>  -->
 
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  -->
     <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="logo-box bell-box">
-                    <img src="../static/bell.png" class="bell">
+                    <img src="../static/bell.png" class="bell m-btn">
                     <span class="amount-bell">1</span>
                 </div>
 
@@ -392,17 +392,30 @@ function clickColor() {
 $(document).on('click', '.page-prev', clickColor);
 
 
-
-
-$('.m-btn').bind('tap', function() {
+function clickOpacity() {
     setTimeout(() => {
-        // $(this).css({'box-shadow': 'none'});
         $(this).css({'opacity': '1'});
+        $(this).siblings('span').css({'opacity': '1'});
         
-    }, 500);
-    // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
-    $(this).css({'opacity': '0.9'});
-})
+    }, 100);
+    $(this).css({'opacity': '0.7'});
+    $(this).siblings('span').css({'opacity': '0.7'});
+}
+
+
+$(document).on('click', '.m-btn', clickOpacity);
+
+
+
+// $('.m-btn').bind('tap', function() {
+//     setTimeout(() => {
+//         // $(this).css({'box-shadow': 'none'});
+//         $(this).css({'opacity': '1'});
+        
+//     }, 500);
+//     // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
+//     $(this).css({'opacity': '0.9'});
+// })
 
 
 
