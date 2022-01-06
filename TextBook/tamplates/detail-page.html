@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/detail-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/detail-page.css">
     <title>마이페이지 개인 회원정보 수정</title>
 </head>
 <body class="before-load">
@@ -204,21 +204,23 @@
              
             <div id="container">
 
-                <div class="path-bar">
+                <div class="path-section">
+                    <div class="path-bar">
 
-                   
-                        <p><strong><a href="#">웰컴</a></strong></p>
-                   
-                    <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
-                    <!--메인북 페이지 -->
-                        <p><a href="#">전체교재</a></p>
-                   
-                    <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
-                    <!-- 전체 교재 페이지 -->
-                   
-                        <p><a href="#">JUNIOR / LISTENING</a></p>
-                   
-                    <!-- 전체 교재 페이지 -->
+                    
+                        <p><strong><a href="#" class="grand-category">웰컴</a></strong></p>
+                    
+                        <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
+                        <!--메인북 페이지 -->
+                        <p><a href="#" class="parent-category">전체교재</a></p>
+                    
+                        <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
+                        <!-- 전체 교재 페이지 -->
+                    
+                        <p><a href="#" class="child-category">JUNIOR / LISTENING</a></p>
+                    
+                        <!-- 전체 교재 페이지 -->
+                    </div>
                 </div>
 
 
@@ -243,7 +245,7 @@
     
                                     <li>
                                         <div class="Litem">판매가</div>
-                                        <div class="Ritem"><span class="sale-rate">10%</span><span class="sale-price" id="bookprice">17,910</span><span class="won">원</span></div>
+                                        <div class="Ritem"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
                                     </li>
     
                                     <li>
@@ -268,6 +270,8 @@
                                         <ul class="optionList">
                                           <li class="optionItem">LISTENING 1</li>
                                           <li class="optionItem">LISTENING 2</li>
+                                          <li class="optionItem">LISTENING 3</li>
+                                          <li class="optionItem">LISTENING 4</li>
                                         </ul>
                                     </div>
         
@@ -338,7 +342,7 @@
                                 <div id="booklevel" class="page-book-level">JUNIOR</div>
                             </div>
                             <span class="bar"></span>
-                            <div id="bookprice" class="page-book-price">17,910원</div>
+                            <div id="bookprice" class="page-book-price"><span class="muti-book-price">17,910</span>원</div>
                             <div class="amount-check">
                                             
                                 <div class="amount-num">
@@ -419,7 +423,7 @@ Grammar Series level
                 <section class="book-description">
                     <div class="book-infobox">
                         <div class="book-desbox">
-                            <img class="book-inforamtionimg" src="../static/detail-page/book-infomation-img.png" alt="">
+                            <img class="book-informationimg" src="../static/detail-page/book-infomation-img.png" alt="">
                         </div>
     
                         <div class="more-bookinfo on">책 정보 더보기</div>
@@ -449,14 +453,15 @@ Grammar Series level
                 <section class="more-series">
                     <div class="more-series-box">
                         <p class="series-title">이 책의 시리즈</p>
-                    
-                        <div class="book-slide-box">
-                            <button class="btn-left"></button>
-                
-                            <div class="slide-wrap">
-                                <div class="slide-show-box">
 
-                                    <div class="slide-show-area">
+                        <div class="book-slide-box">
+                            <button class="btn-left swiper-button-prev"></button>
+                            
+
+                            <div class="slide-wrap swiper firstSwiper">
+                                <div class="slide-show-box swiper-wrapper">
+
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
@@ -505,7 +510,7 @@ Grammar Series level
                                     </div>
     
     
-                                    <div class="slide-show-area">
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
@@ -554,7 +559,7 @@ Grammar Series level
     
     
     
-                                    <div class="slide-show-area">
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
@@ -605,24 +610,26 @@ Grammar Series level
                                 </div>
                             </div>
 
-                            <button class="btn-right"></button> 
+                            <button class="btn-right swiper-button-next"></button> 
 
                         </div>
+                    
+                       
                     </div>
                 </section>
-
+                
                 <section class="more-series">
                     <div class="more-series-box">
                         <p class="series-title">이 책의 시리즈</p>
                     
                         <div class="book-slide-box">
-                            <button class="btn-left"></button>
+                            <button class="btn-left button-prev"></button>
                             
 
-                            <div class="slide-wrap">
-                                <div class="slide-show-box">
+                            <div class="slide-wrap swiper secondSwiper">
+                                <div class="slide-show-box swiper-wrapper">
 
-                                    <div class="slide-show-area">
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book.png" alt="시리북 더 보기">
@@ -671,7 +678,7 @@ Grammar Series level
                                     </div>
     
     
-                                    <div class="slide-show-area">
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book2.png" alt="시리북 더 보기">
@@ -720,7 +727,7 @@ Grammar Series level
     
     
     
-                                    <div class="slide-show-area">
+                                    <div class="slide-show-area swiper-slide">
                                         <div class="book-component">
                                             <a class="book-link" href="https://smartstore.naver.com/modoobooks/products/5303877368?NaPm=ct%3Dky139w74%7Cci%3D48fbe5c55e4957dd5b1c308b135313ca574d2748%7Ctr%3Dsls%7Csn%3D980243%7Chk%3Dfa3e15e4ac1322660b479e35f1863f090b4c7288" target='_blank'>
                                                 <img class="series-img" src="../static/detail-page/series-book3.png" alt="시리북 더 보기">
@@ -771,11 +778,27 @@ Grammar Series level
                                 </div>
                             </div>
 
-                            <button class="btn-right"></button> 
+                            <button class="btn-right button-next"></button> 
 
                         </div>
                     </div>
                 </section>
+                <script>
+                    var swiper = new Swiper(".firstSwiper", {
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                        },
+                    });
+
+                    var swiper = new Swiper(".secondSwiper", {
+                        navigation: {
+                        nextEl: ".button-next",
+                        prevEl: ".button-prev",
+                        },
+                    });
+                </script>
+
 
 
                 <section class="ask-product">
@@ -977,7 +1000,6 @@ Grammar Series level
 
 
 
-
         </div>
 
 
@@ -1014,6 +1036,7 @@ Grammar Series level
     const faqBtn = document.querySelector('.btn-point');
     const options = document.querySelectorAll('.optionItem');
     // 클릭한 옵션의 텍스트를 라벨 안에 넣음
+    
     const handleSelect = function(item) {
         label.innerHTML = item.textContent;
         label.parentNode.classList.remove('active');
@@ -1034,29 +1057,28 @@ Grammar Series level
     
     //특정 영역제외 클릭하기 
     
-    // body.addEventListener('click', function(event) {
-    //     var target = event.target;
-    //     if(target !== label) {
-    //         label.parentNode.classList.remove('active');
-    //     }
-    // });
+//   body.addEventListener('click', function(event) {
+//       var target = event.target;
+//       if(target !== $('.label')) {
+//           label.parentNode.classList.remove('active');
+//       }
+//   });
 
 
 
 
 
-    // 책 수량 
+// ------------------------책 수량 ----------------------
 
 $('.amount-check .sign-mius').click(function(e){
         e.preventDefault();
         var stat = $(this).parent().parent().children().find('.amount-count').val();
-        console.log(stat);
-
-        
+        if(stat == NaN || stat == "") {
+        //pass
+         } else {
     
         var num = parseInt(stat,10);
-        
-        
+            
         num--;
         if(num<=1){
             num = 1;
@@ -1064,12 +1086,18 @@ $('.amount-check .sign-mius').click(function(e){
         $('.amount-count').val(num);
         
         $(this).parent().parent().children().find('.amount-count').val(num);
+        caluPrice(num)
+        }
 });
+
+
 
 $('.amount-check .sign-plus').click(function(e){
     e.preventDefault();
     var stat = $(this).parent().parent().children().find('.amount-count').val();
-    console.log(stat);
+    if(stat == NaN || stat == "") {
+        //pass
+    } else {
     var num = parseInt(stat,10);
     $('.amount-count').val(num + 1);
     num++;
@@ -1078,16 +1106,50 @@ $('.amount-check .sign-plus').click(function(e){
     }
     $('.amount-count').val(num);
     $(this).parent().parent().children().find('.amount-count').val(num);
+    caluPrice(num)
+    }
 });
     
 //같은 데이터 입력
 $(document).on('keyup', '.amount-count', function() {
-    // alert('af')
+
     let textNum = $(this).val();
-   
     $('.amount-count').val(textNum);
-    // $('.amount-count').text($(this).val());
+    
+    //타자에서 값이 들어오지 않을 경우 계산해주지 않음
+    if($(this).val() == NaN || $(this).val() == "" || $(this).val() == 0) {
+        //pass
+    } else {
+    caluPrice(textNum)
+    }
 })
+
+
+//----------------- 값에 따라 가격 계산하는 함수 -----------------
+function caluPrice(num) {
+
+    let Price = $('.sale-price').text();
+    Price = parseInt(Price.replace(',', ''))
+    let intAmount = parseInt(num, 10);
+    let number = String(Price * intAmount);
+    let point = ',';
+
+    if (number.length > 3 ) {
+        output = [number.slice((-number.length), -3), point, number.slice(-3)].join('');
+    } 
+    // let output = number.replace(3, 'point')
+    // , 추가하기 
+    
+    $('.muti-book-price').text(output);
+}
+
+
+
+
+//#book-price * textNum 
+
+
+//------------------ 책 수량에 따른 곱하기 
 
 /* 책 목차 더 보기 */
     

@@ -9,12 +9,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  -->
     <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
     <title>교제몰 메인</title>
 
 </head>
 <body>
+<!-- -->
     <div id="wrap">
 
 
@@ -296,15 +300,15 @@
         <div class="mobile-footer-box">
             
             <div class="mobile-footer-menu">
-                <img src="../static/mobile-ham.png" class="m-ham">
-                <img src="../static/mobile-user.png" class="m-user">
-                <img src="../static/mobile-home.png" class="m-home">
-                <img src="../static/mobile-faq.png" class="m-faq">
-                <img src="../static/mobile-cart.png" class="m-cart">
+                <img src="../static/mobile-ham.png" class="m-ham m-btn">
+                <img src="../static/mobile-user.png" class="m-user m-btn">
+                <img src="../static/mobile-home.png" class="m-home m-btn">
+                <img src="../static/mobile-faq.png" class="m-faq m-btn">
+                <img src="../static/mobile-cart.png" class="m-cart m-btn">
                 <span class="amount-cart">1</span>
             </div>        
         </div>
-        <button class="page-prev"><img src="../static/m-prev-page.png" alt=""></button>
+        <button class="page-prev"><a href="#" class="move-prev"><p></p></a></button>
     </div>
 <script>
 
@@ -314,6 +318,10 @@
 window.swiper1 = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 0,
+//------------- 페이지별변경사항  페이지에 맞는 모바일 상단 정보에 포커스, css 바도 맞추어 수정
+/*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+		html 페이지 -> script initailSlide: a도 변경 필요 
+		*/
     initialSlide: 4,
 });
 
@@ -353,12 +361,36 @@ $(window).scroll(function makeF () {
             $('.fixed-category').css({'top':'0px'});
         } else if($(window).scrollTop() < headTop * 1/10) {
             $('.fixed-category').css({'position' :'relative'});
-            $('.mypage-menu').css('top', '5.09rem');
-            $('.mypage-menu').css('top', '5.09rem');
-            $('.mypage-menu').css('top', '0px');
+            // $('.mypage-menu').css('top', '5.09rem');
+            // $('.mypage-menu').css('top', '0px');
         }
     })
-    // $(window).on('scroll', makeF);
+
+
+
+//뒤로가기 버튼 클릭시 touch 등 현상
+
+
+$('.page-prev').bind('tap', function() {
+    setTimeout(() => {
+        $('.page-prev').css({'background-color': '#FFFFFF'});
+        
+    }, 100);
+    $('.page-prev').css({'background-color': '#F3F3F3'});
+})
+
+
+$('.m-btn').bind('tap', function() {
+    setTimeout(() => {
+        // $(this).css({'box-shadow': 'none'});
+        $(this).css({'opacity': '1'});
+        
+    }, 100);
+    // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
+    $(this).css({'opacity': '0.3'});
+})
+
+
 
 
 

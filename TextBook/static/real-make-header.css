@@ -658,7 +658,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	 }
 	 
 
-	
+	.stick-area {
+		border-bottom: 0.09rem solid #EC5937;
+	}
 
 	 .fixed-category { 
         width: 100%; display: block;
@@ -697,9 +699,17 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
     .fixed-menu > section > span { font-size: 1.45rem; margin-left: 1rem;}
     .fixed-menu > section:nth-child(4)::before {
-        content: ""; position: absolute; display: block;
-        height: 0.64rem; width: 10.91rem; background-color: #EC5937; 
-        border-radius: 0.55rem 0.55rem 0 0; top: 4.5rem;
+		/*페이지별변경사항: nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+		html 페이지 -> script initailSlide: a도 변경 필요 
+		*/
+		top: 4.6rem;
+        content: ""; 
+		position: absolute; 
+		display: block;
+        height: 0.64rem; 
+		width: 10.91rem; 
+		background-color: #EC5937; 
+        border-radius: 0.55rem 0.55rem 0 0; 
         left: -0.36rem;
     }
 
@@ -817,7 +827,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		justify-content: center;
 		align-items: center;
 		box-shadow: 0px 3px 8px rgb(0 0 0 / 20%);
-		background: #fff;
+		background: #FFFFFF;
 		background-image: url(../static/m-prev-page.png);
 		background-repeat: no-repeat;
 		background-size: 25px 25px;
