@@ -319,8 +319,9 @@ a:hover, a:active, a:visited{
     padding-left: 0.78rem;
     font-weight: normal;
     font-size: 0.56rem;
-    line-height: 0.66rem;
+    line-height: 1.34rem;
     z-index: 3000;
+    
 }
 
 
@@ -493,7 +494,7 @@ background: transparent;}
    border-bottom: 0.06rem solid #EC5937;
    background: #FDFDFD;
    transition: transform 400ms ease-in-out 400ms;
-   z-index: 9999;
+   z-index: 99;
 }
 
 .page-direction-box {
@@ -1824,7 +1825,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin: 82px 0 0 57px;
 }
 .purchase { 
-	width: 207px; height: 48px; border-radius: 38px; background: #FFFFFF;
+	width: 207px; height: 48px; border-radius: 38px; background: #FDFDFD;
 	float: right; margin: 51px 83px 0 0; cursor: pointer; display: flex;
 	align-items: center; justify-content: space-evenly;
 }
@@ -2192,7 +2193,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 	.mobile-login { 
 		width: 37.1795vw; height: 12.0513vw; border-radius: 7.6923vw;
-		border: 0.6410vw solid #DFDFDF; background: #FFFFFF; color: #333;
+		border: 0.6410vw solid #DFDFDF; background: #FDFDFD; color: #333;
 		display: flex!important; justify-content: center; align-items: center; font-weight: bold;
 		font-size: 1.4rem; margin: 7.2vw auto 50vw auto; cursor: pointer;
 	}
