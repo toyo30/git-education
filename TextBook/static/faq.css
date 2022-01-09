@@ -623,7 +623,60 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 
+#paging > ul {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ width: 5.44rem;
+ height: 1.19rem;
+      list-style-type:none;
+ box-shadow: 0px 3px 7px  rgba(0, 0, 0, 0.07);
+border-radius: 0.25rem;
+padding: 0;
+margin: 0;
+}
+  
+  #paging > ul li {
+      text-align: center;
+      font-size: 0.44rem;
+      cursor:pointer;
+      padding: 0.31rem 0px;
+      color: #EC5937;
+    border: 1px solid #EC5937;
+    width: 1.19rem;
+    height: 1.19rem;
+    box-sizing: border-box;
+}
+  #paging > ul > li:hover {
+      /*background: #fbfbfb;*/
+      /*font-weight:bold;*/
+      opacity: 0.9;
+  }
+  
 
+  #paging > ul > li.selected {
+      color: #FDFDFD;
+      font-weight:bold;
+      cursor:default;
+      background: #EC5937;
+  }
+  
+  #paging > ul > li.next {
+      width: 0.94rem;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      background: url(../static/faq/paging-next.png) no-repeat center / contain;
+      background-size: 0.47rem 0.63rem;
+      
+  }
+
+  #paging > ul > li.previous {
+      width: 0.94rem;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      background: url(../static/faq/paging-previous.png) no-repeat center / contain;
+      background-size: 0.47rem 0.63rem;
+  }
 
 
 
@@ -1599,7 +1652,57 @@ button {-webkit-appearance:none;}
    }
 
    
-
+   #paging > ul {
+      width: 15.82rem;
+     height: 3.45rem;
+      list-style-type:none;
+      box-shadow: 0px 3px 7px  rgba(0, 0, 0, 0.07);
+      border-radius: 0.73rem;
+      padding: 0;
+      margin: 0;
+      }
+          
+          #paging > ul li {
+              text-align: center;
+              font-size: 1.27rem;
+              cursor:pointer;
+              padding: 0.91rem 0px;
+              color: #EC5937;
+          border: 1px solid #EC5937;
+          width: 3.45rem;
+          height: 3.45rem;
+          box-sizing: border-box;
+      }
+      #paging > ul > li:hover {
+          /*background: #fbfbfb;*/
+          /*font-weight:bold;*/
+          opacity: 0.9;
+      }
+      
+  
+      #paging > ul > li.selected {
+          color: #FDFDFD;
+          font-weight:bold;
+          cursor:default;
+          background: #EC5937;
+      }
+      
+      #paging > ul > li.next {
+          width: 2.73rem;
+          border-top-right-radius: 0.73rem;
+          border-bottom-right-radius: 0.73rem;
+          background: url(../static/faq/paging-next.png) no-repeat center / contain;
+          background-size: 1.36rem 1.82rem;
+          
+      }
+  
+      #paging > ul > li.previous {
+          width: 2.73rem;
+          border-top-left-radius: 0.73rem;
+          border-bottom-left-radius: 0.73rem;
+          background: url(../static/faq/paging-previous.png) no-repeat center / contain;
+          background-size: 1.36rem 1.82rem;
+      }
 
 
 }

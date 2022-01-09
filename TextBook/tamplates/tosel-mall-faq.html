@@ -466,9 +466,11 @@
                             </div> 
                         </li>
                     </ul>
+
                     
-                
                 </section>
+
+                <div id="paging"></div>
 
 
 
@@ -545,11 +547,7 @@
 
 //-------------스크롤
 
-window.swiper1 = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    initialSlide: 5,
-});
+
 
 
 //--------------- 모바일 토글버튼 ----------------------
@@ -578,20 +576,20 @@ $(document).ready(function(){
 
 
 
-$(window).scroll(function makeF () {
-        let fixTop = $('.fixed-category').offset().top;
-        let headTop = $('#header').offset().top + $('#header').outerHeight();
-        let fixPos = $('.fixed-category').position().top;
-        if($(window).scrollTop() > fixPos){
-            $('.fixed-category').css({'position':'fixed'});
-            $('.fixed-category').css({'top':'0px'});
-        } else if($(window).scrollTop() < headTop * 1/10) {
-            $('.fixed-category').css({'position' :'relative'});
-            $('.mypage-menu').css('top', '5.09rem');
-            $('.mypage-menu').css('top', '5.09rem');
-            $('.mypage-menu').css('top', '0px');
-        }
-    })
+// $(window).scroll(function makeF () {
+//         let fixTop = $('.fixed-category').offset().top;
+//         let headTop = $('#header').offset().top + $('#header').outerHeight();
+//         let fixPos = $('.fixed-category').position().top;
+//         if($(window).scrollTop() > fixPos){
+//             $('.fixed-category').css({'position':'fixed'});
+//             $('.fixed-category').css({'top':'0px'});
+//         } else if($(window).scrollTop() < headTop * 1/10) {
+//             $('.fixed-category').css({'position' :'relative'});
+//             $('.mypage-menu').css('top', '5.09rem');
+//             $('.mypage-menu').css('top', '5.09rem');
+//             $('.mypage-menu').css('top', '0px');
+//         }
+//     })
     // $(window).on('scroll', makeF);
 
 
@@ -647,30 +645,6 @@ function arrangeFaq() {
 
 $(document).on('click', '.arrange-box', arrangeFaq)
 // -------------------------- 주문/배송, 결제 취소 환불, 서비스/기타 버튼 클릭시 해당 faq 등장 -------
-
-// function arrangeView() {
-//         $(this).siblings().removeClass('view-active');
-//         $(this).addClass('view-active');
-        
-//         // let dataTitle = $(this).data("title");
-//         // console.log(dataTitle);
-//         // let dataArray = [];
-//         // $('.faq-order .faq-box').each(function() {
-//         //     alert('asdff')
-//         //     dataArray.push($(this).data('date'));
-//         //     console.log(dataArray);
-
-//         //     console.log($(this).data('date'));
-//         //     // let num = $(this).data('date');
-//         //     // listSort($(this),num);
-//         //     // console.log($(this).data('view'));
-//         // })
-// }
-
-// $(document).on('click', '.view-box', arrangeView);
-
-
-
 
 
 $(document).on('click', '.view-box', function() {
@@ -801,5 +775,6 @@ resizeEvent();
 window.addEventListener('resize', resizeEvent);
     
 </script>
+<script src="../static/paging.js"></script>
 </body>
 </html>

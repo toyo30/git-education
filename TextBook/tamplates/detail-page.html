@@ -203,41 +203,47 @@
 
              
             <div id="container">
+                
 
-                <div class="path-section">
-                    <div class="path-bar">
-
-                    
-                        <p><strong><a href="#" class="grand-category">웰컴</a></strong></p>
-                    
-                        <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
-                        <!--메인북 페이지 -->
-                        <p><a href="#" class="parent-category">전체교재</a></p>
-                    
-                        <img class="" src="../static/detail-page/path-mark.png" alt="포함관계">
-                        <!-- 전체 교재 페이지 -->
-                    
-                        <p><a href="#" class="child-category">JUNIOR / LISTENING</a></p>
-                    
-                        <!-- 전체 교재 페이지 -->
-                    </div>
-                </div>
+                
 
 
                 <section class="order-menu">
-                    <div class="order-menu-box">
+                    <div class="path-section">
+                        <div class="path-bar">
+    
+                        
+                            <p><strong><a href="#" class="grand-category">웰컴</a></strong></p>
+                        
+                            <div class="path-mark"></div>
+                            <!-- <img class="" src="../static/detail-page/path-mark.png" alt="포함관계"> -->
+                            <!--메인북 페이지 -->
+                            <p><a href="#" class="parent-category">전체교재</a></p>
+                            
+                            <div class="path-mark"></div>
+                            <!-- <img class="" src="../static/detail-page/path-mark.png" alt="포함관계"> -->
+                            <!-- 전체 교재 페이지 -->
+                        
+                            <p><a href="#" class="child-category">JUNIOR / LISTENING</a></p>
+                        
+                            <!-- 전체 교재 페이지 -->
+                        </div>
+                    </div>
+                    
+                    <div class="order-menu-box m-menu-box">
+                        
                         <div class="main-bookbox">
                             <img src="../static/detail-page/book-main-img.png" alt="책메인이미지">
                         </div>
     
                         <div class="order-info">
                             <div class="order-title">
-                                <h3 id="booktitle">TOSEL LISTENING</h3>
-                                <p id="booklevel">JUNIOR</p>
+                                <h3 id="bookTitle" class="book-title">TOSEL LISTENING</h3>
+                                <p id="bookLevel" class="book-level">JUNIOR</p>
                             </div>
     
                             <div class="order-list">
-                                <ul>
+                                <ul class="order-list-area">
                                     <li>
                                         <div class="Litem">정가</div>
                                         <div class="Ritem line-through">19,900원</div>
@@ -359,7 +365,7 @@
                             </div>
 
                         
-                            <button id="input-basket" class="page-add">장바구니 담기</button>
+                            <button id="inp-basket" class="page-add">장바구니 담기</button>
                             <button id="order-now" class="page-buy">바로 구매</button>
                             
                         </div>
@@ -840,7 +846,7 @@ Grammar Series level
                                     <td class="table-litem">배송비 안내</td>
                                     <td class="table-ritem">
                                         <div>
-                                            <div>배송비: 3500원</div>
+                                            <div class="table-ship-fee">배송비: 3500원</div>
                                             <div class="tablem-design">
                                                 <div>*제주 추가 5000원</div>
                                                 <span>/</span>
@@ -861,7 +867,7 @@ Grammar Series level
 
                     <div class="table-box">
                         <div class="table-title">반품/교환 안내</div>
-                        <table class="table-area">
+                        <table class="table-area table-refund">
                             <caption class="blind">반품/교환 안내</caption>
                             <thead class="blind">
                                 <th>
@@ -923,7 +929,7 @@ Grammar Series level
 
 
                
-                   
+                
 
 
 
@@ -931,6 +937,48 @@ Grammar Series level
                 
 
              </div>
+
+            <div class="popup-point">
+                <section class="popup-section">
+                    <div class="popup-box">
+                        <div class="popup">
+                            <!-- <div class="popup-box"> -->
+                            <div class="popup-layer">
+                                    <div class="popup-area">
+                                        <p class="popup-text">장바구니에 상품이 담겼습니다.</p>
+                                        <p class="popup-title">장바구니로 이동하시겠습니까?</p>
+                                    </div>
+                                    <div class="popup-btn">
+                                        <button class="move-btn" type="button" name="button">이동</button>
+                                        <span class="btn-bar"></span>
+                                        <button class="move-btn cancel">취소</button>
+
+                                    </div>
+                            </div>
+                            <!-- </div> -->
+                            <div class="popup-dimmed"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mobile-purchase">
+                    <button class="mobile-cart"><span class="count"></span></button>
+                    <button id="mobile-buy-btn" class="mobile-buy">구매하기</button>
+            </div>
+
+
+            <div class="mobile-floation-box">
+                <div class="m-select-item">
+                    <ul class="book-option">
+                        <li>LISTENING 1</li>
+                        <li>LISTENING 2</li>
+                    </ul>
+                    <button class="m-select-area">분권 구매</button>
+                </div>  
+                <button class="mobile-add"></button>
+                <button id="mobile-buy-right" class="mobile-buy">바로 구매</button>
+            </div>
         </div>
 
 
@@ -1001,13 +1049,6 @@ Grammar Series level
 
 
         </div>
-
-
-
-
-
-
-
         <div class="mobile-footer-menu">
             <img src="../static/mobile-ham.png" class="m-ham">
             <img src="../static/mobile-user.png" class="m-user">
@@ -1015,6 +1056,8 @@ Grammar Series level
             <img src="../static/mobile-faq.png" class="m-faq">
             <img src="../static/mobile-cart.png" class="m-cart">
         </div>
+
+
     </div>
 <script>
 
@@ -1169,8 +1212,32 @@ $(document).on('click', '.bcontent-close', function() {
 
 
 
+//-----------------  ------------------- 더 보기 클릭에 따른 돌아가기 
+
+// $('.point').position().top + $('.point').height()
+
+
+//
+
+
+
+
+//------------------장바구니 담기 버튼 시 밥업 뜨기 
+function addBasket() {
+    $('.popup').fadeIn();
+}
+
+function cancel() {
+    $('.popup').fadeOut();
+}
+
+$(document).on('click', '#inp-basket', addBasket);
+$(document).on('click', '.move-btn.cancel', cancel);
+
 
 </script>
+
+
 
 <!-- <script src="../static/detail-page/detail-slide.js"></script> -->
 </body>

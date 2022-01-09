@@ -537,6 +537,8 @@
                 
                 </section>
 
+                <div id="paging"></div>
+
 
 
 
@@ -607,18 +609,13 @@
             <span class="amount-cart">1</span>
            
         </div>
+        <button class="page-prev"><img src="../static/m-prev-page.png" alt=""></button>
 
     </div>
 <script>
 
 
 //-------------스크롤
-
-window.swiper1 = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    initialSlide: 4,
-});
 
 
 //--------------- 모바일 토글버튼 ----------------------
@@ -869,7 +866,7 @@ resizeEvent();
 window.addEventListener('resize', resizeEvent);
 
 </script>
+<script src="../static/paging.js"></script>
     
-</script>
 </body>
 </html>
