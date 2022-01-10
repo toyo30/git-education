@@ -83,7 +83,7 @@ a:hover, a:active, a:visited{
 }
 
 
-.m-more-series, .mobile-floation-box, .mobile-purchase {
+.m-more-series, .mobile-float, .mobile-purchase {
    display: none;
 }
 
@@ -1825,7 +1825,6 @@ table td {
       border-top: 0.06rem solid #F3F3F3;
       background: #FDFDFD;
       z-index: 9999;
-      display: none;
    }
 
    .mobile-cart {
@@ -1851,8 +1850,26 @@ table td {
 
    /* mobile-floation-box */
 
+   .mobile-float {
+      display: none;
+      
+   }
+
+   .mobile-dimmed {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.3;
+      z-index: 99999;
+   }
+
    .mobile-floation-box {
-      display: block;
+      display: none;
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -1862,7 +1879,7 @@ table td {
       padding-bottom: 3.09rem;
       border-top-left-radius: 1.64rem;
       border-top-right-radius: 1.64rem;
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+      box-shadow: 5px 3px 7px rgba(0, 0, 0, 30%);
    }
 
 
@@ -1949,7 +1966,7 @@ table td {
       font-weight: 800;
    }
 
-   .mobile-buy {
+   .mobile-right-buy {
       width: 17.90rem;
       height: 4.80rem;
       background: #EC5937;
@@ -2009,6 +2026,10 @@ table td {
 
      /* select-option */
 
+     .order-list .selectBox {
+        display: none;
+     }
+
      /* .select-option {
       display: block;
       position: fixed;
@@ -2049,25 +2070,25 @@ table td {
    padding-left: 2rem;
    font-weight: normal;
    font-size: 1.27rem;
-   line-height: 1.45rem;
+   line-height: 4.45rem;
    z-index: 99999;
-   background: url(../static/faq/faq-open.png) calc(100% - 16px) center no-repeat;
-   background-size: 0.63rem;
+   background: url(../static/detail-page/m-select-open.png) calc(100% - 16px) center no-repeat;
+   background-size: 1.82rem;
    border-radius: 1rem;
    transition: 100ms;
-   border: 0.08rem solid #E8E8E8;;
+   border: 0.1rem solid #EC5937;
 }
 
 .selectBox.active .label{
    transition: 100ms;
-   background: url(../static/faq/faq-close.png) calc(100% - 16px) center no-repeat;
-   background-size: 0.63rem;
+   background: url(../static/detail-page/m-select-close.png) calc(100% - 16px) center no-repeat;
+   background-size: 1.82rem;
    background-color: #FDFDFD;
 }
 
 .selectBox .optionList {
    position: absolute;
-   top: 0px;
+   top: -22rem;
    left: 0;
    width: 100%;
    list-style-type: none;
@@ -2077,13 +2098,17 @@ table td {
    /* transition: .3s ease-in; */
    z-index: 3000;
    background: #FDFDFD;
-   border-radius: 0.47rem;
    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+   border-top: 0;
 }
 
 .selectBox.active .optionList {
-  max-height: 15.63rem;
+  max-height: 23.63rem;
   z-index: 3000;
+  border: 0.1rem solid #EC5937;
+  border-top-left-radius: 0.73rem;
+  border-top-right-radius: 0.73rem;
+  border-bottom: 0;
   /* border-bottom-left-radius: 0px;
    border-bottom-right-radius: 0px; */
 }
@@ -2102,22 +2127,18 @@ table td {
     font-size: 1.27rem;
     line-height: 1.45rem;
     z-index: 3000;
-    
 }
 
-
 .selectBox .optionItem:first-child {
-   padding-top: 3.03rem;
-   width: 100%;
-   padding-bottom: 0.47rem;
-   height: 100%;;
+   padding: 2rem;
+   padding-top: 2.4rem;
 }
 
 .selectBox .optionItem:last-child {
-   width: 100%;
-   padding-bottom: 0.78rem;
-   height: 100%;;
+   padding: 2rem;
+   padding-bottom: 2.7rem;
 }
+
 
 
 
