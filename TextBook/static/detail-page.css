@@ -956,6 +956,14 @@ background: transparent;}
    margin-left: 1.75rem;
 }
 
+
+.book-link {
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+
 .book-component p {
    width: 4.06rem;
    padding: 0 0.16rem;
@@ -1321,16 +1329,24 @@ table td {
 }
 
 
-@media screen and (max-width: 390px) {
+/* @media screen and (max-width: 390px) {
    html {
       font-size: 10px;
+   }
+} */
+
+@media screen and (max-width: 320px) {
+   html {
+      font-size: 8px;
    }
 }
 
 
+
+
 @media screen and (max-width: 650px) {
    #wrap {
-      min-width: 390px;
+      min-width: 320px;
    }
    #header, .mobile-all-menu, #footer, .mobile-footer-menu {
       display: none;
@@ -1639,6 +1655,26 @@ table td {
    }
 
 
+   /* more-series */
+
+   .btn-left, .btn-right {
+      display: none;
+   }
+
+   .book-slide-box {
+      padding: 0;
+      width: 100%;
+   }
+
+   .book-component {
+
+   }
+
+
+   .series-img {
+
+   }
+
    /* ask-product */
    .ask-box {
       width: 100%;
@@ -1761,7 +1797,7 @@ table td {
       height: 4.36rem;
       background: url(../static/detail-page/m-purchase-chart.png) no-repeat;
       background-size: contain;
-      margin-right: 0.7rem;
+      margin-right: 1.5rem;
       cursor: pointer;
    }
 
