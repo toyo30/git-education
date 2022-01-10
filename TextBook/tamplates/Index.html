@@ -9,18 +9,75 @@
 <style>
 
 
-
-
 .amount-box { 
-    width: 100%; height: 100%; margin-top: 10px;
+    width: 115px; height: 25px; margin-top: 10px;
     display: flex; justify-content: space-between; align-items: center;
 }
 
 
 /* 체크 박스 */
 
+input[type="checkbox"]:hover { border-color: rgba(170, 170, 170, 0.5); }
+input[type="checkbox"] {
+   cursor: pointer; -webkit-appearance: none;
+   -moz-appearance: none; appearance: none;
+   outline: 0;   background: transparent;
+   height: 25px; width: 25px; border: 1px solid #C4C4C4;
+   border-radius: 5px;
+}
+input[type="checkbox"]:checked { background: #EC5937; border: none; }
+  
+input[type="checkbox"]:disabled {
+    background: #e6e6e6; opacity: 0.6;
+    pointer-events: none;
+}
+
+input[type="checkbox"]:after {
+    content: ''; position: relative; left: 14%; top: 20%; width: 67%; height: 81%;
+    background: url(../static/input-check.png) no-repeat;
+    background-size: contain; transform: rotate(10deg);
+    display: none;
+}
+input[type="checkbox"]:checked:after { display: block; }
+input[type="checkbox"]:disabled:after { border-color: #7b7b7b; }
 
 /* 체크 박스 */
+
+
+.amount-check { 
+    width: 82px; height: 100%; border: 1px solid #C4C4C4; border-radius: 5px;
+    display: flex;
+}
+.amount-check > div { 
+    border-right: 1px solid #C4C4C4; flex: 1;
+}
+.amount-check > div:last-child { border-right: none;}
+.plus { width: 14px; height: 14px;}
+.minus { width: 14px;}
+.sign { 
+    display: flex; justify-content: center; align-items: center; cursor: pointer;
+    background: #EDEDED;
+}
+
+.amount-num { font-size: 0.5rem!important; text-align: right; line-height: 25px;}
+.amount-num > input { 
+    display: block; margin-right: 3px; color: #333333;
+    width: 100%; height: 100%; border: none; outline: none;
+    
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] { text-align:right; padding-right: 2px; font-size: 0.5rem;}
+
+/* .amount-box { 
+    width: 100%; height: 100%; margin-top: 10px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+
 
 
 .amount-check { 
@@ -75,7 +132,7 @@ font-size: 18px;
 line-height: 20px;
 background: transparent;}
 
-
+ */
 
 
 
@@ -84,7 +141,44 @@ background: transparent;}
 </style>
 </head>
 <body>
-    <input type="checkbox">
+
+    <div class="amount-box">
+        <input type="checkbox" id="mycheck">
+        <label for="mycheck"><span></span></label>
+        <div class="amount-check">
+            <div class="sign sign-mius">
+                <img src="../static/minus-num.png" class="minus">
+            </div>
+            <div class="amount-num">
+                <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                 class="amount-count" maxlength="2" min="1" value="1">
+            </div>
+            <div class="sign sign-plus">
+                <img src="../static/plus-num.png" class="plus">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="amount-box">
+        <input type="checkbox" id="mycheck">
+        <label for="mycheck"><span></span></label>
+        <div class="amount-check">
+            <div class="sign sign-mius">
+                <img src="../static/minus-num.png" class="minus">
+            </div>
+            <div class="amount-num">
+                <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                 class="amount-count" maxlength="2" min="1" value="1">
+            </div>
+            <div class="sign sign-plus">
+                <img src="../static/plus-num.png" class="plus">
+            </div>
+        </div>
+    </div>
+
+    <!-- <input type="checkbox"> -->
 
 
 
@@ -93,7 +187,7 @@ background: transparent;}
 
 
 
-	<div class="amount-box">
+	<!-- <div class="amount-box">
 		<div class="amount-check">
 			
 			<div class="amount-num">
@@ -108,31 +202,53 @@ background: transparent;}
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 <script>
+
 $('.amount-box .sign-mius').click(function(e){
                     e.preventDefault();
-                    var stat = $(this).parent().parent().children().find('.amount-count').val();
+                    var stat = $(this).parent().find('.amount-count').val();
                     var num = parseInt(stat,10);
                     num--;
                     if(num<=1){
                         num = 1;
                     }
-                    $(this).parent().parent().children().find('.amount-count').val(num);
+                    $(this).parent().parent().find('.amount-count').val(num);
                 });
 
                 $('.amount-box .sign-plus').click(function(e){
                     e.preventDefault();
-                    var stat = $(this).parent().parent().children().find('.amount-count').val();
+                    var stat = $(this).parent().find('.amount-count').val();
                     var num = parseInt(stat,10);
                     num++;
-                    if(num>=999){
-                        num = 999;
+                    if(num>=99){
+                        num = 99;
                     }
-                    $(this).parent().parent().children().find('.amount-count').val(num);
+                    $(this).parent().parent().find('.amount-count').val(num);
                 });
+// $('.amount-box .sign-mius').click(function(e){
+//                     e.preventDefault();
+//                     var stat = $(this).parent().parent().children().find('.amount-count').val();
+//                     var num = parseInt(stat,10);
+//                     num--;
+//                     if(num<=1){
+//                         num = 1;
+//                     }
+//                     $(this).parent().parent().children().find('.amount-count').val(num);
+//                 });
+
+//                 $('.amount-box .sign-plus').click(function(e){
+//                     e.preventDefault();
+//                     var stat = $(this).parent().parent().children().find('.amount-count').val();
+//                     var num = parseInt(stat,10);
+//                     num++;
+//                     if(num>=999){
+//                         num = 999;
+//                     }
+//                     $(this).parent().parent().children().find('.amount-count').val(num);
+//                 });
 </script>
 </body>
 </html>
