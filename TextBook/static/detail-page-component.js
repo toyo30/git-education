@@ -47,5 +47,24 @@ function removeContent() {
 }
 
 
-$(document).on('click', '.optionItem', addContent);
+$(document).on('click', '.mobile-float .optionItem', addContent);
 $(document).on('click', '.remove-component', removeContent);
+
+
+
+
+
+
+
+
+function calWholePrice() {
+    let severalPrice = 0;
+    $('.mobile-floation-box .muti-book-price').each(function() {
+        console.log($(this).val());
+    })
+
+    $('.mobile-floation-box .m-whole-price-value').text();
+}
+
+
+$(document).on('click', '.m-whole-price-text', calWholePrice);

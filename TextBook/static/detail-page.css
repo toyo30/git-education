@@ -83,7 +83,7 @@ a:hover, a:active, a:visited{
 }
 
 
-.m-more-series, .mobile-float, .mobile-purchase {
+.m-more-series, .mobile-float, .mobile-purchase, .popup-go {
    display: none;
 }
 
@@ -1812,7 +1812,6 @@ table td {
    } */
 
    .mobile-purchase {
-     
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -1828,12 +1827,30 @@ table td {
    }
 
    .mobile-cart {
+      position: relative;
       width: 4.36rem;
       height: 4.36rem;
       background: url(../static/detail-page/m-purchase-chart.png) no-repeat;
       background-size: contain;
       margin-right: 1.5rem;
       cursor: pointer;
+   }
+
+   .mobile-cart .count {
+      position: absolute;
+      display: none;
+      width: 1.27rem;
+      height: 1.27rem;
+      line-height: 1.37rem;
+      border-radius: 1.5rem;
+      background: #EC5937;
+      color: #FDFDFD;
+      top: 0.7rem;
+      right: 0.7rem;
+   }
+
+   .mobile-cart .count.point {
+      display: block;
    }
 
    .mobile-buy {
@@ -1847,6 +1864,130 @@ table td {
       cursor: pointer;
    }
 
+
+
+   /* popup-go */
+
+   .popup {
+      display: none;
+   }
+
+   .mobile-popup-close {
+      position: absolute;
+      top: -3.64rem;
+      width: 100%;
+   }
+
+   .popup-layer {
+      display: none;
+      position: fixed;
+      width: 100%;
+      padding: 2.27rem;
+      bottom: 7.82rem;
+   }
+
+   .popup-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0;
+   }
+
+   .popup-text {
+      font-size: 1.27rem;
+      line-height: 1.45rem;
+      margin: 0;
+   }
+
+   .popup-go {
+      display: block;
+      font-size: 1.27rem;
+      color: #EC5937;
+      line-height: 1.45rem;
+   }
+
+   .popup-title {
+      display: none;
+   }
+
+   .popup-btn {
+      display: none;
+   }
+
+
+   .popup-dimmed {
+      display: none;
+      z-index: 9;
+   }
+
+   /* basket-img */
+
+   .basket-inter {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      z-index: 999999;
+   }
+
+   .basket-inter:after {
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+      content: '';
+   }
+
+
+   .basket-img {
+      position: relative;
+      display: inline-block;
+      width: 5.91rem;
+      height: 5.91rem;
+      background: url(../static/detail-page/m-basket-inter.png) no-repeat;
+      background-size: contain;
+      transform: scale(0.3);
+      transition: 400ms;
+      z-index: 9999; 
+   }
+
+   .basket-img.animate {
+      transform: scale(2);
+    }
+
+    .basket-img.move{
+      animation: movemove 800ms 100ms linear alternate;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes movemove {
+
+      /* 0% {
+         transform:translate(10px, 10px);
+         animation-duration: 4s;
+      }
+
+      10% {
+         transform:translate(20px, -30px);
+         animation-duration: 4s;
+      }
+
+      40% {
+         transform:translate(-100px, -40px);
+         animation-duration: 4s;
+
+      }  */
+
+      100% {
+         transform:translate(-260px, 410px);
+         opacity: 0;
+
+      }
+       
+    }
 
    /* mobile-floation-box */
 
@@ -1882,6 +2023,45 @@ table td {
       box-shadow: 5px 3px 7px rgba(0, 0, 0, 30%);
    }
 
+   .mobile-float-close-box {
+      position: absolute;
+      width: 100%;
+      top: -1rem;
+
+
+   }
+
+   .mobile-float-close {
+      margin: 0 auto;
+      width: 3.55rem;
+      height: 0.55rem;
+      border-radius: 1.73rem;
+      background: #FDFDFD;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+   }
+
+
+   .m-whole-price {
+      display: flex;
+      width: 36.60rem;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.73rem 0;
+   }
+
+   .m-whole-price-text {
+      font-size: 1.27rem;
+      line-height: 1.45rem;
+      font-weight: bold;
+   }
+
+   .m-whole-price-area {
+      font-size: 1.64rem;
+      line-height: 1.82rem;
+      font-weight: 800;
+      color:#EC5937;
+   }
 
 
 
@@ -1951,7 +2131,6 @@ table td {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding-top: 5.40rem;
    }
 
    .mobile-add {

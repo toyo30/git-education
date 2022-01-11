@@ -1245,16 +1245,18 @@ Grammar Series level
                 
 
              </div>
-
-            <div class="popup-point">
+             <div class="popup-point">
                 <section class="popup-section">
                     <div class="popup-box">
                         <div class="popup">
-                            <!-- <div class="popup-box"> -->
                             <div class="popup-layer">
                                     <div class="popup-area">
+                                        <div class="mobile-popup-close">
+                                            <div class="mobile-float-close"></div>
+                                        </div>
                                         <p class="popup-text">장바구니에 상품이 담겼습니다.</p>
                                         <p class="popup-title">장바구니로 이동하시겠습니까?</p>
+                                        <p class="popup-go"><a href="#">바로가기</a></p>
                                     </div>
                                     <div class="popup-btn">
                                         <button class="move-btn" type="button" name="button">이동</button>
@@ -1263,23 +1265,29 @@ Grammar Series level
 
                                     </div>
                             </div>
-                            <!-- </div> -->
                             <div class="popup-dimmed"></div>
                         </div>
                     </div>
                 </section>
             </div>
 
+            
+
             <div class="mobile-purchase">
                     <button class="mobile-cart"><span class="count"></span></button>
                     <button id="mobile-buy-btn" class="mobile-buy">구매하기</button>
             </div>
 
+            
+
 
             <div class="mobile-float">
                 <div class="mobile-dimmed"></div>
+                
                 <div class="mobile-floation-box">
-                    
+                    <div class="mobile-float-close-box">
+                        <div class="mobile-float-close"></div>
+                    </div>    
             
 
                     <div class="select-option">
@@ -1301,74 +1309,11 @@ Grammar Series level
 
 
                     <div class="m-component-box">
-                        <!-- <div class="m-component-area">
-                            <p class="m-component-title"><span class="point">1</span>. TOSEL Listening Junior</p>
-                            <p class="m-component-subtitle">Listening 1</p>
-                            
-                            <div class="m-component-select">
-
-
-                                
-                                <div class="m-component-amount">
-                                    <div class="amount-box">
-                                        <div class="amount-check">
-                                            <div class="sign sign-mius">
-                                                <img src="../static/detail-page/m-mius-btn.png" class="minus">
-                                            </div>
-                                            <div class="amount-num">
-                                                <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
-                                                class="amount-count" maxlength="2" min="1" value="1">
-                                            </div>
-                                            <div class="sign sign-plus">
-                                                <img src="../static/detail-page/m-plus-btn.png" class="plus">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="m-component-price"><span class="muti-book-price">17,910</span>원</div>
-                            
-                            
-                            </div>
-
-                            <span class="remove-component"></span>
-                        </div> -->
-
-                        <!-- <div class="m-component-area">
-                            <p class="m-component-title"><span class="point">1</span>. TOSEL Listening Junior</p>
-                            <p class="m-component-subtitle">Listening 1</p>
-                            
-                            <div class="m-component-select">
-
-
-                                
-                                <div class="m-component-amount">
-                                    <div class="amount-box">
-                                        <div class="amount-check">
-                                            <div class="sign sign-mius">
-                                                <img src="../static/detail-page/m-mius-btn.png" class="minus">
-                                            </div>
-                                            <div class="amount-num">
-                                                <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
-                                                class="amount-count" maxlength="2" min="1" value="1">
-                                            </div>
-                                            <div class="sign sign-plus">
-                                                <img src="../static/detail-page/m-plus-btn.png" class="plus">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="m-component-price"><span class="muti-book-price">17,910</span>원</div>
-                            
-                            
-                            </div>
-
-                            <span class="remove-component"></span>
-                        </div> -->
-
-
-                    
+                        
+                    </div>
+                    <div class="m-whole-price">
+                        <p class="m-whole-price-text">주문 금액</p>
+                        <p class="m-whole-price-area"><span class="m-whole-price-value">0</span>원</p>
                     </div>
                     <div class="mobile-buy-btn">
                         <button class="mobile-add">장바구니 담기</button>
@@ -1376,6 +1321,14 @@ Grammar Series level
                     </div>
                 </div>
             </div>
+
+
+            <div class="basket-inter">
+                <div class="basket-img"></div>
+            </div>
+
+
+
                 
         </div>
 
@@ -1457,33 +1410,106 @@ Grammar Series level
     </div>
 <script>
 
-/* mobile-right-buy */
+//------------------------------- 모바일 장바구니 담기 ------
+
+
+
+
+
+
+
+/* mobile-right-buy float-mobile open-close */
 function toggleFloat() {
     $('.mobile-float').slideToggle();
     $('.mobile-floation-box').slideToggle();
 }
 $(document).on('click', '#mobile-buy-btn', toggleFloat);
-
 $(document).on('click', '.mobile-dimmed', toggleFloat);
-// let target = $('.mobile-floation-box').not($(this));
-// console.log(target);
+$(document).on('click', '.mobile-float-close', toggleFloat);
+$(document).on('click', '.mobile-add', toggleFloat);
 
-// $(document).on('click', target, function() {
-//     alert('asdf');    
-//     $('.mobile-floation-box').slideToggle();
-// })
+
+//---- 장바구니 클릭 시  모바일 팝업 열기 버튼 
+
+let basketNum = 0;
+
+
+
+function addBasketM() {
+    console.log(basketNum)
+    basketNum++;
+    $('.basket-inter').fadeIn();
+    setTimeout(function() {
+        $('.basket-img').addClass('animate');
+    }, 600);
+
+
+    setTimeout(function() {
+        $('.basket-img').addClass('move');
+        $('.basket-img').removeClass('animate');
+    }, 1100);
+
+    $('.basket-inter').fadeIn();
+    setTimeout(function() {
+        $('.basket-inter').fadeOut();
+        $('.basket-img').removeClass('move');
+    }, 2000);
+
+
+    // setTimeout(function() {
+    //     $('.basket-inter').fadeOut();
+    //     $('.basket-img').removeClass('animate');
+    // }, 1100);
+
+
+    setTimeout(function(){
+        $('.popup').fadeIn();
+        $('.popup-dimmed').fadeIn();
+        $('.popup-layer').slideDown();
+        $('.mobile-cart .count').addClass('point');
+        $('.mobile-cart .count').text(basketNum);
+    }, 2000);
+
+    // setTimeout(function(){
+    //     $('.popup').fadeIn();
+    //     $('.popup-dimmed').fadeIn();
+    //     $('.popup-layer').slideDown();
+    //     $('.mobile-cart .count').addClass('point');
+    //     $('.mobile-cart .count').text(basketNum);
+    // }, 1800);
+ 
+}
+
+function removeBasketM() {
+    $('.popup').fadeToggle();
+    $('.popup-dimmed').slideUp();
+    $('.popup-layer').slideUp();
+}
+
+
+$(document).on('click', '.mobile-add', addBasketM);
+$(document).on('click', '.popup-dimmed', removeBasketM);
+$(document).on('click', '.mobile-purchase', removeBasketM);
+
+
+
+
+
+
+
+
 
 
 /* 책 정보 더 보기 */
 
 
-    function addClass() {
-        $('.book-desbox').toggleClass('height-full')
-        $('.more-bookinfo.on').fadeToggle(400);
-        $('.more-bookinfo.back').fadeToggle(400);
-    }
+function addClass() {
+    $('.book-desbox').toggleClass('height-full')
+    $('.more-bookinfo.on').fadeToggle(400);
+    $('.more-bookinfo.back').fadeToggle(400);
+}
 
-    $(document).on('click', '.more-bookinfo', addClass)
+$(document).on('click', '.more-bookinfo', addClass)
     
 /* select event 클릭하기 */
 
@@ -1519,37 +1545,6 @@ const handleSelect = (label, item) => {
 }
 
 
-    // const label = document.querySelector('.label');
-    // const faqBtn = document.querySelector('.btn-point');
-    // const options = document.querySelectorAll('.optionItem');
-    // // 클릭한 옵션의 텍스트를 라벨 안에 넣음
-    
-    // const handleSelect = function(item) {
-    //     label.innerHTML = item.textContent;
-    //     label.parentNode.classList.remove('active');
-    // }
-    // // 옵션 클릭시 클릭한 옵션을 넘김
-    // options.forEach(function(option){
-    //     option.addEventListener('click', function(){handleSelect(option)})
-    // })
-    
-    // // 라벨을 클릭시 옵션 목록이 열림/닫힘
-    // label.addEventListener('click', function(e){
-    //     if(label.parentNode.classList.contains('active')) {
-    //     label.parentNode.classList.remove('active');
-    //     } else {
-    //     label.parentNode.classList.add('active');
-    //     }
-    // });
-    
-    //특정 영역제외 클릭하기 
-    
-//   body.addEventListener('click', function(event) {
-//       var target = event.target;
-//       if(target !== $('.label')) {
-//           label.parentNode.classList.remove('active');
-//       }
-//   });
 
 
 
@@ -1557,7 +1552,7 @@ const handleSelect = (label, item) => {
 
 // ------------------------책 수량 ----------------------
 
-$('.amount-check .sign-mius').click(function(e){
+$(document).on('click', '.amount-check .sign-mius',function(e){
         e.preventDefault();
         var stat = $(this).parent().parent().children().find('.amount-count').val();
         if(stat == NaN || stat == "") {
@@ -1579,7 +1574,7 @@ $('.amount-check .sign-mius').click(function(e){
 
 
 
-$('.amount-check .sign-plus').click(function(e){
+$(document).on('click', '.amount-check .sign-plus', function(e){
     e.preventDefault();
     var stat = $(this).parent().parent().children().find('.amount-count').val();
     if(stat == NaN || stat == "") {
@@ -1596,6 +1591,55 @@ $('.amount-check .sign-plus').click(function(e){
     caluPrice(num)
     }
 });
+
+
+
+
+
+
+// ------------------------책 수량 ----------------------
+
+
+
+// $('.amount-check .sign-mius').click(function(e){
+//         e.preventDefault();
+//         var stat = $(this).parent().parent().children().find('.amount-count').val();
+//         if(stat == NaN || stat == "") {
+//         //pass
+//          } else {
+    
+//         var num = parseInt(stat,10);
+            
+//         num--;
+//         if(num<=1){
+//             num = 1;
+//         }
+//         $('.amount-count').val(num);
+        
+//         $(this).parent().parent().children().find('.amount-count').val(num);
+//         caluPrice(num)
+//         }
+// });
+
+
+
+// $('.amount-check .sign-plus').click(function(e){
+//     e.preventDefault();
+//     var stat = $(this).parent().parent().children().find('.amount-count').val();
+//     if(stat == NaN || stat == "") {
+//         //pass
+//     } else {
+//     var num = parseInt(stat,10);
+//     $('.amount-count').val(num + 1);
+//     num++;
+//     if(num>=999){
+//         num = 999;
+//     }
+//     $('.amount-count').val(num);
+//     $(this).parent().parent().children().find('.amount-count').val(num);
+//     caluPrice(num)
+//     }
+// });
     
 //같은 데이터 입력
 $(document).on('keyup', '.amount-count', function() {
@@ -1633,9 +1677,6 @@ function caluPrice(num) {
 
 
 
-//#book-price * textNum 
-
-
 //------------------ 책 수량에 따른 곱하기 
 
 /* 책 목차 더 보기 */
@@ -1667,16 +1708,24 @@ $(document).on('click', '.bcontent-close', function() {
 
 
 //------------------장바구니 담기 버튼 시 밥업 뜨기 
+//----------------- 장바구니 담기 버튼 시 초기화
 function addBasket() {
+    /* json 형식으로 저장 */
     $('.popup').fadeIn();
+    $('.label').text('분권 구매');
+    $('.muti-book-price').text('17,910');
+    $('.amount-count').val(1);
 }
 
+
+//----------팝업 닫기 버튼 
 function cancel() {
     $('.popup').fadeOut();
 }
 
 $(document).on('click', '#inp-basket', addBasket);
 $(document).on('click', '.move-btn.cancel', cancel);
+
 
 
 
