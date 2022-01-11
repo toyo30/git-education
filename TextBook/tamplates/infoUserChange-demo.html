@@ -6,10 +6,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../static/infoUserChangeDemo.css">
-    <!-- <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>  -->
+    <link rel="stylesheet" href="../static/real-make-header.css">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
+    
     <title>개인회원정보 수정</title>
 </head>
 <script>
@@ -32,13 +34,9 @@ function goAddr(){
     <div id="wrap">
 
         <div class="mobile-all-menu">
-            
-            
-            
-            
             <section class="mobile-header">
                 <section class="mobile-header-items">
-                    <img src="../static/faq/tosel-mobile-logo.png" class="m-logo">
+                    <img src="../static/tosel-logo.png" class="m-logo">
                     <img src="../static/m-close.png" class="m-close">
                 </section>
             </section>
@@ -106,43 +104,14 @@ function goAddr(){
         </div>
 
 
-        <script>
-            $(document).ready(function(){
-                $('.mobile-all-menu div').hide();
-                $('.mobile-all-menu section').hide();
-                $('.m-ham').click(function(){
-                    $('.mobile-all-menu').css('background','#fff');
-                    $('.mobile-all-menu').css('width','100%');
-                    $('.mobile-all-menu div').fadeIn();
-                    $('.mobile-all-menu section').fadeIn();
-                    $('body').css('overflow-y','hidden');
-                    $('.logo-box').css("display", "none");
-                });
-
-                $('.m-close').click(function(){
-                    $('.mobile-all-menu').css('background','transparent');
-                    $('.mobile-all-menu').css('width','0%');
-                    $('.mobile-all-menu div').fadeOut();
-                    $('.mobile-all-menu section').fadeOut();
-                    $('.logo-box').fadeIn();
-                });
-            });
-        </script>
-
-
-        
-
         <div id="header">
 
             <div id="top-menu">
 
                 <div class="logo-box">
                     <img src="../static/tosel-logo.png" class="t-logo">
-                    <img src="../static/faq/tosel-mobile-logo.png" class="tm-logo">
-
-                    
+                    <img src="../static/tosel-mobile-logo.png" class="tm-logo"> 
                 </div>
-
 
                 <nav>
                     <ul>
@@ -155,79 +124,104 @@ function goAddr(){
                     </ul>
                 </nav>
 
-                <div class="logo-box mobile-faq-logo">
-                    <h1 class="mobile-title">회원 정보</h1>
-                </div>
-                <div class="logo-box mobile-bell-log">
-                    <img src="../static/bell.png" class="bell">
+                
+
+                <div class="logo-box logo-title-box">
+                    <h1 class="logo-title">회원 정보</h1>
                 </div>
 
-                
+                <div class="logo-box bell-box">
+                    <img src="../static/bell.png" class="bell m-btn">
+                    <span class="amount-bell">1</span>
+                </div>
 
 
             </div>
 
-            
+        </div>
 
+        <div class="stick-area">
+            <div class="fixed-category swiper mySwiper">
+                <div class="fixed-menu swiper-wrapper">
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-orderlist.png" class="all-text-fix m-btn">
+                            <span class="m-btn">주문내역 관리</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn">  -->
+                            <img src="../static/m-cartlist.png" class="event-fix m-btn">
+                            <span class="m-btn">장바구니</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-cancellist.png" class="best-seller-fix">
+                            <span>취소/반품/교환 조회</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-infolist.png" class="new-product-fix">
+                            <span>회원 정보</span>
+                        <!-- </a> -->
+                        
+                    </section>
+                </div>
+            </div>
         </div>
 
 
 
 
-
-
         <div id="content">
-            <div class="fixed-category swiper mySwiper">
-                <div class="fixed-menu swiper-wrapper">
-                    <section class="swiper-slide">
-                        <img src="../static/all-text.png" class="all-text all-text-fix">
-                        <span>전체 교재</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/event.png" class="event event-fix">
-                        <span>이벤트</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/best-seller.png" class="best-seller best-seller-fix">
-                        <span>베스트 셀러</span>
-                    </section>
-                    <section class="swiper-slide">
-                         <img src="../static/new-product.png" class="new-product new-product-fix">
-                        <span>신상품</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/goods.png" class="goods goods-fix">
-                        <span>굿즈</span>
-                    </section>
-                    <section class="swiper-slide">
-                        <img src="../static/data-room.png" class="data-room data-room-fix">
-                        <span>학습 자료실</span>
-                    </section>
-                    <div class="search-box">
-                        <img src="../static/search.png" class="search-img">
-                        <input type="search">
-                        <button>검색</button>
-                    </div>
+            <div class="category-area">
+                <section class="category-item">
+                    <img src="../static/all-text.png" class="about-book">
+                    <span>전체 교재</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/event.png" class="about-event">
+                    <span>이벤트</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/best-seller.png" class="about-best">
+                    <span>베스트 셀러</span>
+                </section>
+                <section class="category-item">
+                     <img src="../static/new-product.png" class="about-new">
+                    <span>신상품</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/goods.png" class="about-good">
+                    <span>굿즈</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/data-room.png" class="about-room">
+                    <span>학습 자료실</span>
+                </section>
+                <div class="search-box">
+                    <img src="../static/search.png" class="search-img">
+                    <input type="search">
+                    <button>검색</button>
                 </div>
             </div>
 
 
 
 
-            <div id="page-section">
-                <div id="page-list">
+            <div class="contents-area">
+                <section class="mypage-menu">
+                    <h2 class="mypage-title">마이페이지</h2>
 
-
-                    <section class="mypage-menu">
-                        <h2 class="mypage-title">마이페이지</h3>
-
-                        <ul class="mypage-list">
-                            <li class="mypage-item">주문내역 관리</li>
-                            <li class="mypage-item">장바구니</li>
-                            <li class="mypage-item">취소/반품/교환 조회</li>
-                            <li class="mypage-item text-active">회원 정보</li>
-                        </ul>
-                    </section>
+                    <ul class="mypage-list">
+                        <li class="mypage-item">주문내역 관리</li>
+                        <li class="mypage-item">장바구니</li>
+                        <li class="mypage-item">취소/반품/교환 조회</li>
+                        <li class="mypage-item text-active">회원 정보</li>
+                    </ul>
+                </section>
 
 
                     <section class="manage-info">
@@ -499,7 +493,7 @@ function goAddr(){
 
 
                     
-                </div>
+                
 
              </div>
 
@@ -509,11 +503,6 @@ function goAddr(){
 
 
         <div id="footer">
-            
-            
-            
-            
-            
             <img src="../static/mobile-banner.png" class="mobile-banner">
             <div class="footer-banner-bar">
                 <div class="footer-banner">
@@ -529,11 +518,6 @@ function goAddr(){
                     </div>
                 </div>
             </div>
-           
-           
-           
-           
-           
             <div class="company-intro">
                 <div class="company-intro-bar">
                     <div class="logo-intro">
@@ -545,14 +529,9 @@ function goAddr(){
                 </div>
             </div>
 
-            
-            
-            
-            
             <div class="tosel-footer">
                 <div class="tosel-footer-bar">
                     <img src="../static/tosel-logo.png" class="footer-logo">
-                    
                     <div class="company-detail">
 
                         <p class="l-intro">
@@ -571,26 +550,20 @@ function goAddr(){
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
 
-
-
-
-
-
-
-        <div class="mobile-footer-menu">
-            <img src="../static/mobile-ham.png" class="m-ham">
-            <img src="../static/mobile-user.png" class="m-user">
-            <img src="../static/mobile-home.png" class="m-home">
-            <img src="../static/mobile-faq.png" class="m-faq">
-            <img src="../static/mobile-cart.png" class="m-cart">
+        <div class="mobile-footer-box">
+            
+            <div class="mobile-footer-menu">
+                <img src="../static/mobile-ham.png" class="m-ham m-btn">
+                <img src="../static/mobile-user.png" class="m-user m-btn">
+                <img src="../static/mobile-home.png" class="m-home m-btn">
+                <img src="../static/mobile-faq.png" class="m-faq m-btn">
+                <img src="../static/mobile-cart.png" class="m-cart m-btn">
+                <span class="amount-cart">1</span>
+            </div>        
         </div>
-
+        <button class="page-prev"><a href="#" class="move-prev"></a></button>
 
 
 
@@ -628,6 +601,92 @@ function addColor() {
 
 
 $(document).on('click', '.vaild-box', addColor)
+
+
+
+
+
+
+//--------기본 값
+function clickColor() {
+    setTimeout(() => {
+        $(this).css({'background-color': '#FFFFFF'});
+        
+    }, 100);
+    $(this).css({'background-color': '#F3F3F3'});
+}
+
+
+$(document).on('click', '.page-prev', clickColor);
+
+
+function clickOpacity() {
+    setTimeout(() => {
+        $(this).css({'opacity': '1'});
+        $(this).next('span').css({'opacity': '1'});
+        
+    }, 100);
+    $(this).css({'opacity': '0.5'});
+    $(this).next('span').css({'opacity': '0.5'});
+}
+
+
+$(document).on('click', '.m-btn', clickOpacity);
+
+
+
+//-------------스크롤
+
+window.swiper1 = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+//------------- 페이지별변경사항  페이지에 맞는 모바일 상단 정보에 포커스, css 바도 맞추어 수정
+/*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+		html 페이지 -> script initailSlide: a도 변경 필요 
+		*/
+    initialSlide: 4,
+});
+
+
+//--------------- 모바일 토글버튼 ----------------------
+
+$(document).ready(function(){
+                $('.mobile-all-menu div').hide();
+                $('.mobile-all-menu section').hide();
+                $('.m-ham').click(function(){
+                    $('.mobile-all-menu').css('background','#fff');
+                    $('.mobile-all-menu').css('width','100%');
+                    $('.mobile-all-menu div').fadeIn();
+                    $('.mobile-all-menu section').fadeIn();
+                    $('body').css('overflow-y','hidden');
+                });
+                $('.m-close').click(function(){
+                    $('.mobile-all-menu').css('background','transparent');
+                    $('.mobile-all-menu').css('width','0%');
+                    $('.mobile-all-menu div').fadeOut();
+                    $('.mobile-all-menu section').fadeOut();
+                    $('body').css('overflow-y','visible');
+                });
+            });
+
+//--------------- 스크롤 ----------------------
+
+
+
+
+$(window).scroll(function makeF () {
+        let fixTop = $('.fixed-category').offset().top;
+        let headTop = $('#header').offset().top + $('#header').outerHeight();
+        let fixPos = $('.fixed-category').position().top;
+        if($(window).scrollTop() > fixPos){
+            $('.fixed-category').css({'position':'fixed'});
+            $('.fixed-category').css({'top':'0px'});
+        } else if($(window).scrollTop() < headTop * 1/10) {
+            $('.fixed-category').css({'position' :'relative'});
+            // $('.mypage-menu').css('top', '5.09rem');
+            // $('.mypage-menu').css('top', '0px');
+        }
+    })
 
 </script>
     
