@@ -83,15 +83,15 @@ var PagingHelper = {
         this.data.lastnum = (tmp > this.data.totalCnt?this.data.totalCnt:tmp);
     },
     'gotoPage':function(pageNum){
-        console.log(pageNum);
+        // console.log(pageNum);
         
         this.data.currentPage = pageNum; //입력받은 페이지번호를 현재페이지로 설정
         this.setStartnumEndnum();    //입력받은 페이지의 startnum과 endnum구하기
         
         
         //콘솔 출력 (삭제)
-        console.log(this.data.currentPage+"/"+this.data.startnum +"/"+this.data.lastnum);
-        alert(this.data.currentPage+"/"+this.data.startnum +"/"+this.data.lastnum);
+        // console.log(this.data.currentPage+"/"+this.data.startnum +"/"+this.data.lastnum);
+        // alert(this.data.currentPage+"/"+this.data.startnum +"/"+this.data.lastnum);
         
         //리스트 불러오는 ajax호출
         //////////////////////////

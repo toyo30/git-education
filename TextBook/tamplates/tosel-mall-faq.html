@@ -531,19 +531,30 @@
             </div>
         </div>
         <div class="mobile-footer-menu">
-            <img src="../static/mobile-ham.png" class="m-ham">
-            <img src="../static/mobile-user.png" class="m-user">
-            <img src="../static/mobile-home.png" class="m-home">
-            <img src="../static/mobile-faq.png" class="m-faq">
-            <img src="../static/mobile-cart.png" class="m-cart">
+            <img src="../static/mobile-ham.png" class="m-ham m-btn">
+            <img src="../static/mobile-user.png" class="m-user m-btn">
+            <img src="../static/mobile-home.png" class="m-home m-btn">
+            <img src="../static/mobile-faq.png" class="m-faq m-btn">
+            <img src="../static/mobile-cart.png" class="m-cart m-btn">
             <span class="amount-cart">1</span>
            
         </div>
-        <button class="page-prev"><img src="../static/m-prev-page.png" alt=""></button>
+        <button class="page-prev m-btn"><img src="../static/m-prev-page.png" alt=""></button>
 
     </div>
 <script>
+function clickOpacity() {
+    setTimeout(() => {
+        $(this).css({'opacity': '1'});
+        $(this).next('span').css({'opacity': '1'});
+        
+    }, 100);
+    $(this).css({'opacity': '0.5'});
+    $(this).next('span').css({'opacity': '0.5'});
+}
 
+
+$(document).on('click', '.m-btn', clickOpacity);
 
 //-------------스크롤
 

@@ -516,6 +516,7 @@ margin-top: 1.56rem;
     width: 1.19rem;
     height: 1.19rem;
     box-sizing: border-box;
+    line-height: inherit;
 }
   #paging > ul > li:hover {
       /*background: #fbfbfb;*/
