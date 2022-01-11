@@ -1836,6 +1836,8 @@ table td {
       cursor: pointer;
    }
 
+
+
    .mobile-cart .count {
       position: absolute;
       display: none;
@@ -1847,6 +1849,7 @@ table td {
       color: #FDFDFD;
       top: 0.7rem;
       right: 0.7rem;
+      font-size: 0.9rem;
    }
 
    .mobile-cart .count.point {
@@ -2078,7 +2081,7 @@ table td {
       margin: 0 auto;
       background: #ECECEC;
       border-radius: 1rem;
-      padding: 2.00rem 1.50rem;
+      padding: 2.00rem;
       margin-top: 0.73rem;
    }
 
@@ -2087,10 +2090,11 @@ table td {
       top: 0.60rem;
       right: 0.60rem;
       display:inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 3rem;
+      height: 3rem;
       background: url(../static/detail-page/m-component-remove.png) no-repeat;
-      background-size: contain;
+      background-size: 1.5rem 1.5rem;
+      background-position: center center;
       cursor: pointer;
    }
 

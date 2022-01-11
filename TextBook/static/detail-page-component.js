@@ -33,7 +33,6 @@ function addContent(){
     $('.mobile-float .m-component-box').append(content);
 
     $('.label').text('분권 구매');
-
 }
 
 function removeContent() {

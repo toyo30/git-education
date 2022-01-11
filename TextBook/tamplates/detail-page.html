@@ -1234,17 +1234,8 @@ Grammar Series level
                         </table>
                     </div>
                 </section>
-
-
-               
-                
-
-
-
-                    
-                
-
              </div>
+             
              <div class="popup-point">
                 <section class="popup-section">
                     <div class="popup-box">
@@ -1444,31 +1435,23 @@ function addBasketM() {
     }, 600);
 
 
-    setTimeout(function() {
-        $('.basket-img').addClass('move');
-        $('.basket-img').removeClass('animate');
-    }, 1100);
-
-    $('.basket-inter').fadeIn();
-    setTimeout(function() {
-        $('.basket-inter').fadeOut();
-        $('.basket-img').removeClass('move');
-    }, 2000);
-
-
     // setTimeout(function() {
-    //     $('.basket-inter').fadeOut();
+    //     $('.basket-img').addClass('move');
     //     $('.basket-img').removeClass('animate');
     // }, 1100);
 
+    // $('.basket-inter').fadeIn();
+    // setTimeout(function() {
+    //     $('.basket-inter').fadeOut();
+    //     $('.basket-img').removeClass('move');
+    // }, 2000);
 
-    setTimeout(function(){
-        $('.popup').fadeIn();
-        $('.popup-dimmed').fadeIn();
-        $('.popup-layer').slideDown();
-        $('.mobile-cart .count').addClass('point');
-        $('.mobile-cart .count').text(basketNum);
-    }, 2000);
+
+    setTimeout(function() {
+        $('.basket-inter').fadeOut();
+        $('.basket-img').removeClass('animate');
+    }, 1100);
+
 
     // setTimeout(function(){
     //     $('.popup').fadeIn();
@@ -1476,7 +1459,15 @@ function addBasketM() {
     //     $('.popup-layer').slideDown();
     //     $('.mobile-cart .count').addClass('point');
     //     $('.mobile-cart .count').text(basketNum);
-    // }, 1800);
+    // }, 2000);
+
+   setTimeout(function(){
+       $('.popup').fadeIn();
+       $('.popup-dimmed').fadeIn();
+       $('.popup-layer').slideDown();
+       $('.mobile-cart .count').addClass('point');
+       $('.mobile-cart .count').text(basketNum);
+   }, 1800);
  
 }
 
