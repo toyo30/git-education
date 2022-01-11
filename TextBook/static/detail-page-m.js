@@ -1,4 +1,4 @@
-var mql = window.matchMedia("screen and (max-width: 650px)");
+
 
 window.swiper2 = new Swiper(".thirdSwiper", {
     slidesPerView: "auto",

@@ -432,8 +432,11 @@ Grammar Series level
                             <img class="book-informationimg" src="../static/detail-page/book-infomation-img.png" alt="">
                         </div>
     
-                        <div class="more-bookinfo on">책 정보 더보기</div>
-                        <div class="more-bookinfo back">책 정보 접기</div>
+                        <div class="more-bookbtn">
+                            <button class="more-bookinfo on">책 정보 더보기</button>
+                            <button class="more-bookinfo back">책 정보 접기</button>
+                        </div>
+                        
                     </div>
                 </section>
 
@@ -1235,7 +1238,7 @@ Grammar Series level
                     </div>
                 </section>
              </div>
-             
+
              <div class="popup-point">
                 <section class="popup-section">
                     <div class="popup-box">
@@ -1281,35 +1284,40 @@ Grammar Series level
                     </div>    
             
 
-                    <div class="select-option">
-                        <div class="selectBox">
+                    <div class="mobile-component-scroll">
+                        <div class="select-option">
+                            <div class="selectBox">
+                                
+                                <button class="label">분권 구매</button>
+                                <ul class="optionList">
+                                    <li class="optionItem m-btn">LISTENING 1</li>
+                                    <li class="optionItem m-btn">LISTENING 2</li>
+                                    <li class="optionItem m-btn">LISTENING 3</li>
+                                    <li class="optionItem m-btn">LISTENING 4</li>
+                                    
+                                    
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+    
+    
+                        <div class="m-component-box">
                             
-                            <button class="label">분권 구매</button>
-                            <ul class="optionList">
-                                <li class="optionItem">LISTENING 1</li>
-                                <li class="optionItem">LISTENING 2</li>
-                                <li class="optionItem">LISTENING 3</li>
-                                <li class="optionItem">LISTENING 4</li>
-                                
-                                
-                                
-                            </ul>
-                            
+                                   
                         </div>
                     </div>
+                        <div class="m-whole-price">
+                            <p class="m-whole-price-text">주문 금액</p>
+                            <p class="m-whole-price-area"><span class="m-whole-price-value">0</span>원</p>
+                        </div>
+                        <div class="mobile-buy-btn">
+                            <button class="mobile-add">장바구니 담기</button>
+                            <button id="mobile-buy-right" class="mobile-right-buy">바로 구매</button>
+                        </div>
+                    
 
-
-                    <div class="m-component-box">
-                        
-                    </div>
-                    <div class="m-whole-price">
-                        <p class="m-whole-price-text">주문 금액</p>
-                        <p class="m-whole-price-area"><span class="m-whole-price-value">0</span>원</p>
-                    </div>
-                    <div class="mobile-buy-btn">
-                        <button class="mobile-add">장바구니 담기</button>
-                        <button id="mobile-buy-right" class="mobile-right-buy">바로 구매</button>
-                    </div>
                 </div>
             </div>
 
@@ -1401,10 +1409,24 @@ Grammar Series level
     </div>
 <script>
 
+/* 버튼들 추가하기 */
+function clickOpacity() {
+    setTimeout(() => {
+        $(this).css({'opacity': '1'});
+        $(this).next('span').css({'opacity': '1'});
+        
+    }, 100);
+    $(this).css({'opacity': '0.5'});
+    $(this).next('span').css({'opacity': '0.5'});
+}
+
+
+$(document).on('click', '.m-btn', clickOpacity);
+
+
+
+
 //------------------------------- 모바일 장바구니 담기 ------
-
-
-
 
 
 
@@ -1427,8 +1449,11 @@ let basketNum = 0;
 
 
 function addBasketM() {
-    console.log(basketNum)
     basketNum++;
+    listAddNum = 0;
+    $('.m-component-area').remove();
+    $('.m-whole-price-value').text(0);
+
     $('.basket-inter').fadeIn();
     setTimeout(function() {
         $('.basket-img').addClass('animate');
@@ -1472,7 +1497,7 @@ function addBasketM() {
 }
 
 function removeBasketM() {
-    $('.popup').fadeToggle();
+    $('.popup').fadeOut();
     $('.popup-dimmed').slideUp();
     $('.popup-layer').slideUp();
 }
@@ -1488,6 +1513,25 @@ $(document).on('click', '.mobile-purchase', removeBasketM);
 
 
 
+/* 책 목차 더 보기 */
+    
+$(document).on('click', '.bcontent-open', function() {
+    $('.bcontent-item').css({"height":"100%"});
+    $('.bcontent-open').fadeOut(0);
+    $('.bcontent-close').toggleClass('toggleClass', 400);
+})
+
+$(document).on('click', '.bcontent-close', function() {
+    $('.bcontent-item').css({"height":"8.13rem"});
+    $('.bcontent-close').toggleClass('toggleClass', 400);
+    $('.bcontent-open').fadeIn(50);
+
+    let bcontent = $('.book-tcontent');
+    let bcontentTop = bcontent.position().top - bcontent.outerHeight() * 3/10;
+    $('html, body').animate({scrollTop: bcontentTop}, 500);
+    
+
+})
 
 
 
@@ -1498,9 +1542,17 @@ function addClass() {
     $('.book-desbox').toggleClass('height-full')
     $('.more-bookinfo.on').fadeToggle(400);
     $('.more-bookinfo.back').fadeToggle(400);
+
+    if(!$('.book-desbox').hasClass('height-full')){
+        let bookDesbox = $('.book-desbox');
+        let bookDesboxTop = bookDesbox.position().top + bookDesbox.outerHeight()*3/4;
+        $('html, body').animate({scrollTop: bookDesboxTop}, 500);
+    }
+
 }
 
 $(document).on('click', '.more-bookinfo', addClass)
+
     
 /* select event 클릭하기 */
 
@@ -1670,19 +1722,6 @@ function caluPrice(num) {
 
 //------------------ 책 수량에 따른 곱하기 
 
-/* 책 목차 더 보기 */
-    
-$(document).on('click', '.bcontent-open', function() {
-    $('.bcontent-item').css({"height":"100%"});
-    $('.bcontent-open').fadeOut(0);
-    $('.bcontent-close').toggleClass('toggleClass', 400);
-})
-
-$(document).on('click', '.bcontent-close', function() {
-    $('.bcontent-item').css({"height":"260px"});
-    $('.bcontent-close').toggleClass('toggleClass', 400);
-    $('.bcontent-open').fadeIn(50);
-})
 
 
 
@@ -1702,7 +1741,7 @@ $(document).on('click', '.bcontent-close', function() {
 //----------------- 장바구니 담기 버튼 시 초기화
 function addBasket() {
     /* json 형식으로 저장 */
-    $('.popup').fadeIn();
+    
     $('.label').text('분권 구매');
     $('.muti-book-price').text('17,910');
     $('.amount-count').val(1);
@@ -1719,6 +1758,7 @@ $(document).on('click', '.move-btn.cancel', cancel);
 
 
 
+$(document).on('click', '#inp-basket', addBasketM);
 
 
 
