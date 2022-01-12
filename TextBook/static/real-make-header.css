@@ -333,6 +333,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 .text-active {
 	color: #EC5937;
+	font-weight: bold;
 }
 
 /* @media (max-width:1275px) { html{font-size: 2.5098vw;}} */
@@ -459,11 +460,11 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-bottom: 3.5294vw;
  }
  
- .manage-sub {
+ /* .manage-sub {
 	font-size: 0.75rem;
 	line-height: 2.1176vw;
 	margin-bottom: 1.1765vw;
- }
+ } */
 
 
 
@@ -873,3 +874,53 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
     }
     
 }
+
+.loading {
+	opacity: 0.3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999999;
+	background: #FDFDFD;
+	transition: 0.5s;
+}
+.before-load .container {
+    display: none;
+} 
+.before-load .loading {
+	opacity: 1;
+	transition: 900ms ease-in-out;
+} 
+@keyframes loading-spin {
+	100% { transform: rotate(360deg); }
+}
+@keyframes loading-circle-ani {
+	0% { stroke-dashoffset: 157; }
+	75% { stroke-dashoffset: -147; }
+	100% { stroke-dashoffset: -157; }
+}
+.loading-circle {
+	position: relative;
+	width: 54px;
+	height: 54px;
+	animation: loading-spin 2s infinite ease-in-out;
+	z-index: 9999999;
+}
+.loading-circle circle {
+	stroke: #EC5937;
+	stroke-width: 4;
+	/* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
+	stroke-dasharray: 157, 157;
+	stroke-dashoffset: 0;
+	fill: transparent;
+	animation: loading-circle-ani 2s infinite;
+	/* transition: 1s; */
+}
+/* .loading-circle:hover circle {
+	stroke-dashoffset: -157;
+} */

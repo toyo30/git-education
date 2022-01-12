@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+</head>
+<style>
+    .loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	background: white;
+	opacity: 0;
+	transition: 0.5s;
+}
+.before-load .container {
+    display: none;
+} 
+.before-load .loading {
+	opacity: 1;
+	transition: 900ms ease-in-out;
+} 
+@keyframes loading-spin {
+	100% { transform: rotate(360deg); }
+}
+@keyframes loading-circle-ani {
+	0% { stroke-dashoffset: 157; }
+	75% { stroke-dashoffset: -147; }
+	100% { stroke-dashoffset: -157; }
+}
+.loading-circle {
+	width: 54px;
+	height: 54px;
+	animation: loading-spin 2s infinite ease-in-out;
+}
+.loading-circle circle {
+	stroke: #EC5937;
+	stroke-width: 4;
+	/* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
+	stroke-dasharray: 157, 157;
+	stroke-dashoffset: 0;
+	fill: transparent;
+	animation: loading-circle-ani 2s infinite;
+	/* transition: 1s; */
+}
+/* .loading-circle:hover circle {
+	stroke-dashoffset: -157;
+} */
+</style>
+<body class="before-load">
+    
+    <div class="loading">
+		<svg class="loading-circle">
+			<circle cx="50%" cy="50%" r="25"></circle>
+		</svg>
+	</div>
+
+<script>
+$(window).ajaxStart(function (){
+
+//loading.show();
+
+document.body.classList.remove('before-load');
+
+}).ajaxStop(function (){
+
+    document.body.classList.add('before-load');
+//loading.hide();
+
+});
+
+</script>
+</body>
+</html>
