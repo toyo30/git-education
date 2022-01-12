@@ -206,7 +206,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-top: 60px;
 	display: flex;
 	color: #333333;
-	margin-bottom: 500px;
+	margin-bottom: 7rem;
  }
  
  /* mypage-menu */
@@ -422,7 +422,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 .contents-area { 
 	width: 93.7%; 
 	margin-top: 4.7059vw;
-	margin-bottom: 15.63rem;
+	margin-bottom: 7rem;
  }
  
  /* mypage-menu */
@@ -460,11 +460,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 	margin-bottom: 3.5294vw;
  }
  
- /* .manage-sub {
-	font-size: 0.75rem;
-	line-height: 2.1176vw;
-	margin-bottom: 1.1765vw;
- } */
+
 
 
 
@@ -664,6 +660,12 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 		margin: 0 auto;
 		margin-top: 3.18rem;
 	 }
+
+	 .manage-sub {
+		font-size: 4.6154vw;
+		line-height: 5.1282vw;
+		margin-bottom: 2.0513vw;
+	 } 
 	 
 
 	.stick-area {

@@ -483,7 +483,8 @@ input {
  }
 
 #paging {
-   margin-bottom: 15.63rem;
+   margin-top: 1.56rem;
+   margin-bottom: 8rem;
 }
 
  #paging > ul {
@@ -497,7 +498,6 @@ input {
    border-radius: 0.25rem;
    padding: 0;
    margin: 0 auto;
-   margin-top: 1.56rem;
    line-height: inherit;
 }
   
@@ -1108,7 +1108,7 @@ input {
 
 
     .faq-section {
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
 
     
@@ -1167,20 +1167,23 @@ input {
     }
 
     
+    #paging {
+         margin-top: 4.5rem;
+         margin-bottom: 8rem;
+    }
 
     #paging > ul {
-      width: 15.82rem;
-     height: 3.45rem;
-      border-radius: 0.73rem;
-      margin-top: 2.00rem;
+         width: 15.82rem;
+         height: 3.45rem;
+         border-radius: 0.73rem;
       }
           
-          #paging > ul li {
-              text-align: center;
-              font-size: 1.27rem;
-              cursor:pointer;
-              padding: 0.91rem 0px;
-              color: #EC5937;
+      #paging > ul li {
+         text-align: center;
+         font-size: 1.27rem;
+         cursor:pointer;
+         padding: 0.91rem 0px;
+         color: #EC5937;
           border: 1px solid #EC5937;
           width: 3.45rem;
           height: 3.45rem;

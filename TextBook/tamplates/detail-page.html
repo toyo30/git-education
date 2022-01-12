@@ -1269,7 +1269,7 @@ Grammar Series level
             
 
             <div class="mobile-purchase">
-                    <button class="mobile-cart"><span class="count"></span></button>
+                    <button class="mobile-cart"><span class="count amount-cart"></span></button>
                     <button id="mobile-buy-btn" class="mobile-buy">구매하기</button>
             </div>
 
@@ -1491,8 +1491,8 @@ function addBasketM() {
        $('.popup').fadeIn();
        $('.popup-dimmed').fadeIn();
        $('.popup-layer').slideDown();
-       $('.mobile-cart .count').addClass('point');
-       $('.mobile-cart .count').text(basketNum);
+       $('.mobile-cart .amount-cart').addClass('point');
+       $('.mobile-cart .amount-cart').text(basketNum);
    }, 1800);
  
 }
@@ -1541,8 +1541,8 @@ $(document).on('click', '.bcontent-close', function() {
 
 function addClass() {
     $('.book-desbox').toggleClass('height-full')
-    $('.more-bookinfo.on').fadeToggle(400);
-    $('.more-bookinfo.back').fadeToggle(400);
+    $('.more-bookinfo.on').fadeToggle(10);
+    $('.more-bookinfo.back').fadeToggle(10);
 
     if(!$('.book-desbox').hasClass('height-full')){
         let bookDesbox = $('.book-desbox');

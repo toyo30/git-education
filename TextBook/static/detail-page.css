@@ -1341,17 +1341,17 @@ table td {
 .basket-img {
    position: relative;
    display: inline-block;
-   width: 5.91rem;
-   height: 5.91rem;
+   width: 15.91rem;
+   height: 15.91rem;
    background: url(../static/detail-page/m-basket-inter.png) no-repeat;
    background-size: contain;
-   transform: scale(0.3);
+   transform: scale(0.01);
    transition: 400ms;
    z-index: 9999; 
 }
 
 .basket-img.animate {
-   transform: scale(2);
+   transform: scale(1);
  }
 
 
@@ -1964,7 +1964,7 @@ table td {
 
 
 
-   .mobile-cart .count {
+   .mobile-cart .amount-cart {
       position: absolute;
       display: none;
       width: 1.27rem;
@@ -1978,7 +1978,7 @@ table td {
       font-size: 0.9rem;
    }
 
-   .mobile-cart .count.point {
+   .mobile-cart .amount-cart.point {
       display: block;
    }
 
@@ -2192,11 +2192,12 @@ table td {
       color:#EC5937;
    }
 
-
+   .mobile-component-scroll {
+      padding-top: 5.6rem;
+   }
 
    /* m-component-box-area */
    .m-component-box {
-      padding-top: 5.6rem;
       padding-bottom: 1.1rem;
       border-bottom: 0.1rem solid #F3F3F3;
    }
@@ -2359,6 +2360,7 @@ table td {
    padding-left: 1rem;
    padding-right: 1rem;
    left: 0;
+   top: 1rem;
 
 }
 
@@ -2450,11 +2452,13 @@ table td {
 .selectBox .optionItem:first-child {
    padding: 2rem;
    padding-top: 2.4rem;
+   /* padding-bottom: 2.7rem; */
 }
 
 .selectBox .optionItem:last-child {
    padding: 2rem;
    padding-bottom: 2.7rem;
+   /* padding-top: 2.4rem; */
 }
 
 
@@ -2489,7 +2493,7 @@ table td {
 }
 
 
-.mobile-component-scroll {
+.m-component-box {
    overflow-y: scroll; 
    -ms-overflow-style: none; /* IE and Edge */
    scrollbar-width: none; /* Firefox */
@@ -2497,13 +2501,13 @@ table td {
 }
 
 /* Chrome, Safari, Opera*/
-.mobile-component-scroll:-webkit-scrollbar {
+.m-component-box:-webkit-scrollbar {
    display: none; 
 } 
 
  
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
    .mobile-component-scroll {
       max-height: 17.9rem;
    }
@@ -2531,7 +2535,63 @@ table td {
       max-height: 55rem;
    }
    
+}   */
+
+
+@media screen and (max-width: 650px) {
+   .m-component-box {
+      max-height: 12rem;
+   }
+   
+}
+
+
+@media screen and (max-width: 520px) {
+   .m-component-box {
+      max-height: 12rem;
+   }
+
+   .more-bookinfo.on {
+      width: 9rem;
+   }
+
+   .more-bookinfo.back {
+      width: 9rem;
+   }
+
+   .more-bookinfo.on::after {
+      background-position: top 0.17rem right 12%;
+   }
+
+   .more-bookinfo.back::after {
+      background-position: top 0.17rem right 12%;
+   }
+
+}
+
+@media screen and (max-width: 431px) {
+   .m-component-box {
+      max-height: 20rem;
+   }
+   .more-bookinfo.on {
+      width: 10rem;
+      height: 2.5rem;
+   }
+
+   .more-bookinfo.back {
+      width: 10rem;
+      height: 2.5rem;
+   }
+   
+}
+
+@media screen and (max-width: 350px) {
+   .m-component-box {
+      max-height: 32rem;
+   }
+   
 }  
+
 
 
 

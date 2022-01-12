@@ -1029,7 +1029,6 @@ line-height: 21px;
       font-size: 1.64rem;
       margin-bottom: 2.8205vw;
    }
-
    .manage-sub {
       font-size: 4.6154vw;
       line-height: 5.1282vw;
@@ -1118,7 +1117,6 @@ line-height: 21px;
       font-weight: normal;
    }
 
-   
    .email-check {
       width: 66.6667vw;
       height: 8.4615vw;
@@ -1129,7 +1127,13 @@ line-height: 21px;
       line-height: 4.4615vw;
       font-weight: normal;
    }
-   
+
+   .m-text-line {
+      width: 4rem;
+      line-height: 1.5rem;
+   }
+
+
    
    .input-box {
       width: 17.0196vw;

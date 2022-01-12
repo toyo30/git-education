@@ -489,7 +489,8 @@ input {
  
  
  #paging {
-   margin-bottom: 15.63rem;
+   margin-top: 1.56rem;
+   margin-bottom: 8rem;
 }
 
  #paging > ul {
@@ -499,11 +500,11 @@ input {
  width: 5.44rem;
  height: 1.19rem;
       list-style-type:none;
- box-shadow: 0px 3px 7px  rgba(0, 0, 0, 0.07);
-border-radius: 0.25rem;
-padding: 0;
-margin: 0 auto;
-margin-top: 1.56rem;
+   box-shadow: 0px 3px 7px  rgba(0, 0, 0, 0.07);
+   border-radius: 0.25rem;
+   padding: 0;
+   margin: 0 auto;
+   margin-top: 1.56rem;
 }
   
   #paging > ul li {
@@ -1122,7 +1123,7 @@ margin-top: 1.56rem;
   
   
      .faq-section {
-        margin-bottom: 50px;
+        margin-bottom: 0;
      }
   
      
@@ -1184,6 +1185,11 @@ margin-top: 1.56rem;
         line-height: 1.70rem;
         /* white-space:pre-wrap; */
      }
+
+     #paging {
+      margin-top: 4.5rem;
+      margin-bottom: 8rem;
+ }
 
 
      #paging > ul {
