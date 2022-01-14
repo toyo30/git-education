@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
+    <title>교제몰 메인</title>
+
+</head>
+<body>
+
+    <div id="wrap">
+<!-- header -->
+
+        <div class="mobile-all-menu">
+            <section class="mobile-header">
+                <section class="mobile-header-items">
+                    <img src="../static/tosel-logo.png" class="m-logo">
+                    <img src="../static/m-close.png" class="m-close">
+                </section>
+            </section>
+            <div class="mobile-ne">
+                <div class="mobile-con">
+                    <img src="../static/all-cate.png" class="all-cate">
+
+                    <div class="mobile-slide-menu">
+                        <section>
+                            <img src="../static/all-text.png" class="mobile-menu-allText">
+                            <span>전체 교재</span>
+                        </section>
+                        <section>
+                            <img src="../static/event.png" class="mobile-menu-event">
+                            <span>이벤트</span>
+                        </section>
+                        <section>
+                            <img src="../static/best-seller.png" class="mobile-menu-bestSeller">
+                            <span>베스트 셀러</span>
+                        </section>
+                        <section>
+                            <img src="../static/new-product.png" class="mobile-menu-newProduct">
+                            <span>신상품</span>
+                        </section>
+                        <section>
+                            <img src="../static/goods.png" class="mobile-menu-goods">
+                            <span>굿즈</span>
+                        </section>
+                        <section>
+                            <img src="../static/data-room.png" class="mobile-menu-dataRoom">
+                            <span>학습 자료실</span>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="mobile-nav">
+                    <ul>
+                        <li>
+                            <img src="../static/mobile-user.png" class="mobile-user">
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li>
+                            <img src="../static/bell.png" class="mobile-bell">
+                            <a href="#">공지사항</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-faq.png" class="mobile-faq">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-cart.png" class="mobile-cart">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li>
+                            <img src="../static/mobile-join.png" class="mobile-join">
+                            <a href="#">회원가입</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <section class="mobile-login"><span>로그인</span></section>
+            </div>
+
+        </div>
+
+
+        <div id="header">
+
+            <div id="top-menu">
+
+                <div class="logo-box">
+                    <img src="../static/tosel-logo.png" class="t-logo">
+                    <img src="../static/tosel-mobile-logo.png" class="tm-logo"> 
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a class="login-btn">로그인</a></li>
+                        <li><img src="../static/join.png" class="join"><a href="#">회원가입</a></li>
+                        <li><img src="../static/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                        <li><img src="../static/notice.png" class="notice"><a href="#">공지사항</a></li>
+                        <li><img src="../static/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                        <li><img src="../static/cart.png" class="cart"><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+
+                
+
+                <div class="logo-box logo-title-box">
+                    <h1 class="logo-title">회원 정보</h1>
+                </div>
+
+                <div class="logo-box bell-box">
+                    <img src="../static/bell.png" class="bell m-btn">
+                    <span class="amount-bell">1</span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="stick-area">
+            <div class="fixed-category swiper mySwiper">
+                <div class="fixed-menu swiper-wrapper">
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-orderlist.png" class="all-text-fix m-btn">
+                            <span class="m-btn">주문내역 관리</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn">  -->
+                            <img src="../static/m-cartlist.png" class="event-fix m-btn">
+                            <span class="m-btn">장바구니</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-cancellist.png" class="best-seller-fix">
+                            <span>취소/반품/교환 조회</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-infolist.png" class="new-product-fix">
+                            <span>회원 정보</span>
+                        <!-- </a> -->
+                        
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="content">
+<!-- content -->
+             <div class="category-area">
+                <section class="category-item">
+                    <img src="../static/all-text.png" class="about-book">
+                    <span>전체 교재</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/event.png" class="about-event">
+                    <span>이벤트</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/best-seller.png" class="about-best">
+                    <span>베스트 셀러</span>
+                </section>
+                <section class="category-item">
+                     <img src="../static/new-product.png" class="about-new">
+                    <span>신상품</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/goods.png" class="about-good">
+                    <span>굿즈</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/data-room.png" class="about-room">
+                    <span>학습 자료실</span>
+                </section>
+                <div class="search-box">
+                    <img src="../static/search.png" class="search-img">
+                    <input type="search">
+                    <button>검색</button>
+                </div>
+            </div>
+
+
+            
+
+
+            <div class="contents-area">
+                <section class="mypage-menu">
+                    <h2 class="mypage-title">마이페이지</h2>
+
+                    <ul class="mypage-list">
+                        <li class="mypage-item">주문내역 관리</li>
+                        <li class="mypage-item text-active">장바구니</li>
+                        <li class="mypage-item">취소/반품/교환 조회</li>
+                        <li class="mypage-item">회원 정보</li>
+                    </ul>
+                </section>
+<!-- content -->
+
+
+
+                
+        
+
+                <section class="manage-info">
+                    <h3 class="manage-title">장바구니</h4>
+                    
+                    <div class="path-box">
+                        <div></div>
+                    </div>
+                    
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                    <h3 class="manage-title">회원정보 관리</h4>
+                    <h4 class="manage-sub">필수정보</h4>
+
+                </section>
+
+
+            </div>
+
+
+        </div>
+
+<!-- footer -->
+        <div id="footer">
+            <img src="../static/mobile-banner.png" class="mobile-banner">
+            <div class="footer-banner-bar">
+                <div class="footer-banner">
+                    <img src="../static/footer-banner.png" class="banner">
+                    <div class="banner-title">
+                        <h2>올해의</h2>
+                        <h1>베스트 셀러</h1>
+                    </div>
+                    <span>토셀의 심화 문제를 만나고 싶다면?</span>
+                    <div class="purchase">
+                        <span>구매하러가기</span>
+                        <img src="../static/purchase-arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div class="company-intro">
+                <div class="company-intro-bar">
+                    <div class="logo-intro">
+                        <img src="../static/tosel.png" class="bottom-tosel">
+                        <span class="vertical-line"></span> 
+                        <img src="../static/tosel-lab.png" class="tosel-lab">
+                    </div>
+                    <span>회사 소개</span>
+                </div>
+            </div>
+
+            <div class="tosel-footer">
+                <div class="tosel-footer-bar">
+                    <img src="../static/tosel-logo.png" class="footer-logo">
+                    <div class="company-detail">
+
+                        <p class="l-intro">
+                            서울시 성북구 안암로 145 고려대학교 라이시움 4층<br>
+                            Lyceum. Korea University, 145 Anam Ro, Seongbuk-Gu, Seoul, Korea 02841<br>
+                            Copyright ⓒ TOSEL. All Rights Reserved.
+                        </p>
+
+                        <p class="r-intro">
+                            상호명 : (주)에듀토셀<br>
+                            사업자 등록번호 : 209-81-55585<br>
+                            대표자명 : 오승연<br>
+                            Tel: +82-02-923-0505 / Fax : +82-02-923-7070
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-footer-box">
+            
+            <div class="mobile-footer-menu">
+                <img src="../static/mobile-ham.png" class="m-ham m-btn">
+                <img src="../static/mobile-user.png" class="m-user m-btn">
+                <img src="../static/mobile-home.png" class="m-home m-btn">
+                <img src="../static/mobile-faq.png" class="m-faq m-btn">
+                <img src="../static/mobile-cart.png" class="m-cart m-btn">
+                <span class="amount-cart">1</span>
+            </div>        
+        </div>
+        <button class="page-prev"><a href="#" class="move-prev"></a></button>
+    </div>
+<script>
+
+
+//-------------스크롤
+
+window.swiper1 = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+//------------- 페이지별변경사항  페이지에 맞는 모바일 상단 정보에 포커스, css 바도 맞추어 수정
+/*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+		html 페이지 -> script initailSlide: a도 변경 필요 
+		*/
+    initialSlide: 4,
+});
+
+
+//--------------- 모바일 토글버튼 ----------------------
+
+$(document).ready(function(){
+                $('.mobile-all-menu div').hide();
+                $('.mobile-all-menu section').hide();
+                $('.m-ham').click(function(){
+                    $('.mobile-all-menu').css('background','#fff');
+                    $('.mobile-all-menu').css('width','100%');
+                    $('.mobile-all-menu div').fadeIn();
+                    $('.mobile-all-menu section').fadeIn();
+                    $('body').css('overflow-y','hidden');
+                });
+                $('.m-close').click(function(){
+                    $('.mobile-all-menu').css('background','transparent');
+                    $('.mobile-all-menu').css('width','0%');
+                    $('.mobile-all-menu div').fadeOut();
+                    $('.mobile-all-menu section').fadeOut();
+                    $('body').css('overflow-y','visible');
+                });
+            });
+
+//--------------- 스크롤 ----------------------
+
+
+
+
+$(window).scroll(function makeF () {
+        let fixTop = $('.fixed-category').offset().top;
+        let headTop = $('#header').offset().top + $('#header').outerHeight();
+        let fixPos = $('.fixed-category').position().top;
+        if($(window).scrollTop() > fixPos){
+            $('.fixed-category').css({'position':'fixed'});
+            $('.fixed-category').css({'top':'0px'});
+        } else if($(window).scrollTop() < headTop * 1/10) {
+            $('.fixed-category').css({'position' :'relative'});
+            // $('.mypage-menu').css('top', '5.09rem');
+            // $('.mypage-menu').css('top', '0px');
+        }
+    })
+
+
+
+//qjxms zmff
+
+
+// $('.page-prev').bind('tap', function() {
+//     setTimeout(() => {
+//         $('.page-prev').css({'background-color': '#FFFFFF'});
+        
+//     }, 100);
+//     $('.page-prev').css({'background-color': '#F3F3F3'});
+// })
+
+function clickColor() {
+    setTimeout(() => {
+        $(this).css({'background-color': '#FFFFFF'});
+        
+    }, 100);
+    $(this).css({'background-color': '#F3F3F3'});
+}
+
+
+$(document).on('click', '.page-prev', clickColor);
+
+
+function clickOpacity() {
+    setTimeout(() => {
+        $(this).css({'opacity': '1'});
+        $(this).next('span').css({'opacity': '1'});
+        
+    }, 100);
+    $(this).css({'opacity': '0.5'});
+    $(this).next('span').css({'opacity': '0.5'});
+}
+
+
+$(document).on('click', '.m-btn', clickOpacity);
+
+
+
+// $('.m-btn').bind('tap', function() {
+//     setTimeout(() => {
+//         // $(this).css({'box-shadow': 'none'});
+//         $(this).css({'opacity': '1'});
+        
+//     }, 500);
+//     // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
+//     $(this).css({'opacity': '0.9'});
+// })
+
+
+
+
+
+    
+</script>
+</body>
+</html>

@@ -1270,15 +1270,6 @@ table td {
    color: #333333;
 }
 
-/* 
-.popup-btn {
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   height: 1.88rem;
-   overflow: hidden;
-} */
 
 .popup-btn {
    display: flex;
@@ -1313,8 +1304,6 @@ table td {
    background: #000;
    opacity: 0.3;
 }
-
-
 
 /* baskeet */
 
