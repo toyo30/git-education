@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
-    <title>교제몰 메인</title>
+    <link rel="stylesheet" href="../static/tosel-mall-basket.css">
+    <title>장바구니</title>
 
 </head>
 <body>
@@ -113,7 +114,7 @@
                 
 
                 <div class="logo-box logo-title-box">
-                    <h1 class="logo-title">회원 정보</h1>
+                    <h1 class="logo-title">장바구니</h1>
                 </div>
 
                 <div class="logo-box bell-box">
@@ -219,34 +220,246 @@
                 <section class="manage-info">
                     <h3 class="manage-title">장바구니</h4>
                     
-                    <div class="path-box">
-                        <div></div>
+                    <div class="path-bar">
+                        <p class="path-item path-active">장바구니</p>
+                        <div class="path-mark"></div>
+                        <p class="path-item">주문/결제</p>
+                        <div class="path-mark"></div>
+                        <p class="path-item">주문완료</p>
+                    </div>
+                    
+                    <div class="table-box">
+                        <div class="table-title blind">반품/교환 안내</div>
+                        <table class="table-area">
+                            <caption class="blind">장바구니</caption>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <td>전체선택</td>
+                                    <td>상품정보</td>
+                                    <td>상품금액</td>
+                                    <td>할인적용금액</td>
+                                    <td>상품수량</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <td>
+                                        <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
+                                    </td>
+                                    <td>
+                                        <p class="book-level">High Junior</p>
+                                        <p class="book-title">LISTENING 1</p>
+                                        <p class="m-for-who">for teachers</p>
+                                        <p class="m-original-price"><span class="original-text">정가 :</span><span class="original-text-deco"><span class="original-value">19,900</span> 원</span></p>
+                                        <div class="m-sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                        <div class="m-amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </td>
+                                    <td>
+                                        <p class="original-price"><span class="original-value">19,900</span>원</p>
+                                    </td>
+                                    <td>
+                                        <div class="sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                    </td>
+                                    <td>
+                                        <div class="amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="remove-btn"></button>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+
+
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <td>
+                                        <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
+                                    </td>
+                                    <td>
+                                        <p class="book-level">High Junior</p>
+                                        <p class="book-title">LISTENING 1</p>
+                                        <p class="m-for-who">for teachers</p>
+                                        <p class="m-original-price"><span class="orgin-text">정가 :</span><span class="orgin-price">19,900</span>원</p>
+                                        <div class="m-sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                        <div class="m-amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="original-price"><span class="original-value">19,900</span>원</p>
+                                    </td>
+                                    <td>
+                                        <div class="sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                    </td>
+                                    <td>
+                                        <div class="amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="remove-btn"></button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <td>
+                                        <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
+                                    </td>
+                                    <td>
+                                        <p class="book-level">High Junior</p>
+                                        <p class="book-title">LISTENING 1</p>
+                                        <p class="m-for-who">for teachers</p>
+                                        <p class="m-original-price"><span class="orgin-text">정가 :</span><span class="orgin-price">19,900</span>원</p>
+                                        <div class="m-sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                        <div class="m-amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="original-price"><span class="original-value">19,900</span>원</p>
+                                    </td>
+                                    <td>
+                                        <div class="sale-price"><span class="sale-rate">10%</span><span class="sale-price" id="bookPrice">17,910</span><span class="won">원</span></div>
+                                    </td>
+                                    <td>
+                                        <div class="amount-box">
+                                            <div class="amount-check">
+                                                <div class="sign sign-mius">
+                                                    <img src="../static/detail-page/m-mius-btn.png" class="minus">
+                                                </div>
+                                                <div class="amount-num">
+                                                    <input type="number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /
+                                                    class="amount-count" maxlength="2" min="1" value="1">
+                                                </div>
+                                                <div class="sign sign-plus">
+                                                    <img src="../static/detail-page/m-plus-btn.png" class="plus">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="remove-btn"></button>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                            <tfoot class="blind">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                    <div class="cal-area">
+
+                        <div class="cal-price-box">
+                            <div class="whole-sale-box">
+                                <div class="whole-sale-text">총 할인금액</div>
+                                <div class="whole-sale-area"><span class="whole-sale-value">19,999</span>원</div>
+                            </div>
+
+                            <div class="cal-charge-box">
+                                <div class="whole-product-box">
+                                    <div class="whole-product-text">총 상품금액</div>
+                                    <div class="whole-product-area"><span class="whole-product-value">19,999</span>원</div>
+                                </div>
+                                <div class="delivery-box">
+                                    <div class="delivery-text">배송비</div>
+                                    <div class="delivery-area"><span class="delivery-value">3,500</span>원</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="whole-price-box">
+                            <p class="whole-price-text">총 결제 금액</p>
+                            <p class="whole-price-area"><span class="whole-price-value">999,999</span>원</p>
+                        </div>
+
+                        <div class="cal-plus"></div>
+                        <div class="cal-equl"></div>
+
                     </div>
                     
 
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
-
-                    <h3 class="manage-title">회원정보 관리</h4>
-                    <h4 class="manage-sub">필수정보</h4>
+                    <div class="btn-area">
+                        <button class="go-shopping">쇼핑 계속하기</button>
+                        <button class="go-buy">결제하기</button>
+                    </div>
+                   
 
                 </section>
 
@@ -332,7 +545,7 @@ window.swiper1 = new Swiper(".mySwiper", {
 /*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
 		html 페이지 -> script initailSlide: a도 변경 필요 
 		*/
-    initialSlide: 4,
+    initialSlide: 1,
 });
 
 

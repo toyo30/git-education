@@ -76,6 +76,8 @@ button {
 #wrap { width: 100vw; height: 100%; position: relative;}
 
 
+.blind { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden; }
+
 
 /* header */
 
@@ -136,6 +138,15 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 .notice { width: 18px; height: 20px; }
 .FAQ { width: 18px; height: 18px; }
 .cart { width: 21px; height: 20px; }
+
+
+
+
+
+/* check-box 수정 */
+
+/* checkbox 수정 */
+
 
 
 
@@ -331,10 +342,6 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 /* .mobile-all-menu div { display: none!important;} */
 /* .mobile-all-menu { display: none;} */
 
-.text-active {
-	color: #EC5937;
-	font-weight: bold;
-}
 
 /* @media (max-width:1275px) { html{font-size: 2.5098vw;}} */
 @media screen and (max-width: 1275px){ html{font-size: 2.5098vw;}}
@@ -350,6 +357,9 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 @media screen and (max-width:1275px) {
+
+
+
 	/* header 요소 반응형 */
 
 	#header { height: 2.66rem;}
@@ -499,6 +509,11 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 
 @media screen and (max-width:649px) {
+
+
+	
+
+
 	/* wrap */
 	/* header */
 
@@ -846,7 +861,7 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 
 	.page-prev > img {
 		width: 25px;
-	}
+	} 
 	
 }
 
