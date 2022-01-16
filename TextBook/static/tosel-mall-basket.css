@@ -326,6 +326,7 @@ tbody > tr > td:nth-child(2) {
 
 .book-level {
 	font-size: 0.50rem;
+	margin-bottom: 0.2rem;
 }
 
 .book-title {
@@ -618,7 +619,6 @@ tbody > tr > td:last-child{
 	.manage-title {
 		font-size: 0.75rem;
 		line-height: 2.1176vw;
-		margin-bottom: 3.5294vw;
 	}
 	
 
@@ -1004,7 +1004,14 @@ tbody > tr > td:last-child{
 	/* btn-area */
 
 	.btn-area {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		bottom: 11.7500vw;
+		height: 8rem;
 		justify-content: space-between;
+		background: #FDFDFD;
+
 	}
 
 	.go-shopping, .go-buy {
