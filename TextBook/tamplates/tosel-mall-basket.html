@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="../static/real-make-header.css">
     <link rel="stylesheet" href="../static/tosel-mall-basket.css">
     <title>장바구니</title>
-
 </head>
 <body>
 
@@ -234,7 +233,7 @@
                             <caption class="blind">장바구니</caption>
                             <thead>
                                 <tr>
-                                    <th><input type="checkbox"></th>
+                                    <th class><input id="allCheck" type="checkbox"></th>
                                     <td>전체선택</td>
                                     <td>상품정보</td>
                                     <td>상품금액</td>
@@ -245,12 +244,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th><input type="checkbox"></th>
+                                    <th><input id="oneCheck" type="checkbox"></th>
                                     <td class="basket-book-size">
                                         <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
                                     </td>
                                     <td>
-                                        <p class="book-level">High Junior</p>
+                                        <p class="book-level">High Junior1</p>
                                         <p class="book-title">LISTENING 1</p>
                                         <p class="m-for-who">for teachers</p>
                                         <p class="m-original-price"><span class="original-text">정가 :</span><span class="original-text-deco"><span class="original-value">19,900</span> 원</span></p>
@@ -305,12 +304,12 @@
 
 
                                 <tr>
-                                    <th><input type="checkbox"></th>
+                                    <th><input id="oneCheck" type="checkbox"></th>
                                     <td class="basket-book-size">
                                         <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
                                     </td>
                                     <td>
-                                        <p class="book-level">High Junior</p>
+                                        <p class="book-level">High Junior2</p>
                                         <p class="book-title">LISTENING 1</p>
                                         <p class="m-for-who">for teachers</p>
                                         <p class="m-original-price"><span class="orgin-text">정가 :</span><span class="orgin-price">19,900</span>원</p>
@@ -358,12 +357,12 @@
                                 </tr>
 
                                 <tr>
-                                    <th><input type="checkbox"></th>
+                                    <th><input id="oneCheck" type="checkbox"></th>
                                     <td class="basket-book-size">
                                         <img class="basket-book-img" src="../static/listening-high-junior.png" alt="책 이미지">
                                     </td>
                                     <td>
-                                        <p class="book-level">High Junior</p>
+                                        <p class="book-level">High Junior3</p>
                                         <p class="book-title">LISTENING 1</p>
                                         <p class="m-for-who">for teachers</p>
                                         <p class="m-original-price"><span class="orgin-text">정가 :</span><span class="orgin-price">19,900</span>원</p>
@@ -544,7 +543,7 @@ window.swiper1 = new Swiper(".mySwiper", {
 /*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
 		html 페이지 -> script initailSlide: a도 변경 필요 
 		*/
-    initialSlide: 1,
+    initialSlide: 0,
 });
 
 
@@ -590,16 +589,10 @@ $(window).scroll(function makeF () {
 
 
 
-//qjxms zmff
 
 
-// $('.page-prev').bind('tap', function() {
-//     setTimeout(() => {
-//         $('.page-prev').css({'background-color': '#FFFFFF'});
-        
-//     }, 100);
-//     $('.page-prev').css({'background-color': '#F3F3F3'});
-// })
+
+//-------------- 클릭 컬러 변경 ----------------
 
 function clickColor() {
     setTimeout(() => {
@@ -628,21 +621,8 @@ $(document).on('click', '.m-btn', clickOpacity);
 
 
 
-// $('.m-btn').bind('tap', function() {
-//     setTimeout(() => {
-//         // $(this).css({'box-shadow': 'none'});
-//         $(this).css({'opacity': '1'});
-        
-//     }, 500);
-//     // $(this).css({'box-shadow': '3px 3px 7px rgb(0 0 0 / 7%)'});
-//     $(this).css({'opacity': '0.9'});
-// })
-
-
-
-
-
     
 </script>
+<script src="../static/tosel-mall-basket.js"></script>
 </body>
 </html>

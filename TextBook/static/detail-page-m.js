@@ -1,5 +1,3 @@
-
-
 window.swiper2 = new Swiper(".thirdSwiper", {
     slidesPerView: "auto",
     spaceBetween: 0,

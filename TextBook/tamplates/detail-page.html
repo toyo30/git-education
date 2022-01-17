@@ -338,7 +338,7 @@
                 <section class="page-direction-position">
                     <div class="page-direction-box">
                         <div class="page-box detail-page-box active-box">상세</div>
-                        <div class="page-box faq-page-box">FAQ</div>
+                        <div class="page-box faq-page-box">FAQ</div>5
                         <div class="page-box question-page-box">상품 문의</div>
                         <div class="page-box shipment-page-box">배송/반품/교환</div>
                     
@@ -381,10 +381,10 @@
                         <div class="bcontent-title">목차</div>
 
                         <p class="bcontent-item">
-TOSEL 소개
-    
-TOSEL Level Chart
-About TOSEL - 토셀에 관하여
+TOSEL 소개 
+
+TOSEL Level Chart 
+About TOSEL - 토셀에 관하여 
 Why TOSEL - 왜 토셀인가
 Evaluation - 평가
 성적표 및 인증서
@@ -1461,16 +1461,6 @@ function addBasketM() {
     }, 600);
 
 
-    // setTimeout(function() {
-    //     $('.basket-img').addClass('move');
-    //     $('.basket-img').removeClass('animate');
-    // }, 1100);
-
-    // $('.basket-inter').fadeIn();
-    // setTimeout(function() {
-    //     $('.basket-inter').fadeOut();
-    //     $('.basket-img').removeClass('move');
-    // }, 2000);
 
 
     setTimeout(function() {
@@ -1479,13 +1469,6 @@ function addBasketM() {
     }, 1100);
 
 
-    // setTimeout(function(){
-    //     $('.popup').fadeIn();
-    //     $('.popup-dimmed').fadeIn();
-    //     $('.popup-layer').slideDown();
-    //     $('.mobile-cart .count').addClass('point');
-    //     $('.mobile-cart .count').text(basketNum);
-    // }, 2000);
 
    setTimeout(function(){
        $('.popup').fadeIn();
@@ -1645,45 +1628,7 @@ $(document).on('click', '.amount-check .sign-plus', function(e){
 
 
 
-// $('.amount-check .sign-mius').click(function(e){
-//         e.preventDefault();
-//         var stat = $(this).parent().parent().children().find('.amount-count').val();
-//         if(stat == NaN || stat == "") {
-//         //pass
-//          } else {
-    
-//         var num = parseInt(stat,10);
-            
-//         num--;
-//         if(num<=1){
-//             num = 1;
-//         }
-//         $('.amount-count').val(num);
-        
-//         $(this).parent().parent().children().find('.amount-count').val(num);
-//         caluPrice(num)
-//         }
-// });
 
-
-
-// $('.amount-check .sign-plus').click(function(e){
-//     e.preventDefault();
-//     var stat = $(this).parent().parent().children().find('.amount-count').val();
-//     if(stat == NaN || stat == "") {
-//         //pass
-//     } else {
-//     var num = parseInt(stat,10);
-//     $('.amount-count').val(num + 1);
-//     num++;
-//     if(num>=999){
-//         num = 999;
-//     }
-//     $('.amount-count').val(num);
-//     $(this).parent().parent().children().find('.amount-count').val(num);
-//     caluPrice(num)
-//     }
-// });
     
 //같은 데이터 입력
 $(document).on('keyup', '.amount-count', function() {

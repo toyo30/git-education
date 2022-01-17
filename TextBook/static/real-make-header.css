@@ -941,3 +941,8 @@ nav > ul li img { vertical-align: middle; display: inline-block; margin-right: 9
 /* .loading-circle:hover circle {
 	stroke-dashoffset: -157;
 } */
+
+
+.text-active {
+	font-weight: 800;
+}

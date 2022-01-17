@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/TextBook-main.css?ver=11243131233">
-    <link rel="stylesheet" type="text/css" href="../static/faq.css">
-    <link rel="stylesheet" href="../static/InfoUserChange.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>마이페이지 개인 회원정보 수정</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/infoUserGroupChange.css">
+    <link rel="stylesheet" href="../static/real-make-header.css">
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    
+    <title>개인회원정보 수정</title>
 </head>
+<script>
+function goAddr(){
+  
+        new daum.Postcode({
+            oncomplete: function(data) {
+            $("#num-address").val(data.zonecode);
+            $("#my-address").val(data.address);
+            // document.querySelector("#num-address").value = data.zonecode;
+            // document.querySelector('#my-address').value = addr;
+              console.log(data.address);
+              console.log(data.zonecode);
+            }
+        }).open();
+}
+</script>
 <body>
-    <!-- <body class="before-load"> -->
-    <!-- <div class="loading">
-        <svg class="loading-circle">
-            <circle cx="50%" r="25"></circle>
-        </svg>
-    </div>  -->
 
     <div id="wrap">
 
@@ -91,40 +104,14 @@
         </div>
 
 
-        <script>
-            $(document).ready(function(){
-                $('.mobile-all-menu div').hide();
-                $('.mobile-all-menu section').hide();
-                $('.m-ham').click(function(){
-                    $('.mobile-all-menu').css('background','#fff');
-                    $('.mobile-all-menu').css('width','100%');
-                    $('.mobile-all-menu div').fadeIn();
-                    $('.mobile-all-menu section').fadeIn();
-                    $('body').css('overflow-y','hidden');
-                });
-                $('.m-close').click(function(){
-                    $('.mobile-all-menu').css('background','transparent');
-                    $('.mobile-all-menu').css('width','0%');
-                    $('.mobile-all-menu div').fadeOut();
-                    $('.mobile-all-menu section').fadeOut();
-                });
-            });
-        </script>
-
-
-        
-
         <div id="header">
 
             <div id="top-menu">
 
                 <div class="logo-box">
                     <img src="../static/tosel-logo.png" class="t-logo">
-                    <img src="../static/faq/tosel-mobile-logo.png" class="tm-logo">
-
-                    
+                    <img src="../static/tosel-mobile-logo.png" class="tm-logo"> 
                 </div>
-
 
                 <nav>
                     <ul>
@@ -137,85 +124,111 @@
                     </ul>
                 </nav>
 
-                <div class="logo-box mobile-faq-logo">
-                    <h1 class="mobile-title">회원 정보</h1>
-                </div>
-                <div class="logo-box mobile-bell-log">
-                    <img src="../static/bell.png" class="bell">
+                
+
+                <div class="logo-box logo-title-box">
+                    <h1 class="logo-title">회원 정보</h1>
                 </div>
 
-                
+                <div class="logo-box bell-box">
+                    <img src="../static/bell.png" class="bell m-btn">
+                    <span class="amount-bell">1</span>
+                </div>
 
 
             </div>
 
         </div>
 
+        <div class="stick-area">
+            <div class="fixed-category swiper mySwiper">
+                <div class="fixed-menu swiper-wrapper">
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-orderlist.png" class="all-text-fix m-btn">
+                            <span class="m-btn">주문내역 관리</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn">  -->
+                            <img src="../static/m-cartlist.png" class="event-fix m-btn">
+                            <span class="m-btn">장바구니</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-cancellist.png" class="best-seller-fix">
+                            <span>취소/반품/교환 조회</span>
+                        <!-- </a> -->
+                    </section>
+                    <section class="swiper-slide">
+                        <!-- <a href="#" class="m-btn"> -->
+                            <img src="../static/m-infolist.png" class="new-product-fix">
+                            <span>회원 정보</span>
+                        <!-- </a> -->
+                        
+                    </section>
+                </div>
+            </div>
+        </div>
 
 
 
 
         <div id="content">
-
-            
-
-             <div class="search-menu">
-                 <div class="search-bar">
-                    <section>
-                        <img src="../static/all-text.png" class="all-text">
-                        <span>전체 교재</span>
-                    </section>
-                    <section>
-                        <img src="../static/event.png" class="event">
-                        <span>이벤트</span>
-                    </section>
-                    <section>
-                        <img src="../static/best-seller.png" class="best-seller">
-                        <span>베스트 셀러</span>
-                    </section>
-                    <section>
-                        <img src="../static/new-product.png" class="new-product">
-                        <span>신상품</span>
-                    </section>
-                    <section>
-                        <img src="../static/goods.png" class="goods">
-                        <span>굿즈</span>
-                    </section>
-                    <section>
-                        <img src="../static/data-room.png" class="data-room">
-                        <span>학습 자료실</span>
-                    </section>
-
-                     <div class="search-box">
-                         <img src="../static/search.png" class="search-img">
-                         <input type="search">
-                         <button>검색</button>
-                     </div>
-                 </div>
-             </div>
+            <div class="category-area">
+                <section class="category-item">
+                    <img src="../static/all-text.png" class="about-book">
+                    <span>전체 교재</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/event.png" class="about-event">
+                    <span>이벤트</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/best-seller.png" class="about-best">
+                    <span>베스트 셀러</span>
+                </section>
+                <section class="category-item">
+                     <img src="../static/new-product.png" class="about-new">
+                    <span>신상품</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/goods.png" class="about-good">
+                    <span>굿즈</span>
+                </section>
+                <section class="category-item">
+                    <img src="../static/data-room.png" class="about-room">
+                    <span>학습 자료실</span>
+                </section>
+                <div class="search-box">
+                    <img src="../static/search.png" class="search-img">
+                    <input type="search">
+                    <button>검색</button>
+                </div>
+            </div>
 
 
 
-             <div id="page-section">
-                <div id="page-list">
 
+            <div class="contents-area">
+                <section class="mypage-menu">
+                    <h2 class="mypage-title">마이페이지</h2>
 
-                    <section class="mypage-menu">
-                        <h2 class="mypage-title">마이페이지</h3>
-
-                        <ul class="mypage-list">
-                            <li class="mypage-item">주문내역 관리</li>
-                            <li class="mypage-item">장바구니</li>
-                            <li class="mypage-item">취소/반품/교환 조회</li>
-                            <li class="mypage-item">회원 정보</li>
-                        </ul>
-                    </section>
+                    <ul class="mypage-list">
+                        <li class="mypage-item">주문내역 관리</li>
+                        <li class="mypage-item">장바구니</li>
+                        <li class="mypage-item">취소/반품/교환 조회</li>
+                        <li class="mypage-item text-active">회원 정보</li>
+                    </ul>
+                </section>
 
 
                     <section class="manage-info">
                         <h3 class="manage-title">회원정보 관리</h4>
                         <h4 class="manage-sub">필수정보</h4>
-                        <form id="frm" name="frm" action="" method="post" enctype="multipart/form-data">
+                        <div id="frm" name="frm">
+                        <!-- <form id="frm" name="frm" action="/mobile/user/help/naverProfile?m=uploadServiceProfileImage&token_help=4d0sbf6JiMSpUX24&lang=ko_KR" action="" method="post" enctype="multipart/form-data"> -->
                             <div class="form-box">
                                 <h5 class="blind">회원정보 수정</h5>
                     
@@ -228,15 +241,31 @@
                                         <!--p 태그 안 글자에 기존 아이디 전송하기-->
                                     </div>
                                 </div>
+
+                                <div class="form-item">
+                                    <div class="form-lab">
+                                        <p><label for="groupName">단체명</label></p>
+                                    </div>
+                                    <div class="input-text pad-topbottom">
+                                        <div class="input-detail phone-detail">
+                                            <div class="input-wrap mobile-name">
+                                                <input type="text" id="groupName" class="inp" name="groupName" maxlength="20" autocomplete="off" value="에듀토셀">
+                                            </div>
+                                            <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
+                                        </div>
+                                        
+                                        <!-- input 태그 안  value에 이름 전송하기-->
+                                    </div>
+                                </div>
                     
                                 <div class="form-item">
                                     <div class="form-lab">
-                                        <p><label class="lab-item" for="userName">이름</label></p>
+                                        <p><label class="lab-item" for="groupOwnerName">사업자명</label></p>
                                     </div>
-                                    <div class="input-text same-height">
+                                    <div class="input-text same-height pad-topbottom">
                                         <div>
                                             <span class="input-wrap mobile-name">
-                                                <input type="text" id="userName" class="inp" name="userName" maxlength="20" autocomplete="off" value="백민기">
+                                                <input type="text" id="groupOwnerName" class="inp" name="groupOwnerName" maxlength="20" autocomplete="off" value="김토셀">
                                             <!-- input 태그 안  value에 이름 전송하기-->
                                             </span>
                                             <p class="add-info">*개명하신 경우 본인인증 후 수정 가능합니다.</p>
@@ -246,25 +275,35 @@
                     
                                 
                                 </div>
-                    
+
                                 <div class="form-item">
                                     <div class="form-lab">
-                                        <p><label for="userGender">성별</label></p>
+                                        <p><label class="lab-item" for="groupRegis">사업자등록증</label></p>
                                     </div>
-                                    <div class="input-text same-height">
+                                    <div class="input-text same-height pad-topbottom">
                                         <div>
-                                        <p id="userGender" class="genderText">여성</p>
-                                        <!--p 태그 안 글자에 기존 아이디 전송하기-->
+                                            <span class="input-wrap mobile-name filebox">
+                                                <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+                                                <label for="file">첨부하기</label> 
+                                                <input type="file" id="file">
+                                                
+                                            </span>
+                                            <p class="add-info">*사업자 등록증 사본을 첨부해주세요.</p>
                                         </div>
+                                        
                                     </div>
+                    
+                                
                                 </div>
                     
+                                
+                    
                                 <div class="form-item">
                                     <div class="form-lab">
-                                        <p><label for="userBirth">생년월일</label></p>
+                                        <p><label for="groupBirth">사업자등록일</label></p>
                                     </div>
                                     <div class="input-text same-height">
-                                        <p id="userBirth" class="genderText">9999년 12월 31일</p>
+                                        <p id="groupBirth" class="genderText">2010년 12월 31일</p>
                                         <!--p 태그 안 글자에 기존 아이디 전송하기-->
                                     </div>
                                 </div>
@@ -274,7 +313,7 @@
                                         <p><label for="userCheck">본인인증</label></p>
                                     </div>
                                     <div class="input-text same-height">
-                                        <p id="userCheck" class="email-check">이메일 인증 완료</p>
+                                        <p id="userCheck" class="email-check same-height mobile-text">이메일 인증 완료</p>
                                     </div>
                                 </div>
                     
@@ -308,12 +347,13 @@
                                         </div>
                     
                                         <div class="passbtn-wrap">
-                                            <a id="passChange" href="">비밀번호 변경
-                                            </a>
+                                            <button id="passChange" href="">비밀번호 변경
+                                            </button>
                                         </div>
                                         
                                     </div>
                                 </div>
+
                     
                                 <div class="form-item">
                                     <div class="form-lab">
@@ -322,22 +362,22 @@
                                     <div class="input-text direction">
                                         <div class="input-detail">
                                             <div class="input-box address-box">
-                                                <input type="text" id="passwordCur" class="inp-area" name="passwordCur" maxlength="6" autocomplete="off">
+                                                <input type="text" id="num-address" class="inp-area" name="num-address" maxlength="6" asutocomplete="off">
                                             </div>
                                             <div class="btn-addressbox">
-                                                <a id="addfind" class="btn-address" href="">주소 찾기</a>
+                                                <button id="addfind" class="btn-address" onclick="goAddr()">주소 찾기</button>
                                             </div>
                                         </div>
                     
                                         <div class="input-detail">
                                             <div class="input-box address-inp">
-                                                <input type="text" id="passwordNew" class="inp-area" name="passwordNew" maxlength="60" autocomplete="off">
+                                                <input type="text" id="my-address" class="inp-area" name="my-address" maxlength="60" autocomplete="off">
                                             </div>
                                         </div>
                     
-                                        <div class="input-detail">
+                                        <div class="input-detail mobile-addressdetail">
                                             <div class="input-box address-inp">
-                                                <input type="text" id="passNewCheck" class="inp-area" name="passNewCheck" maxlength="60" autocomplete="off">
+                                                <input type="text" id="detail-address" class="inp-area" name="detail-address" maxlength="60" autocomplete="off">
                                             </div>
                                             <!-- <div>*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div> -->
                                         </div>
@@ -358,7 +398,7 @@
                                     <div class="form-lab">
                                         <p><label for="phoneNumber">전화번호</label></p>
                                     </div>
-                                    <div class="input-text">
+                                    <div class="input-text pad-topbottom">
                                         <div class="input-detail phone-detail">
                                             <div class="input-box phone-inp">
                                                 <input type="text" id="phoneNumber" class="inp" name="phoneNumber" maxlength="20" autocomplete="off" placeholder="숫자만 입력해주세요">
@@ -377,22 +417,24 @@
                            
                     
                                         <div class="input-text direction mobile-layout">
+                                            <div class="emailsms-box">
                                             <div class="input-detail">
                                                 <div class="input-box email-box">
-                                                    <input type="email" id="passwordCur" class="inp-area" name="passwordCur"  autocomplete="on" placeholder="tosel@tosel.com">
+                                                    <input type="email" id="write-email" class="inp-area" name="write-email"  autocomplete="on" placeholder="tosel@tosel.com">
                                                 </div>
                                                 <div class="btn-addressbox">
-                                                    <a id="addSend" class="btn-email" href="">인증메일 전송</a>
+                                                    <a id="addSend" class="btn-email" >인증메일 전송</a>
                                                 </div>
                                             </div>
                         
-                                            <div class="input-detail">
+                                            <div class="input-detail mobile-addressdetail pc-detail">
                                                 <div class="input-box email-box mobile-emailbox">
-                                                    <input type="text" id="passwordCur" class="inp-area" name="passwordCur" maxlength="6" autocomplete="off">
+                                                    <input type="text" id="check-email" class="inp-area" name="check-email" maxlength="6" autocomplete="off">
                                                 </div>
                                                 <div class="btn-addressbox">
                                                     <a id="EmailCheck" class="btn-emailcheck" href="">인증하기</a>
                                                 </div>
+                                            </div>
                                             </div>
                         
                                     
@@ -449,11 +491,11 @@
                                     <div class="input-text mobile-perText">
                                         <div class="sms-box mobile-perBox">
                                             <div class="vaild">
-                                                <a href="">1년</a>
-                                                <a href="">3년</a>
-                                                <a href="">5년</a>
-                                                <a href="">10년</a>
-                                                <a href="">탈퇴시</a>
+                                                <button class="vaild-box active-box">1년</button>
+                                                <button class="vaild-box">3년</button>
+                                                <button class="vaild-box">5년</button>
+                                                <button class="vaild-box">10년</button>
+                                                <button class="vaild-box">탈퇴시</button>
                                             </div>
                                             <p class="sms-text mobile-sms-text">*개인정보 유효기간 내 이용이 없을 경우, 휴면 계정으로 전환되어 각종 메일, 문자를 수신할 수 없습니다.</p>
                                         </div>
@@ -471,16 +513,19 @@
                                     <b id="btnLeave">회원 탈퇴하기</b>
                                 </a> -->
                             </div>
-                        </form>
+                        </div>
                     </section>
 
 
 
                     
-                </div>
+                
 
              </div>
+
         </div>
+
+
 
 
         <div id="footer">
@@ -513,7 +558,6 @@
             <div class="tosel-footer">
                 <div class="tosel-footer-bar">
                     <img src="../static/tosel-logo.png" class="footer-logo">
-                    
                     <div class="company-detail">
 
                         <p class="l-intro">
@@ -533,16 +577,151 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-footer-menu">
-            <img src="../static/mobile-ham.png" class="m-ham">
-            <img src="../static/mobile-user.png" class="m-user">
-            <img src="../static/mobile-home.png" class="m-home">
-            <img src="../static/mobile-faq.png" class="m-faq">
-            <img src="../static/mobile-cart.png" class="m-cart">
+
+        <div class="mobile-footer-box">
+            
+            <div class="mobile-footer-menu">
+                <img src="../static/mobile-ham.png" class="m-ham m-btn">
+                <img src="../static/mobile-user.png" class="m-user m-btn">
+                <img src="../static/mobile-home.png" class="m-home m-btn">
+                <img src="../static/mobile-faq.png" class="m-faq m-btn">
+                <img src="../static/mobile-cart.png" class="m-cart m-btn">
+                <span class="amount-cart">1</span>
+            </div>        
         </div>
+        <button class="page-prev"><a href="#" class="move-prev"></a></button>
+
+
+
+
+
+
+
+
     </div>
-</body>
+
 <script>
-    
+
+
+// daum.Postcode.load(function() {
+//     new daum.Postcode({
+//             oncomplete: function(data) {
+//                 $("#num-address").val(data.zonecode);
+//                 $("#my-address").val(data.address);
+            
+//               console.log(data.address);
+//               console.log(data.zonecode);
+//             }
+//         }).open();
+// })
+
+
+// $(document).on('click', '.btn-address', goAddr);
+
+
+function addColor() {
+    $(this).siblings().removeClass('active-box');
+    $(this).addClass('active-box');
+
+}
+
+
+$(document).on('click', '.vaild-box', addColor)
+
+
+
+
+
+
+//--------기본 값
+function clickColor() {
+    setTimeout(() => {
+        $(this).css({'background-color': '#FFFFFF'});
+        
+    }, 100);
+    $(this).css({'background-color': '#F3F3F3'});
+}
+
+
+$(document).on('click', '.page-prev', clickColor);
+
+
+function clickOpacity() {
+    setTimeout(() => {
+        $(this).css({'opacity': '1'});
+        $(this).next('span').css({'opacity': '1'});
+        
+    }, 100);
+    $(this).css({'opacity': '0.5'});
+    $(this).next('span').css({'opacity': '0.5'});
+}
+
+
+$(document).on('click', '.m-btn', clickOpacity);
+
+
+
+//-------------스크롤
+
+window.swiper1 = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+//------------- 페이지별변경사항  페이지에 맞는 모바일 상단 정보에 포커스, css 바도 맞추어 수정
+/*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+		html 페이지 -> script initailSlide: a도 변경 필요 
+		*/
+    initialSlide: 4,
+});
+
+
+//--------------- 모바일 토글버튼 ----------------------
+
+$(document).ready(function(){
+                $('.mobile-all-menu div').hide();
+                $('.mobile-all-menu section').hide();
+                $('.m-ham').click(function(){
+                    $('.mobile-all-menu').css('background','#fff');
+                    $('.mobile-all-menu').css('width','100%');
+                    $('.mobile-all-menu div').fadeIn();
+                    $('.mobile-all-menu section').fadeIn();
+                    $('body').css('overflow-y','hidden');
+                });
+                $('.m-close').click(function(){
+                    $('.mobile-all-menu').css('background','transparent');
+                    $('.mobile-all-menu').css('width','0%');
+                    $('.mobile-all-menu div').fadeOut();
+                    $('.mobile-all-menu section').fadeOut();
+                    $('body').css('overflow-y','visible');
+                });
+            });
+
+//--------------- 스크롤 ----------------------
+
+
+
+
+$(window).scroll(function makeF () {
+        let fixTop = $('.fixed-category').offset().top;
+        let headTop = $('#header').offset().top + $('#header').outerHeight();
+        let fixPos = $('.fixed-category').position().top;
+        if($(window).scrollTop() > fixPos){
+            $('.fixed-category').css({'position':'fixed'});
+            $('.fixed-category').css({'top':'0px'});
+        } else if($(window).scrollTop() < headTop * 1/10) {
+            $('.fixed-category').css({'position' :'relative'});
+            // $('.mypage-menu').css('top', '5.09rem');
+            // $('.mypage-menu').css('top', '0px');
+        }
+    })
+
+
+    $("#file").on('change',function(){
+  var fileName = $("#file").val();
+  $(".upload-name").val(fileName);
+});
+
+
 </script>
+    
+</body>
 </html>
