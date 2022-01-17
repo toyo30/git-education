@@ -18,6 +18,10 @@ th, td{
 }
  
 
+button {
+	margin: 0;
+}
+
 
 /* checkbox 커스텀 */
 
@@ -76,7 +80,7 @@ input[type="checkbox"] {
 /* input-type-number-custom */
 
 .amount-check { 
-    width: 2.56rem; height: 100%; border: 0.03rem solid #C4C4C4; border-radius: 0.16rem;
+    width: 2.56rem; height: 0.78rem; border: 0.03rem solid #C4C4C4; border-radius: 0.16rem;
     display: flex;
 	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
@@ -85,7 +89,17 @@ input[type="checkbox"] {
 }
 .amount-check > div { 
     border-right: 0.03rem solid #C4C4C4; flex: 1;
+	
 }
+
+.sign-plus {
+	border-radius: 0 0.16rem 0.16rem 0;
+}
+
+.sign-mius {
+	border-radius: 0.16rem 0 0 0.16rem;
+}
+
 .amount-check > div:last-child { border-right: none;}
 .plus { width: 0.44rem; height: 0.44rem;}
 .minus { width: 0.44rem;}
@@ -284,7 +298,7 @@ thead > tr > td:nth-child(3) {
 }
 
 thead > tr > td:nth-child(4) {
-	padding-right: 3.31rem;
+	padding-right: 3.05rem;
 	text-indent: 0.13rem;
 }
 
@@ -345,6 +359,7 @@ tbody > tr > td:last-child{
 	height: 0.78rem;
 	background: url(../static/basket/remove-btn.png) no-repeat;
 	background-size: contain;
+	cursor: pointer;
 	/* padding-right: 1.16rem; */
 }
 
@@ -364,6 +379,7 @@ tbody > tr > td:last-child{
 	line-height: 0.56rem;
 	font-weight: 800;
 	color: #EC5937;
+	margin-right: 0.2rem;
 }
 
 .sale-price {
@@ -734,6 +750,12 @@ tbody > tr > td:last-child{
 
 	 /* thead */
 
+	 thead > tr > th {
+		padding: 0.7rem 0.63rem 0.2rem;
+		height: 100%;
+
+	 }
+
 	thead > tr > td:nth-child(4),
 	thead > tr > td:nth-child(5),
 	thead > tr > td:nth-child(6)   {
@@ -764,8 +786,6 @@ tbody > tr > td:last-child{
 	tbody > tr > td:nth-child(2) {
 
 	}
-
-
 	/* table-content */
 
 
@@ -786,15 +806,17 @@ tbody > tr > td:last-child{
 
 	.book-level {
 		font-size: 1.45rem;
+		margin-bottom: 0.7rem;
 	}
 
 	.book-title {
 		font-size: 1.45rem;
+		margin-bottom: 0.3rem;
 	}
 
 	.m-for-who {
 		font-size: 0.91rem;
-		margin-bottom: 0.64rem;
+		margin-bottom: 0.94rem;
 	}
 
 	.m-original-price {
@@ -816,8 +838,8 @@ tbody > tr > td:last-child{
 
 	.m-sale-price {
 		height: 100%;
-		margin-top: -0.3rem;
-		margin-bottom: 1rem;
+		margin-top: 0rem;
+		margin-bottom: 0.4rem;
 	}
 
 	.sale-rate {
@@ -894,14 +916,18 @@ tbody > tr > td:last-child{
 
 	/* book-img */
 
-	tbody > tr > td:nth-child(2) {
-		padding: 2.45rem 1.31rem 2.45rem 0;
+	.basket-book-size {
+		width: 13rem;
+	}
+
+	tbody > tr > td:nth-child(2) { 
+		padding: 2.45rem 0.5rem 2.45rem 0;
 	}
 
 
 	.basket-book-img {
-		width: 9.09rem;
-		height: 12.00rem;
+		width: 12.09rem;
+		height: 15.00rem;
 	}
 
 
@@ -1006,19 +1032,32 @@ tbody > tr > td:last-child{
 	.btn-area {
 		position: fixed;
 		width: 100%;
+		height: 15rem;
 		left: 0;
-		bottom: 11.7500vw;
-		height: 8rem;
+		bottom: 10vw;
+    	height: 10rem;
 		justify-content: space-between;
 		background: #FDFDFD;
+		padding: 0.91rem 0.68rem 3rem;
+		box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+		
 
 	}
 
 	.go-shopping, .go-buy {
 		font-size: 1.45rem;
-		width: 16.27rem;
-		height: 4.46rem;
+		width: 18.5rem;
+		height: 5.09rem;
 		
+	}
+
+	.page-prev {
+		bottom: 37vw;
+	}
+
+
+	.tosel-footer {
+		padding-bottom: 14rem;
 	}
 
 	
@@ -1034,6 +1073,26 @@ tbody > tr > td:last-child{
 @media ( max-width: 670px){
 	.books > section span { transform: scale(0.7); }
 } */
+
+
+@media screen and (max-width: 370px) {
+	.page-prev {
+		bottom: 38vw;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.page-prev {
+		bottom: 15rem;
+	}
+}
+
+
+@media screen and (max-width: 345px) {
+	.page-prev {
+		bottom: 14rem;
+	}
+}
 
 
 
