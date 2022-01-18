@@ -260,9 +260,11 @@ input[type="number"] { text-align:right; padding-right: 0.06rem; font-size: 0.5r
 	 width: 100%;
  }
 
-.m-for-who, .m-original-price, .m-sale-price, .m-amount-box {
+.m-for-who, .m-original-price, .m-sale-price, .m-amount-box, 
+.m-delivery-des, .m-delivery-question {
 	display: none;
 }
+
 
 
 /* thead-sizing */
@@ -967,6 +969,7 @@ tbody > tr > td:last-child{
 
 
 	 .whole-product-box, .delivery-box {
+		 margin-left: 0;
 		 margin-bottom: 1.82rem;
 	 }
 
@@ -993,6 +996,46 @@ tbody > tr > td:last-child{
 		line-height: 1.27rem;
 		padding: 0;
 		border: none;
+	}
+	
+	.delivery-text {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	.m-delivery-question {
+		display: block;
+		width: 1.27rem;
+		height: 1.27rem;
+		background: url(../static/basket/m-delivery-fee-box.png) no-repeat;
+		background-size: contain;
+		margin-left: 0.4rem;
+		margin-right: auto;
+	}
+
+
+	.m-delivery-question:hover + .m-delivery-des {
+		display: block;
+	}
+
+	.m-delivery-des {
+		position: absolute;
+		width: 18.27rem;
+		height: 4.73rem;
+		border-radius: 0.91rem;
+		background: #FDFDFD;
+		border: 0.18rem solid #DFDFDF;
+		color: #EC5937;
+		font-size: 1.09rem;
+		line-height: 1.36rem;
+		text-indent: -0.3rem;
+		margin-left: 0.4rem;
+		padding: 0.91rem 1.55rem 0.91rem 2rem;
+		word-break: keep-all;
+		white-space: pre-wrap;
+		top: 6.5rem;
+		left: 4rem;
 	}
 
 
@@ -1039,17 +1082,23 @@ tbody > tr > td:last-child{
     	height: 10rem;
 		justify-content: space-between;
 		background: #FDFDFD;
-		padding: 0.91rem 0.68rem 3rem;
+		padding: 1rem 1rem 3rem;
 		box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
 		
 
 	}
 
 	.go-shopping, .go-buy {
-		font-size: 1.45rem;
-		width: 18.5rem;
-		height: 5.09rem;
+		font-size: 1.6rem;
+		font-weight: 800;
+		width: 17.90rem;
+		height: 4.80rem;
+		border-radius: 1rem;
 		
+	}
+
+	.go-buy {
+		margin-left: 0;
 	}
 
 	.page-prev {
