@@ -384,14 +384,14 @@ tbody > tr > td:last-child{
 	margin-right: 0.2rem;
 }
 
-.sale-price {
+.pc-sale-price {
 	font-size: 0.53rem;
 	line-height: 0.59rem;
 	font-weight: bold;
 }
 
 
-.sale-price .won {
+.pc-sale-price .won {
 	font-size: 0.38rem;
 	margin-left: 0.1rem;
 }
